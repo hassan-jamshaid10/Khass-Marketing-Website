@@ -1,0 +1,63 @@
+/* Reset + Base */
+
+
+/* Header Styling */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid #E9ECEF;
+}
+
+.site-header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo img {
+  height: 48px;
+}
+
+/* Navigation */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #212529; /* Dark text */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li.current-menu-item a {
+  color: #5227CC; /* Primary hover */
+}
+
+/* CTA Button */
+.btn-primary {
+  background: #5227CC;
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #5227CC;
+}

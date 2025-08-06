@@ -1,0 +1,19 @@
+/*
+Theme Name: Khass Theme
+Theme URI: http://localhost/khass-marketing-website/
+Author: Hassan Jamshaid
+Author URI: https://www.hassanjamshaid.com/
+Description: Custom WordPress theme for Khaas Marketing website.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: khaas
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Outfit', sans-serif;
+}
+
+
