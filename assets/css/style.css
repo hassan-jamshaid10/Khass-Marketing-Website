@@ -1,52 +1,76 @@
-/* Reset + Base */
-
-
-/* Header Styling */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
   background: #fff;
-  padding: 1rem 2rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
-  border-bottom: 1px solid #E9ECEF;
+  border-bottom: 2px solid #E9ECEF;
+  width: 100%;
 }
 
-.site-header .container {
+.header-container {
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  padding: 0.6rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
+  gap: 1rem;
 }
-
-/* Logo */
 .logo img {
-  height: 48px;
+  height: 48px;     /* was 40px */
+  max-height: 48px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
-/* Navigation */
+
+
+/* Centering nav by making it in center column */
+.main-nav {
+  justify-self: center;
+}
+
+/* Navigation links */
 .nav-links {
   display: flex;
   list-style: none;
   gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li a {
   text-decoration: none;
-  color: #212529; /* Dark text */
-  font-weight: 500;
-  transition: color 0.3s ease;
+  color: #212529;
+  font-weight: 600;                /* Match CTA */
+  transition: all 0.3s ease;
+  padding: 0.6rem 1.4rem;          /* Match CTA size */
+  border-radius: 50px;            /* Match CTA shape */
+  display: inline-flex;           /* Align center vertically */
+  align-items: center;
+  line-height: 1;                 /* Avoid vertical spacing issues */
 }
+
 
 .nav-links li a:hover,
 .nav-links li.current-menu-item a {
-  color: #5227CC; /* Primary hover */
+  background-color: #7219A3;
+  color: #fff;
+}
+
+/* CTA and toggle menu */
+.right-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
 }
 
 /* CTA Button */
 .btn-primary {
-  background: #5227CC;
+  background: #7219A3;
   color: #fff;
   padding: 0.6rem 1.4rem;
   border-radius: 50px;
@@ -56,8 +80,91 @@
   align-items: center;
   gap: 0.5rem;
   transition: background 0.3s ease;
+  white-space: nowrap;
 }
 
 .btn-primary:hover {
-  background: #5227CC;
+  background: #7219A3;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.menu-toggle span {
+  width: 20px;
+  height: 2px;
+  background-color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .header-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "logo menu"
+      "nav nav";
+    row-gap: 1rem;
+  }
+
+  .logo {
+    grid-area: logo;
+  }
+
+  .right-controls {
+    grid-area: menu;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  /* ✅ FIXED NAV TOGGLE VISIBILITY */
+  #main-nav {
+    grid-area: nav;
+    justify-self: center;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #main-nav.open {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .desktop-hide {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Default hide mobile CTA */
+.desktop-hide {
+  display: none;
 }
