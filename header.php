@@ -18,6 +18,10 @@
 <body <?php body_class(); ?>>
 
 <?php
-// ✅ Load the actual site header markup
+// ✅ Load the site header markup
 get_template_part('template-parts/site-header');
+
+// ✅ Load the hero section here
+get_template_part('template-parts/hero');
+
 ?>
