@@ -63,3 +63,48 @@ function enqueue_aos_scripts() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_aos_scripts');
 
+function hassan_register_blog_pattern() {
+    register_block_pattern(
+      'hassan/custom-blog-posts',
+      array(
+        'title' => __('Custom Blog Posts Grid', 'hassan'),
+        'description' => _x('Displays a styled grid of recent blog posts using custom layout.', 'Block pattern description', 'hassan'),
+        'categories' => array('featured'),
+        'content' => '
+  <!-- wp:group {"className":"container"} -->
+  <div class="container">
+    <h2 class="section-heading">All Posts</h2>
+  
+    <!-- wp:query {"queryId":1,"query":{"perPage":5,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date"}} -->
+    <div class="posts-grid wp-block-query">
+      <!-- wp:post-template -->
+        <!-- wp:group {"className":"post-card","layout":{"type":"constrained"}} -->
+        <div class="post-card" data-aos="fade-up">
+          <!-- wp:post-featured-image {"sizeSlug":"medium_large"} /-->
+          <!-- wp:group {"className":"post-info"} -->
+          <div class="post-info">
+            <!-- wp:post-terms {"term":"category"} /-->
+            <!-- wp:post-title {"level":3, "isLink":true} /-->
+            <!-- wp:post-excerpt {"moreText":"...","excerptLength":25} /-->
+          </div>
+          <!-- /wp:group -->
+        </div>
+        <!-- /wp:group -->
+      <!-- /wp:post-template -->
+    </div>
+    <!-- /wp:query -->
+  
+    <!-- wp:query-pagination -->
+    <div class="pagination">
+      <!-- wp:query-pagination-previous {"label":"< Prev"} /-->
+      <!-- wp:query-pagination-next {"label":"Next >"} /-->
+    </div>
+    <!-- /wp:query-pagination -->
+  </div>
+  <!-- /wp:group -->
+  '
+      )
+    );
+  }
+  add_action('init', 'hassan_register_blog_pattern');
+  
