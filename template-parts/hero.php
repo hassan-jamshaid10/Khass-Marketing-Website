@@ -14,10 +14,8 @@
   <div class="hero-vector">
   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-graphic-transparent.svg" alt="Hero Vector" />
 </div>
-
-
 </section>
-
+<!-- <---------------------------------->
 <section class="services-section">
   <div class="container">
     <div class="services-heading-wrapper" data-aos="fade-right">
