@@ -23,7 +23,5 @@
 // ✅ Load the site header markup
 get_template_part('template-parts/site-header');
 
-// ✅ Load the hero section here
-get_template_part('template-parts/hero');
 
 ?>
