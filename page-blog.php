@@ -91,5 +91,7 @@ get_header();
     </div>
   </div>
 </section>
+
+
 <!-- BLOG PAGE END -->
 <?php get_footer(); ?>
