@@ -81,3 +81,54 @@
     </div>
   </div>
 </section>
+
+
+<section class="stats-section" data-aos="fade-up">
+  <h2 class="stats-title">Unlock Revenue Growth for Your Business</h2>
+
+  <div class="stats-row">
+    <!-- Left Column: 2x2 Grid -->
+    <div class="stats-column small-stats">
+      <div class="stat-box" data-aos="fade-up" data-aos-delay="100">
+        <h3>130<sup>+</sup></h3>
+        <p>Happy Clients</p>
+      </div>
+      <div class="stat-box" data-aos="fade-up" data-aos-delay="200">
+        <h3>15<sup>+</sup></h3>
+        <p>Experience</p>
+      </div>
+      <div class="stat-box" data-aos="fade-up" data-aos-delay="300">
+        <h3>90<sup>+</sup></h3>
+        <p>Successful Projects</p>
+      </div>
+      <div class="stat-box" data-aos="fade-up" data-aos-delay="400">
+        <h3>100<sup>%</sup></h3>
+        <p>Passion</p>
+      </div>
+    </div>
+
+    <!-- Right Column: Large Box -->
+    <div class="stat-box large-box" data-aos="fade-left" data-aos-delay="500">
+      <h4>Customized Strategies</h4>
+      <p>
+        We craft bespoke marketing strategies aligned precisely with your brand’s vision and goals — ensuring every campaign connects, converts, and delivers lasting impact.
+      </p>
+    </div>
+  </div>
+
+  <!-- Second Row: 2 Large Boxes -->
+  <div class="stats-row bottom-row">
+    <div class="stat-box large-box" data-aos="fade-up" data-aos-delay="600">
+      <h4>Holistic Approach</h4>
+      <p>
+        Our comprehensive services cover everything from brand building to sales optimization. We provide a seamless and integrated experience for all your digital marketing needs.
+      </p>
+    </div>
+    <div class="stat-box large-box" data-aos="fade-up" data-aos-delay="700">
+      <h4>Expert Team</h4>
+      <p>
+        Our team consists of experienced professionals dedicated to driving your brand’s success. We bring industry expertise and a passion for innovation to every project.
+      </p>
+    </div>
+  </div>
+</section>

@@ -195,7 +195,7 @@
 
 .gradient-text {
   font-size: 2.8rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
   background: linear-gradient(
     90deg,
@@ -360,8 +360,8 @@
 .footer {
   background: linear-gradient(to right, #ddd, #C06BE6);
   color: #222;
-  font-family: 'Segoe UI', sans-serif;
-  padding: 40px 20px 20px;
+  font-family: 'outfit', sans-serif;
+  padding: 40px 20px ;
   position: relative;
   z-index: 10;
 }
@@ -479,4 +479,195 @@
   margin-top: 40px;
   font-size: 13px;
   color: #333;
+}
+
+
+/* About */
+
+.who-we-are {
+  padding: 80px 20px;
+}
+
+.who-we-are .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.who-we-are-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.text-box {
+  flex: 1;
+  min-width: 250px;
+}
+
+.text-box .accent-line {
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(to right, #00c3ff, #9b2fc4);
+  border: none;
+  margin-bottom: 10px;
+}
+
+.text-box h2 {
+  color: #6B1E8C;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.text-box p {
+  color: #777;
+  font-size: 16px;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+.image-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-box img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #e6f7ff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-vector {
+  position: absolute;
+  bottom: -2100px; /* move it 50px lower */
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  line-height: 0;
+}
+
+
+.about-vector img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* HOME page 3rd comp */
+.stats-section {
+  margin-top: 80px;
+  padding: 4rem 1rem;
+  font-family: 'Outfit', sans-serif;
+  background: transparent;
+  text-align: center;
+}
+
+.stats-title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 6rem;
+  color: #000;
+}
+
+/* ROW 1: Two Columns Layout */
+.stats-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  align-items: stretch;
+}
+
+/* LEFT COLUMN: 2x2 Grid */
+.stats-column.small-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  height: 100%;
+}
+
+/* RIGHT COLUMN BOX */
+.stats-row > .large-box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ROW 2: Two Large Boxes */
+.stats-row.bottom-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* BOX STYLES */
+.stat-box {
+  background-color: #2e2f31;
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.stat-box h3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.stat-box p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.stat-box sup {
+  font-size: 1.2rem;
+  vertical-align: super;
+}
+
+.large-box h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+
+.large-box p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsive Fixes */
+@media (max-width: 900px) {
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-row > .large-box {
+    margin-top: 2rem;
+  }
+
+  .stats-column.small-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-column.small-stats {
+    grid-template-columns: 1fr;
+  }
 }
