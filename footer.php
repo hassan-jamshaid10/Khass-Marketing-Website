@@ -1,7 +1,10 @@
 <?php
-get_template_part('template-parts/footer/site-footer');
+get_template_part('template-parts/site-footer');
 wp_footer();?>
 
+<script>
+  AOS.init();
+</script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const toggle = document.getElementById('menu-toggle');

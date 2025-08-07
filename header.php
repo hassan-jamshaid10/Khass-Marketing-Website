@@ -11,6 +11,8 @@
 
   <!-- ✅ Optional: force-load custom CSS in case enqueue fails -->
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
   <?php wp_head(); ?>
 </head>

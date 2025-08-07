@@ -51,3 +51,15 @@ function khaas_enqueue_assets() {
     }
 }
 add_action('wp_enqueue_scripts', 'khaas_enqueue_assets');
+
+function enqueue_aos_scripts() {
+    wp_enqueue_style('aos-css', 'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css');
+    wp_enqueue_script('aos-js', 'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js', [], null, true);
+
+    // Initialize AOS in the footer
+    add_action('wp_footer', function () {
+        echo "<script>AOS.init({ once: true, duration: 800, offset: 100 });</script>";
+    });
+}
+add_action('wp_enqueue_scripts', 'enqueue_aos_scripts');
+
