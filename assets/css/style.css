@@ -510,31 +510,53 @@
 
 .featured-label {
   font-size: 0.9rem;
-  font-weight: bold;
-  color: #888;
+  font-weight: 700;       /* Keep bold */
+  color: #1A1A1A;          /* Change from #888 to black/dark gray */
   text-transform: uppercase;
 }
+
+p.featured-meta span.featured-author {
+  color: #7C00FF !important;
+  font-weight: 500;
+}
+
 
 .featured-meta {
   font-size: 0.85rem;
   color: #999;
 }
 
+.featured-meta .featured-author {
+  color: #7C00FF !important;
+  font-weight: 500;
+}
+
+
+
 .featured-description {
   margin: 1rem 0;
   color: #444;
   font-size: 1rem;
   max-width: 90%;
+  margin-bottom: 2rem;
 }
 
 .btn-read-more {
   background: #00C2FF;
   color: white;
-  padding: 0.6rem 1.4rem;
-  border-radius: 50px;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 60px;
   font-weight: bold;
   text-decoration: none;
   display: inline-block;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-read-more:hover {
+  background-color: #009fcc; /* Slightly darker blue on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
 }
 
 .featured-image {
@@ -717,4 +739,16 @@
     padding: 1.4rem;
   }
 }
+
+/* 🛠 Fix: Expand featured post container to match Figma width */
+
+/* 🔄 Fix width to match Figma */
+.blog-featured-post .container,
+.blog-all-posts .container {
+  max-width: 1440px; /* or 1280px depending on your Figma width */
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 
