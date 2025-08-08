@@ -481,6 +481,14 @@
   color: #333;
 }
 
+
+
+
+
+
+
+
+
 /* Blog*/
 
 /* 🔹 FEATURED BLOG POST SECTION */
@@ -607,6 +615,35 @@ p.featured-meta span.featured-author {
   z-index: 2;
   position: relative;
 }
+
+/* Make "All posts" match Figma scale */
+.blog-all-posts .section-heading{
+  font-size: clamp(34px, 4.6vw, 64px); /* was 2rem */
+  line-height: 1.1;
+  font-weight: 600;
+  margin-bottom: 12px; /* keeps the rule line close */
+}
+
+/* Post title size (right column) */
+.blog-all-posts .post-info h3{
+  font-size: clamp(24px, 2.4vw, 42px); /* was default browser size */
+  line-height: 1.18;
+  font-weight: 700;
+  margin: 10px 0 14px;
+}
+
+/* Optional: body copy under titles feels small—nudge it up a bit */
+.blog-all-posts .post-info p{
+  font-size: clamp(15px, 1.05vw, 18px);
+  line-height: 1.6;
+}
+
+/* Optional: category label (“STARTUP”, “BUSINESS”) */
+.blog-all-posts .post-info .post-category{
+  font-size: 13px;
+  letter-spacing: .14em;
+}
+
 
 /* 🔄 FIX: Make post cards appear in full width rows */
 .posts-grid {
@@ -881,29 +918,31 @@ p.featured-meta span.featured-author {
 
 /* BOX STYLES */
 .stat-box {
-  background-color: #2e2f31;
+  background-color: #3F4143; /* exact Figma colour */
   color: white;
-  padding: 2rem;
+  padding: 3rem 2.5rem;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: left;
+  align-items: center;      /* centers horizontally */
+  justify-content: center;  /* centers vertically */
+  text-align: center;       /* centers text content */
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   height: 100%;
   box-sizing: border-box;
 }
 
 .stat-box h3 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 500;
   margin: 0;
 }
 
 .stat-box p {
-  margin-top: 0.5rem;
-  font-size: 1rem;
+  margin-top: 0.8rem;
+  font-size: 1.05rem;
 }
+
 
 .stat-box sup {
   font-size: 1.2rem;
@@ -920,6 +959,36 @@ p.featured-meta span.featured-author {
   font-size: 0.95rem;
   line-height: 1.6;
 }
+
+/* Make ONLY the big cards left-aligned like Figma */
+.stat-box.large-box {
+  align-items: flex-start;     /* left edge */
+  justify-content: center;     /* vertical middle inside the card */
+  text-align: left;            /* left text */
+  padding: 3rem 3rem;          /* generous padding like Figma */
+}
+
+/* Typography & spacing inside the big cards */
+.stat-box.large-box h4 {
+  font-size: 2rem;             /* bigger title like Figma */
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+}
+
+.stat-box.large-box p {
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 48ch;             /* nicer reading width */
+  margin: 0;
+}
+
+/* Keep small cards centered (explicit, just in case) */
+.stats-column.small-stats .stat-box {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 
 /* Responsive Fixes */
 @media (max-width: 900px) {
@@ -940,4 +1009,1744 @@ p.featured-meta span.featured-author {
   .stats-column.small-stats {
     grid-template-columns: 1fr;
   }
+}
+
+/* Colors to match Figma */
+.stats-section .stat-box h3,
+.stats-section .stat-box h4 {
+  color: #FFFFFF;            /* headings/number = pure white */
+  font-weight: 500;
+}
+
+.stats-section .stat-box p {
+  color: rgba(255, 255, 255, 0.65);  /* subtext = soft light gray */
+  /* If you prefer a solid hex close to your Figma swatch:
+     color: #B8C0C9; */
+}
+
+/* (keeps your large cards left-aligned while using the same color system) */
+.stats-section .stat-box.large-box h4 { color: #FFFFFF; }
+.stats-section .stat-box.large-box p  { color: rgba(255,255,255,.65); }
+
+/* Position/flip the vector so it goes top-left → bottom-right */
+.stats-section{
+  position: relative;
+  overflow: hidden;      /* clip vector1 to this section */
+  isolation: isolate;    /* its own stacking context */
+  margin-bottom: 120px;  /* ensure space before next section */
+}
+
+.stats-section .stats-vector{
+  position: absolute;
+  inset: -120px -120px -120px -120px; /* bleed inside but still clipped */
+  z-index: 0;
+  pointer-events: none;
+  line-height: 0;
+}
+
+.stats-section .stats-vector img{
+  width: 140%;
+  height: auto;
+  transform: scaleX(-1); /* TL → BR */
+  opacity: 1;
+}
+
+/* Keep all real content above the vector */
+.stats-section > *:not(.stats-vector) {
+  position: relative;
+  z-index: 1;
+}
+
+/* Extra guard so cards never get cropped by shadows */
+.stats-row.bottom-row { margin-bottom: 2rem; }
+
+/* Heading like Figma */
+.stats-title {
+  font-size: 2.6rem;         /* bump if you want it larger */
+  font-weight: 500;
+  line-height: 1.25;
+  color: #000;               /* Figma heading color */
+  text-align: center;
+  margin: 0 0 3rem;
+}
+
+@media (max-width: 900px) {
+  .stats-section .stats-vector { inset: -80px -80px; }
+  .stats-title { font-size: 2rem; margin-bottom: 2rem; }
+}
+
+
+/* --- CTA layout wrapper --- */
+.cta-section{
+  position: relative;
+  isolation: isolate;    /* prevents previous section’s vector from overlapping */
+  margin-top: 0;         /* you can increase if you want more gap */
+}
+
+
+/* cyan vector (reuse your vector1.png) — top-left to bottom-right */
+.cta-vector{
+  position:absolute;
+  inset:-160px -120px auto -120px;
+  z-index:0;
+  pointer-events:none;
+  line-height:0;
+}
+.cta-vector img{
+  width:140%;
+  height:auto;
+  transform: scaleX(-1);     /* flips to run TL → BR */
+  opacity:1;
+}
+
+/* --- Card --- */
+.cta-card{
+  position:relative;
+  z-index:1;
+  margin:0 auto;
+  max-width: 1220px;
+  min-height: 420px;
+  background:#1f2021;        /* very dark charcoal like Figma */
+  border-radius: 26px;
+  overflow:hidden;
+  box-shadow: 0 14px 30px rgba(0,0,0,.18);
+}
+
+/* neon lines canvas */
+.cta-lines{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+}
+
+/* centered content */
+.cta-content{
+  position:relative;
+  z-index:2;
+  height:100%;
+  padding: 84px 40px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  gap: 28px;
+}
+
+.cta-content h2{
+  margin:0;
+  font-weight:400;
+  font-size: clamp(34px, 4.6vw, 56px);  /* matches the Figma scale */
+  line-height:1.2;
+  letter-spacing:.2px;
+  color:#F1F3F5;
+}
+
+.cta-link{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-size: clamp(16px, 1.6vw, 20px);
+  color:#EDEDED;
+  text-decoration:none;
+  opacity:.9;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.cta-link .arr{font-size:1.2em; line-height:1;}
+.cta-link:hover{opacity:1; transform: translateY(-1px);}
+
+/* responsive tweaks */
+@media (max-width: 780px){
+  .cta-card{min-height: 360px;}
+  .cta-content{padding:64px 24px;}
+}
+
+.stats-cta-wrap{
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* the diagonal image must be absolute so it doesn't push content */
+.stats-cta-wrap .diagonal-vector{
+  position: absolute;
+  inset: -160px -120px -160px -120px; /* bleed a bit */
+  z-index: 0;
+  pointer-events: none;
+  line-height: 0;
+}
+.stats-cta-wrap .diagonal-vector img{
+  width: 160%;
+  height: auto;
+  transform: scaleX(-1); /* TL → BR */
+  display: block;
+}
+
+/* make sure sections render above the image */
+.stats-cta-wrap > section{
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================================================
+   FAQ + TESTIMONIALS  (Figma-matched, scoped, clean)
+   ========================================================= */
+
+/* ---------- Section wrapper ---------- */
+.faq-testimonials{
+  position: relative;                  /* sits above the diagonal vector */
+  z-index: 1;
+  padding: 96px 48px 140px;            /* roomy like Figma */
+  font-family: 'Outfit', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #0d0d0d;
+}
+
+/* thin cyan rim at the very top (from the mock) */
+.faq-testimonials .faq-top-accent{
+  position: absolute;
+  top: 0; left: 24px; right: 24px;
+  height: 56px;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  border: 1.5px solid rgba(0,200,255,.35);
+  border-bottom: none;
+  pointer-events: none;
+}
+
+/* inner max width aligns with your grid */
+.faq-testimonials .faq-inner{ max-width: 1200px; margin: 0 auto; }
+
+/* ---------- FAQ heading ---------- */
+.faq-testimonials .faq-title{
+  margin: 0 0 56px;
+  text-align: center;
+  font-weight: 800;                     /* heavy, like Figma */
+  letter-spacing: .2px;
+  font-size: clamp(36px, 4vw, 56px);
+  color: #0E0E0E;
+}
+
+/* ---------- FAQ list (typography locked to Figma) ---------- */
+.faq-testimonials .faq-list{
+  list-style: none;
+  margin: 0 auto 96px;                  /* gap before testimonial */
+  padding: 0;
+  max-width: 1100px;                    /* narrower column */
+}
+
+.faq-testimonials .faq-item{ margin: 0; }
+
+.faq-testimonials .faq-q{
+  /* IMPORTANT: do not change these two – they match the Figma scale */
+  font-size: clamp(20px, 2.2vw, 28px);
+  padding: 28px 0;
+
+  width: 100%;
+  background: transparent;
+  border: 0;
+  text-align: left;
+  line-height: 1.35;
+  color: #171717;
+  font-weight: 500;
+  cursor: pointer;                      /* feels clickable even if static */
+  position: relative;                   /* used for the hover underline */
+  transition: color .25s ease;
+}
+
+/* the thin separators between items */
+.faq-testimonials .faq-item + .faq-item .faq-q{ border-top: 1px solid rgba(0,0,0,.12); }
+.faq-testimonials .faq-item:last-child .faq-q{ border-bottom: 1px solid rgba(0,0,0,.12); }
+
+/* Figma-style hover line, without changing size/spacing */
+.faq-testimonials .faq-q::after{
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  bottom: -1px;                         /* sits over the divider line */
+  height: 2px;
+  background: var(--neon-cyan, #0aa9c0);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s ease;
+}
+
+.faq-testimonials .faq-q:hover{
+  color: var(--neon-cyan, #0aa9c0);
+}
+.faq-testimonials .faq-q:hover::after{
+  transform: scaleX(1);
+}
+
+/* =========================================================
+   TESTIMONIAL (portrait card with 4 stacked sheets)
+   ========================================================= */
+
+.faq-testimonials .testi-wrap{
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.faq-testimonials .testi-heading{
+  margin: 0 0 28px;
+  font-weight: 300;                     /* light, Figma vibe */
+  color: #4a4a4a;
+  font-size: clamp(26px, 2.6vw, 38px);
+  line-height: 1.45;
+}
+
+/* Card stack container (portrait proportions) */
+.faq-testimonials .testi-stack{
+  position: relative;
+  width: 420px;                         /* narrow */
+  height: 560px;                        /* tall */
+  margin: 0 auto 20px;
+  perspective: 1000px;                  /* tiny depth for hover lift */
+}
+
+/* shared base style – deliberately flat (Figma look) */
+.faq-testimonials .testi-stack .card{
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.03);
+  box-shadow: none;
+}
+
+/* four sheets to the RIGHT, stepped greys (no ground shadow) */
+.faq-testimonials .testi-stack .card-shadow-4{ transform: translate(12px, 10px); background: #F2F2F2; z-index: 1; }
+.faq-testimonials .testi-stack .card-shadow-3{ transform: translate(26px, 18px); background: #E8E8E8; z-index: 2; }
+.faq-testimonials .testi-stack .card-shadow-2{ transform: translate(40px, 26px); background: #DEDEDE; z-index: 3; }
+.faq-testimonials .testi-stack .card-shadow-1{ transform: translate(54px, 34px); background: #D4D4D4; z-index: 4; }
+
+/* top card: very subtle ambient only */
+.faq-testimonials .testi-stack .card-main{
+  z-index: 10;
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 8px 18px rgba(0,0,0,.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform .28s ease, box-shadow .28s ease; /* micro motion */
+}
+.faq-testimonials .testi-stack:hover .card-main{
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0,0,0,.14);
+}
+
+/* back sheets nudge a touch on hover (parallax feel) */
+.faq-testimonials .testi-stack .card-shadow-4,
+.faq-testimonials .testi-stack .card-shadow-3,
+.faq-testimonials .testi-stack .card-shadow-2,
+.faq-testimonials .testi-stack .card-shadow-1{
+  transition: transform .28s ease;
+}
+.faq-testimonials .testi-stack:hover .card-shadow-4{ transform: translate(14px, 10px); }
+.faq-testimonials .testi-stack:hover .card-shadow-3{ transform: translate(28px, 18px); }
+.faq-testimonials .testi-stack:hover .card-shadow-2{ transform: translate(42px, 26px); }
+.faq-testimonials .testi-stack:hover .card-shadow-1{ transform: translate(56px, 34px); }
+
+.faq-testimonials .testi-stack .card-body{
+  padding: 32px 34px 0;
+  text-align: left;
+  color: #616161;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* footer chip — flat & light */
+.faq-testimonials .testi-stack .card-footer{
+  margin-top: auto;
+  padding: 14px 34px 16px;
+  background: #F6F6F6;
+  border-top: 1px solid rgba(0,0,0,.06);
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
+  text-align: left;
+  box-shadow: none;
+}
+.faq-testimonials .testi-stack .card-footer .name{ color:#777;  font-size:13px;   font-weight:400; }
+.faq-testimonials .testi-stack .card-footer .role{ color:#A6A6A6; font-size:12.5px; }
+
+/* dots under the card */
+.faq-testimonials .dots{
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 18px;
+}
+.faq-testimonials .dots span{
+  width: 42px; height: 5px;
+  background: #ececec;
+  border-radius: 6px;
+}
+
+/* ---------- Responsive guards (keep portrait proportions) ---------- */
+@media (max-width: 900px){
+  .faq-testimonials .testi-stack{ width: 360px; height: 520px; }
+}
+@media (max-width: 520px){
+  .faq-testimonials{ padding: 72px 20px 110px; }
+  .faq-testimonials .faq-list{ margin-bottom: 72px; }
+  .faq-testimonials .testi-stack{ width: 86vw; height: 520px; }
+}
+
+/* =========================================================
+   Niceties for other sections (kept simple)
+   ========================================================= */
+
+/* Large stats cards lift a little on hover */
+.stat-box.large-box{
+  transition: transform .28s ease, box-shadow .28s ease, filter .28s ease;
+}
+.stat-box.large-box:hover,
+.stat-box.large-box:focus-within{
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(0,0,0,.18);
+  filter: brightness(1.02);
+}
+
+/* Small stats cards – subtle lift */
+.stats-column.small-stats .stat-box{
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.stats-column.small-stats .stat-box:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,.14);
+}
+
+/* Focus ring for keyboard users */
+.stat-box.large-box:focus-within{
+  outline: 2px solid rgba(0,200,255,.45);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   FIX: Add clear breathing room between FAQ and Testimonial
+   ========================================================= */
+
+/* Bigger, guaranteed gap below the FAQ list (desktop first) */
+.faq-testimonials .faq-list{
+  margin-bottom: 140px !important;  /* was 96px; increase to match Figma */
+}
+
+/* On very large screens give it a touch more */
+@media (min-width: 1400px){
+  .faq-testimonials .faq-list{
+    margin-bottom: 160px !important;
+  }
+}
+
+/* On tablets/phones keep it comfortable without wasting space */
+@media (max-width: 900px){
+  .faq-testimonials .faq-list{
+    margin-bottom: 110px !important;
+  }
+}
+@media (max-width: 520px){
+  .faq-testimonials .faq-list{
+    margin-bottom: 96px !important;
+  }
+}
+
+/* Nudge the testimonial block itself down a bit so the heading
+   never hugs the FAQ divider even if another stylesheet zeroes margins */
+.faq-testimonials .testi-wrap{
+  margin-top: 16px; /* gentle offset below the FAQ block */
+}
+
+/* Make sure the underline on the last FAQ item doesn't eat into the gap */
+.faq-testimonials .faq-list .faq-item:last-child .faq-q{
+  padding-bottom: 32px;  /* gives the underline some space inside the list */
+}
+.faq-testimonials .faq-list .faq-item:last-child .faq-q::after{
+  bottom: 0;             /* keep underline inside the list, not below it */
+}
+
+/* More gap between CTA and FAQ, to match Figma */
+.stats-cta-wrap .faq-testimonials{
+  margin-top: clamp(100px, 12vw, 160px);
+}
+
+
+/* =========================
+   CTA hover effect (same as stats large-box)
+   ========================= */
+.cta-card {
+  transition: transform .28s ease, box-shadow .28s ease, filter .28s ease;
+}
+
+.cta-card:hover,
+.cta-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(0,0,0,.18);
+  filter: brightness(1.02);
+}
+
+/* Optional: keyboard accessibility outline */
+.cta-card:focus-within {
+  outline: 2px solid rgba(0,200,255,.45);
+  outline-offset: 3px;
+}
+
+/* Initial hidden state */
+.cta-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform .28s ease, box-shadow .28s ease, filter .28s ease;
+  animation: ctaFadeIn 0.8s ease-out forwards;
+  animation-delay: 0.4s; /* delay before it starts */
+}
+
+/* Hover effect same as stats */
+.cta-card:hover,
+.cta-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(0,0,0,.18);
+  filter: brightness(1.02);
+}
+
+@keyframes ctaFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* same hover lift you used on stats */
+.cta-card{
+  transition: transform .28s ease, box-shadow .28s ease, filter .28s ease;
+}
+.cta-card:hover,
+.cta-card:focus-within{
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(0,0,0,.18);
+  filter: brightness(1.02);
+}
+
+/* draw-in animation for the purple lines after AOS applies */
+.cta-card .line-purple{
+  stroke-dasharray: 1600;
+  stroke-dashoffset: 1600;
+  opacity: 0;
+}
+.aos-animate .cta-card .line-purple{
+  animation: ctaLineDraw 1.2s ease-out forwards;
+  animation-delay: .35s; /* start after the card begins to appear */
+}
+@keyframes ctaLineDraw{
+  0%   { stroke-dashoffset: 1600; opacity: .2; }
+  100% { stroke-dashoffset: 0;    opacity: 1; }
+}
+
+/* === CTA height tuning to match Figma === */
+.cta-card{
+  /* give it more vertical presence on desktop */
+  min-height: clamp(520px, 58vh, 680px);
+}
+
+/* give the content some breathing room so the headline sits nicely */
+.cta-content{
+  padding: clamp(72px, 10vh, 120px) 40px;
+}
+
+/* adjust for tablet */
+@media (max-width: 1024px){
+  .cta-card{ min-height: clamp(480px, 52vh, 600px); }
+}
+
+/* adjust for mobile */
+@media (max-width: 780px){
+  .cta-card{ min-height: 420px; }
+  .cta-content{ padding: 64px 24px; }
+}
+
+/* Center CTA content */
+.cta-card {
+  display: flex;
+  align-items: center;      /* vertical center */
+  justify-content: center;  /* horizontal center */
+  text-align: center;       /* keep text centered */
+  flex-direction: column;   /* stack heading & link */
+}
+
+/* H2 + underline exactly like the mock */
+.blog-all-posts .section-heading {
+  position: relative;
+  margin: 0 0 90px; /* bigger bottom gap */
+  font-weight: 500;
+}
+
+.blog-all-posts .section-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -16px; /* gap between text & line */
+  height: 1px;
+  background: rgba(0, 0, 0, .16);
+}
+
+
+
+
+
+/* =========================
+   MOBILE-ONLY BASELINE FIXES
+   Add at the very end of your CSS
+   ========================= */
+@media (max-width: 520px) {
+  /* 1) Featured block — tighter & centered like Figma */
+  .blog-featured-post { padding: 56px 0 28px; }
+  .featured-text, .featured-image { max-width: 100%; text-align: center; }
+  .featured-text h2 { font-size: clamp(22px, 6vw, 28px); line-height: 1.25; margin: 10px 0 8px; }
+  .featured-description { max-width: 100%; font-size: 15px; margin: 10px auto 18px; }
+  .featured-image img { max-width: 320px; margin: 0 auto; display: block; }
+
+  /* 2) “All posts” heading + underline spacing */
+  .blog-all-posts { padding: 48px 0 56px; }
+  .blog-all-posts .container { padding-top: 24px; padding-bottom: 48px; }
+  .blog-all-posts .section-heading { 
+    text-align: left; 
+    margin: 0 0 56px; 
+    font-weight: 600; 
+    font-size: clamp(24px, 7vw, 30px);
+  }
+  .blog-all-posts .section-heading::after { bottom: -12px; }
+
+  /* 3) Hide or soften the blue vector that overlaps text on phones */
+  .vector-background { display: none; } /* If Figma shows it, change to: opacity:.25; transform: translateY(-20px) scale(1.1); */
+
+  /* 4) Post cards — ensure image ratio + comfy padding */
+  .post-card { gap: 0; }
+  .post-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;   /* keeps thumbnails consistent */
+    object-fit: cover;
+    object-position: center;
+  }
+  .post-info {
+    width: 100%;
+    padding: 14px 12px 18px;
+  }
+  .blog-all-posts .post-info h3 { 
+    font-size: clamp(18px, 5.4vw, 22px);
+    line-height: 1.25;
+    margin: 8px 0 8px;
+  }
+  .blog-all-posts .post-info p { font-size: 14.5px; line-height: 1.55; }
+  .blog-all-posts .post-info .post-category { font-size: 11px; letter-spacing: .12em; }
+
+  /* 5) Pagination touch targets */
+  .pagination { margin-top: 36px; }
+  .pagination a { padding: 8px 10px; font-size: 14px; }
+
+  /* 6) Stats section — single column + smaller numbers */
+  .stats-section { margin-top: 48px; padding: 36px 0; }
+  .stats-title { font-size: 22px; margin-bottom: 28px; }
+  .stats-row { grid-template-columns: 1fr; gap: 16px; margin: 0 0 20px; }
+  .stats-column.small-stats { grid-template-columns: 1fr; gap: 14px; }
+  .stat-box { padding: 20px 16px; border-radius: 12px; }
+  .stat-box h3 { font-size: 28px; }
+  .stat-box p { font-size: 14px; }
+  .stat-box.large-box { align-items: flex-start; text-align: left; padding: 22px 18px; }
+  .stat-box.large-box h4 { font-size: 18px; }
+  .stat-box.large-box p { font-size: 14.5px; line-height: 1.55; }
+
+  /* 7) Diagonal vector behind stats/cta — reduce bleed */
+  .stats-cta-wrap .diagonal-vector { inset: -60px -40px -80px -40px; }
+  .stats-cta-wrap .diagonal-vector img { width: 140%; }
+
+  /* 8) CTA card — tighter vertical rhythm */
+  .cta-card { min-height: 380px; }
+  .cta-content { padding: 48px 20px; gap: 18px; }
+  .cta-content h2 { font-size: clamp(22px, 6.6vw, 28px); line-height: 1.25; }
+  .cta-link { font-size: 15px; }
+
+  /* 9) FAQ/Testimonial — preserve portrait card proportions but fit viewport */
+  .faq-testimonials { padding: 56px 20px 84px; }
+  .faq-testimonials .faq-title { font-size: clamp(22px, 6.6vw, 28px); margin-bottom: 28px; }
+  .faq-testimonials .faq-list { margin-bottom: 72px !important; }
+  .faq-testimonials .faq-q { font-size: 18px; padding: 18px 0; }
+  .faq-testimonials .testi-stack { width: 88vw; height: 480px; }
+
+  /* 10) Container side padding (global mobile gutters) */
+  .blog-featured-post .container,
+  .blog-all-posts .container {
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  /* Change order so text comes first on mobile */
+  .featured-wrapper {
+    flex-direction: column;
+    align-items: flex-start; /* left align */
+  }
+
+  /* Ensure text block full width and left aligned */
+  .featured-text {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  /* Make heading, meta, description, and button left aligned */
+  .featured-text h2,
+  .featured-label,
+  .featured-meta,
+  .featured-description,
+  .btn-read-more {
+    text-align: left;
+  }
+
+  /* Make button inline instead of centered */
+  .btn-read-more {
+    display: inline-block;
+  }
+
+  /* Image comes after text now */
+  .featured-image {
+    max-width: 100%;
+    text-align: left;
+  }
+}
+
+  /* === Featured Post: mobile exact layout + truly centered full-bleed image === */
+@media (max-width: 520px) {
+  /* use a single mobile gutter var so both sides stay equal */
+  :root { --mobile-gutter: 16px; }
+
+  .blog-featured-post .container {
+    padding-left: var(--mobile-gutter);
+    padding-right: var(--mobile-gutter);
+  }
+
+  /* order + let children stretch EXCEPT where we override */
+  .featured-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* image can be full width */
+  }
+
+  /* unwrap so we can re-order label/h2/meta/desc/button */
+  .featured-text {
+    display: contents;
+    text-align: left;
+  }
+
+  /* ORDER: label → image → h2 → meta → desc → button */
+  .featured-label {
+    order: 1;
+    display: block;
+    margin-bottom: 10px;
+    font-size: .85rem;
+    letter-spacing: 1.6px;
+  }
+
+  /* ✅ FULL-BLEED, CENTERED IMAGE (override desktop sizing/alignment) */
+  .featured-image {
+    order: 2;
+    margin-top: 12px;
+    /* expand over equal gutters and keep perfectly centered */
+    margin-left: calc(-1 * var(--mobile-gutter));
+    margin-right: calc(-1 * var(--mobile-gutter));
+    width: calc(100% + (2 * var(--mobile-gutter)));
+    max-width: none;        /* kill desktop cap */
+    flex: 0 0 auto;         /* don't let flex shrink it oddly */
+    text-align: initial;    /* override any right alignment */
+  }
+  .featured-image img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 16 / 10;  /* bump if you want it taller (try 16/9) */
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .featured-text h2 {
+    order: 3;
+    font-size: clamp(22px, 6vw, 26px);
+    line-height: 1.28;
+    font-weight: 600;
+    margin: 14px 0 8px;
+  }
+
+  .featured-meta {
+    order: 4;
+    font-size: .8rem;
+    margin: 0 0 8px;
+  }
+
+  .featured-description {
+    order: 5;
+    font-size: .95rem;
+    line-height: 1.55;
+    margin: 0 0 14px;
+    max-width: 36ch;
+  }
+
+  /* ✅ Button should NOT stretch */
+  .btn-read-more {
+    order: 6;
+    display: inline-flex;    /* keeps size to content */
+    align-self: flex-start;  /* prevents full-row stretch */
+    width: auto;             /* explicit */
+    max-width: none;
+    padding: .72rem 1.4rem;  /* slightly less wide per your note */
+    font-size: .98rem;
+    margin: 0 0 18px 0;
+  }
+
+  .blog-featured-post { padding: 40px 0 28px; }
+
+    /* === Typography scale like Figma === */
+  .featured-label {
+    font-size: 1.2rem;   /* was 0.85rem */
+    letter-spacing: 1.8px;
+    margin-bottom: 0px;
+  }
+
+  .featured-text h2 {
+    font-size: clamp(25px, 7vw, 32px);  /* bigger headline */
+    line-height: 1.3;
+    font-weight: 650;
+    margin: 0px 0 0px;
+  }
+
+  .featured-meta {
+    font-size: 0.9rem;    /* was 0.8rem */
+    margin-bottom: 0px;
+  }
+
+  .featured-description {
+    font-size: 1.2rem;      /* was 0.95rem */
+    line-height: 1.6;
+    max-width: 38ch;      /* allow a touch more width */
+    margin-bottom: 0px;
+  }
+
+  .btn-read-more {
+    font-size: 1rem;      /* slightly larger text on button */
+    padding: 0.8rem 1.5rem;
+  }
+
+}
+
+/* === MOBILE FIX: keep 2x2 grid for the small stats on phones === */
+@media (max-width: 520px) {
+  .stats-row { grid-template-columns: 1fr; } /* large cards stay full width */
+  .stats-column.small-stats {
+    grid-template-columns: 1fr 1fr;  /* 2 columns like Figma */
+    gap: 12px;                       /* tighter gaps like your mock */
+  }
+
+  /* compact padding so numbers look balanced */
+  .stats-column.small-stats .stat-box { 
+    padding: 20px 14px; 
+  }
+
+  /* large cards stack beneath the 2x2 grid (as in Figma) */
+  .stat-box.large-box { 
+    margin-top: 16px; 
+  }
+}
+
+/* === MOBILE FIX: reduce gap between Expert Team and CTA === */
+@media (max-width: 520px) {
+  /* Remove bottom margin from last stat card */
+  .stats-row.bottom-row .stat-box.large-box:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Pull CTA section closer */
+  .cta-section {
+    margin-top: 24px; /* was larger — adjust to match Figma */
+  }
+}
+
+/* === MOBILE: FAQ header cap + blue triangles === */
+/* === MOBILE: Figma-style FAQ cap + downward triangles === */
+@media (max-width: 520px) {
+  /* Keep FAQ on its own stacking layer so the cap sits above the blue stripe */
+  .faq-testimonials { position: relative; isolation: isolate; padding-top: 72px; }
+
+  /* Cap line: thicker stroke, big radius (pill corners), no bottom border */
+  .faq-testimonials .faq-top-accent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;                             /* taller arc = rounder ends */
+    border: 2px solid rgba(0,200,255,.65);    /* cyan stroke */
+    border-bottom: none;
+    border-radius: 999px 999px 0 0;           /* perfectly rounded corners */
+    background: transparent;
+    z-index: 2;
+    width: 100%;                                /* above the diagonal bg */
+  }
+
+  /* Pull the title closer to the cap so it touches like Figma */
+  .faq-testimonials .faq-title { margin-top: -20px; }
+
+  /* Triangle icons on the right, pointing DOWN */
+  .faq-testimonials .faq-q{
+    position: relative;
+    padding-right: 42px;                      /* room for the triangle */
+  }
+  .faq-testimonials .faq-q::before{
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0; height: 0;
+    border-top: 10px solid #0aa9c0;           /* ▼ down arrow */
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 0;
+    opacity: .95;
+  }
+
+   /* Add a straight cyan line at the bottom of the FAQ section */
+  .faq-testimonials::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px; /* thickness of the line */
+    background-color: rgba(0, 200, 255, 0.65); /* same cyan color as top */
+    border-radius: 0; /* ensure no rounded corners */
+    z-index: 2;
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  /* Increase service section heading and paragraph font size */
+  .services-section .service-item h3 {
+    font-size: 1.75rem;   /* was smaller, now ~20px */
+    line-height: 1.3;
+  }
+  .services-section .service-item p {
+    font-size: 1.35rem;   /* was ~14-15px, now ~15-16px */
+    line-height: 1.55;
+  }
+
+    /* Increase icon/logo size in services section */
+  .services-section .service-icon img {
+    width: 48px;   /* was likely ~32px-40px */
+    height: auto;  /* keep proportions */
+  }
+}
+
+@media (max-width: 520px) {
+  /* 1) Reduce space between post content and pagination */
+  .pagination {
+    margin-top: 20px; /* was bigger, now tighter */
+  }
+
+  /* 2) Increase size and weight of Prev/Next links */
+  .pagination a {
+    font-size: 1.05rem;  /* ~16–17px */
+    font-weight: 900;
+  }
+}
+
+@media (max-width: 520px) {
+  /* Remove bottom margin from last service item */
+  .services-section .service-item:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Reduce top margin of stats section */
+  .stats-section {
+    margin-top: 20px; /* was bigger, now tighter */
+  }
+}
+
+
+/* === DESKTOP: Increase size of Prev/Next links === */
+@media (min-width: 1025px) {
+  .pagination a {
+    font-size: 1.2rem;    /* ~19px */
+    font-weight: 600;     /* bolder for emphasis */
+  }
+}
+
+
+@media (min-width: 1025px) {
+
+  /* Increase service titles */
+  .services-section .service-item h3 {
+    font-size: 1.6rem;  /* ~25-26px */
+    line-height: 1.3;
+  }
+
+  /* Increase service descriptions */
+  .services-section .service-item p {
+    font-size: 1.05rem;  /* ~17px */
+    line-height: 1.6;
+  }
+
+  /* Increase service icons */
+  .services-section .service-icon img {
+    width: 40px;  /* bigger icons for desktop */
+    height: auto;
+  }
+}
+
+
+/* Desktop Mode FAQ Lines */
+@media (min-width: 1025px) {
+  /* Stretch top arc */
+  .faq-testimonials .faq-top-accent {
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 0; /* remove rounded ends if you want a sharp edge */
+  }
+}
+
+  /* Desktop Mode FAQ Lines */
+@media (min-width: 1025px) {
+  /* Stretch top arc but keep rounded ends */
+  .faq-testimonials .faq-top-accent {
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 999px 999px 0 0; /* keeps both ends rounded */
+  }
+
+  /* Add bottom straight line */
+  .faq-testimonials::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 200, 255, 0.65); /* same cyan as top */
+  }
+
+  /* Ensure positioning works */
+  .faq-testimonials {
+    position: relative;
+  }
+}
+
+/* === Testimonial card: let content fill the box (desktop + mobile) === */
+.faq-testimonials .testi-stack{
+  height: auto;                 /* hug content */
+}
+
+/* Only the MAIN card becomes normal flow; shadows stay absolute */
+.faq-testimonials .testi-stack .card-main{
+  position: relative;           /* was absolute */
+  inset: auto;                  /* cancel inset:0 */
+  height: auto;                 /* expand to content */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Comfortable padding like Figma, less empty bottom */
+.faq-testimonials .testi-stack .card-body{
+  padding: 28px 32px 18px;      /* reduce bottom padding */
+}
+
+/* Footer sits right after text, not forced to bottom */
+.faq-testimonials .testi-stack .card-footer{
+  margin-top: 0;                /* was auto */
+  padding: 12px 32px 14px;      /* slightly tighter */
+}
+
+/* MOBILE guard: remove the hardcoded fixed height */
+@media (max-width: 520px){
+  .faq-testimonials .testi-stack{ height: auto; }
+}
+
+
+/* hero page phone i hand image block */
+:root{
+  --hww-bg1:#c7f1ff;
+  --hww-bg2:#10b7ff;
+  --hww-cyan:#00c8ff;
+  --hww-purple:#6F1FB7;
+  --hww-card:#ffffff;
+  --hww-text:#101114;
+  --hww-sub:#6a6f77;
+}
+
+.how-we-work{
+  position: relative;
+  margin: 72px auto;
+  border-radius: 28px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--hww-bg1) 15%, var(--hww-bg2) 85%);
+  box-shadow: 0 18px 50px rgba(0,0,0,.08);
+}
+
+/* subtle diagonal notch in top-right (optional, like the mock) */
+.how-we-work::after{
+  content:"";
+  position:absolute;
+  top:-140px; right:-140px;
+  width:320px; height:320px;
+  background: rgba(255,255,255,.18);
+  transform: rotate(45deg);
+  border-radius: 24px;
+  filter: blur(2px);
+}
+
+.hww-inner{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 32px 64px;
+}
+
+.hww-header h2{
+  margin: 0 0 6px;
+  font-size: clamp(28px, 3.2vw, 48px);
+  font-weight: 800;
+  letter-spacing: .2px;
+  color: var(--hww-text);
+}
+.hww-header .dot{ color:#eb3f34; }
+.hww-sub{
+  margin: 0 0 28px;
+  color: var(--hww-sub);
+  font-size: clamp(14px, 1.2vw, 18px);
+}
+
+.hww-grid{
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(28px, 3.6vw, 56px);
+  align-items: start;
+}
+
+/* LEFT image */
+.hww-figure{
+  margin:0;
+  background:#ddd;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(0,0,0,.14);
+}
+.hww-figure img{
+  display:block;
+  width:100%;
+  height: 560px;               /* set the same look as comp */
+  object-fit: cover;
+}
+
+/* RIGHT card */
+.hww-card{
+  position: relative;
+  background: var(--hww-card);
+  border-radius: 18px;
+  padding: 32px 34px 28px;
+  box-shadow:
+    0 28px 50px rgba(0,0,0,.10),
+    0 6px 18px rgba(0,0,0,.06);
+}
+
+/* Steps */
+.hww-steps{
+  list-style:none;
+  margin:0 0 22px;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap: 26px;
+}
+.hww-step{
+  display:grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  align-items:start;
+}
+.hww-step .badge{
+  display:inline-grid;
+  place-items:center;
+  width:36px; height:36px;
+  border-radius: 999px;
+  background: #4a007a;
+  background: radial-gradient(circle at 30% 30%, #7b27d8, #5217a6 70%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 6px 16px rgba(111,31,183,.35);
+}
+.hww-step h4{
+  margin: 2px 0 6px;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--hww-text);
+}
+.hww-step p{
+  margin:0;
+  color:#3e434b;
+  line-height: 1.6;
+  font-size: 15.5px;
+}
+
+/* CTA */
+.hww-cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width: 230px;
+  padding: 14px 22px;
+  margin-top: 8px;
+  border-radius: 32px;
+  text-decoration:none;
+  background: linear-gradient(180deg, #7f3bf5, #6620d8);
+  color:#fff;
+  font-weight: 700;
+  letter-spacing: .2px;
+  box-shadow:
+    0 12px 22px rgba(0,0,0,.18),
+    inset 0 -4px 10px rgba(0,0,0,.12);
+  transition: transform .15s ease, filter .15s ease;
+}
+.hww-cta:hover{ transform: translateY(-2px); filter: brightness(1.03); }
+
+/* Responsive (tablets/phones) */
+@media (max-width: 1024px){
+  .hww-grid{ grid-template-columns: 1fr; }
+  .hww-figure img{ height: 420px; }
+}
+
+@media (max-width: 580px){
+  .hww-inner{ padding: 36px 16px 42px; }
+  .hww-figure img{ height: 320px; }
+  .hww-card{ padding: 22px 18px; }
+  .hww-step{ gap:14px; }
+  .hww-step .badge{ width:32px; height:32px; font-size:14px; }
+  .hww-step h4{ font-size: 17px; }
+  .hww-step p{ font-size: 14.5px; }
+  .hww-cta{ min-width: 200px; padding: 12px 18px; }
+}
+
+/* HWW: make gradient hug the rounded edges with an even blue rim */
+.how-we-work{
+  border-radius: 28px;
+  overflow: hidden;                 /* clip everything to the rounded shape */
+  background: linear-gradient(135deg,#c7f1ff 15%, #10b7ff 85%);
+  box-shadow: 0 24px 60px rgba(0,0,0,.08);
+  position: relative;
+}
+
+/* subtle inner blue edge so corners look “filled”, not white */
+.how-we-work::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  box-shadow: inset 0 0 0 2px rgba(0,200,255,.18); /* cyan edge */
+  border-radius: 28px;
+}
+
+/* keep the diagonal notch but ensure it stays inside the rounded container */
+.how-we-work::after{
+  content:"";
+  position:absolute;
+  top:-160px; right:-160px;
+  width:360px; height:360px;
+  background: rgba(255,255,255,.18);
+  transform: rotate(45deg);
+  border-radius: 24px;
+  filter: blur(2px);
+  pointer-events:none;
+}
+
+
+/* Stretch both columns to the same row height */
+.hww-grid{
+  grid-template-columns: 1fr 1.05fr;  /* tweak if you want more room on the right */
+  align-items: stretch;               /* key: lets children fill the row */
+}
+
+/* Force both items to fill the row height */
+.hww-figure,
+.hww-card{
+  height: 100%;
+}
+
+/* Image fills its figure neatly */
+.hww-figure{
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(0,0,0,.14);
+}
+.hww-figure img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit: cover;                  /* no squish, clean crop */
+}
+
+/* Right card still looks like the mock */
+.hww-card{
+  display:flex;                       /* so its contents flow but card can stretch */
+  flex-direction: column;
+  justify-content: space-between;     /* keeps CTA anchored towards bottom nicely */
+  border-radius: 18px;
+}
+
+/* How We Work — full-bleed section regardless of parent container padding */
+.how-we-work{
+  width: 100vw;                          /* span the full viewport */
+  margin-left: calc(50% - 50vw);         /* break out of .container gutters */
+  margin-right: calc(50% - 50vw);
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+/* Make both columns stretch to the same row height */
+.hww-grid{ align-items: stretch; }
+
+.hww-figure,
+.hww-card{
+  height: 100%;
+  min-height: 520px;   /* tweak 480–560px to match your Figma */
+}
+
+.hww-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* keeps CTA near the bottom */
+}
+
+/* ========== HOW WE WORK (final) ========== */
+:root{
+  --hww-bg1:#c7f1ff; --hww-bg2:#10b7ff;
+  --hww-card:#fff; --hww-text:#101114; --hww-sub:#6a6f77;
+}
+
+.how-we-work{
+  position: relative;
+  width: 100vw;                           /* full-bleed */
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 28px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--hww-bg1) 15%, var(--hww-bg2) 85%);
+  box-shadow: 0 24px 60px rgba(0,0,0,.08);
+}
+
+.how-we-work::after{ /* optional top-right notch */
+  content:"";
+  position:absolute;
+  top:-160px; right:-160px;
+  width:360px; height:360px;
+  background: rgba(255,255,255,.18);
+  transform: rotate(45deg);
+  border-radius: 24px; filter: blur(2px); pointer-events:none;
+}
+
+.hww-inner{ max-width:1200px; margin:0 auto; padding:56px 32px 64px; }
+
+.hww-grid{
+  display:grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: clamp(28px, 3.6vw, 56px);
+  align-items: stretch;                    /* makes both columns equal height */
+}
+
+.hww-figure, .hww-card{ height:100%; }
+
+.hww-figure{
+  margin:0; border-radius:16px; overflow:hidden;
+  box-shadow: 0 14px 40px rgba(0,0,0,.14);
+}
+.hww-figure img{
+  display:block; width:100%; height:100%; object-fit:cover; /* fills figure */
+}
+
+/* right card */
+.hww-card{
+  background:var(--hww-card);
+  border-radius:18px;
+  padding:32px 34px 28px;
+  display:flex; flex-direction:column; justify-content:space-between;
+  box-shadow: 0 28px 50px rgba(0,0,0,.10), 0 6px 18px rgba(0,0,0,.06);
+}
+
+/* optional minimum row height so they match even with short text */
+.hww-figure, .hww-card{ min-height:520px; }
+
+@media (max-width:1024px){
+  .hww-grid{ grid-template-columns:1fr; }
+  .hww-figure, .hww-card{ min-height:auto; }
+  .hww-figure img{ height:420px; }
+}
+@media (max-width:580px){
+  .hww-inner{ padding:36px 16px 42px; }
+  .hww-figure img{ height:320px; }
+}
+
+
+/* ============ HOW WE WORK (works with your current HTML) ============ */
+
+/* 1) Full-bleed blue panel behind .hww-inner (no left/right white space) */
+.faq-testimonials { position: relative; }
+.faq-testimonials .hww-inner{
+  position: relative;
+  isolation: isolate;            /* makes the ::before sit under only this block */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 32px 64px;
+}
+.faq-testimonials .hww-inner::before{
+  content:"";
+  position: absolute;
+  z-index: -1;                   /* behind the content */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);   /* center the 100vw panel */
+  width: 100vw;                  /* FULL viewport width */
+  height: 100%;                  /* match hww-inner’s height */
+  border-radius: 28px;
+  background: linear-gradient(135deg,#c7f1ff 15%, #10b7ff 85%);
+  box-shadow: 0 24px 60px rgba(0,0,0,.08);
+}
+
+/* Optional: top-right “notch” like your mock */
+.faq-testimonials .hww-inner::after{
+  content:"";
+  position:absolute;
+  top:-160px; right:calc(50% - 50vw + 40px); /* keep inside rounded panel */
+  width:360px; height:360px;
+  background: rgba(255,255,255,.18);
+  transform: rotate(45deg);
+  border-radius: 24px;
+  filter: blur(2px);
+  pointer-events:none;
+  z-index:-1;
+}
+
+/* 2) Make the image column and the card column the SAME height */
+.faq-testimonials .hww-grid{
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(28px, 3.6vw, 56px);
+  align-items: stretch;          /* <= key for equal heights */
+}
+
+/* both sides fill the row height */
+.faq-testimonials .hww-figure,
+.faq-testimonials .hww-card{
+  height: 100%;
+  min-height: 520px;             /* tweak 480–560px to match Figma */
+}
+
+/* image fills its box without distortion */
+.faq-testimonials .hww-figure{
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(0,0,0,.14);
+}
+.faq-testimonials .hww-figure img{
+  display: block;
+  width: 100%;
+  height: 100%;                  /* IMPORTANT: not a fixed px height */
+  object-fit: cover;
+}
+
+/* card stretches & keeps CTA near the bottom */
+.faq-testimonials .hww-card{
+  background: #fff;
+  border-radius: 18px;
+  padding: 32px 34px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 28px 50px rgba(0,0,0,.10), 0 6px 18px rgba(0,0,0,.06);
+}
+
+/* responsive */
+@media (max-width: 1024px){
+  .faq-testimonials .hww-grid{ grid-template-columns: 1fr; }
+  .faq-testimonials .hww-figure,
+  .faq-testimonials .hww-card{ min-height: auto; }
+  .faq-testimonials .hww-figure img{ height: 420px; } /* nice mobile/tablet crop */
+}
+@media (max-width: 580px){
+  .faq-testimonials .hww-inner{ padding: 36px 16px 42px; }
+  .faq-testimonials .hww-figure img{ height: 320px; }
+}
+
+/* ===== HOW WE WORK — match Figma (centered panel + equal columns) ===== */
+
+/* Panel lives behind the .hww-inner, but NOT full-bleed */
+.faq-testimonials { position: relative; }
+
+.faq-testimonials .hww-inner{
+  position: relative;
+  isolation: isolate;
+  /* Centered like Figma: comfortable gutters */
+  max-width: 1140px;         /* tweak if your page grid is wider/narrower */
+  margin: 0 auto;
+  padding: 56px 80px 72px;   /* left/right space like your screenshot */
+}
+
+/* Blue rounded panel that matches .hww-inner size */
+.faq-testimonials .hww-inner::before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;                  /* exactly the .hww-inner box */
+  border-radius: 22px;       /* Figma-ish corner */
+  background: linear-gradient(135deg,#c7f1ff 15%, #10b7ff 85%);
+  box-shadow: 0 24px 60px rgba(0,0,0,.08);
+  /* Important: undo the full-bleed you tried earlier */
+  left: 0 !important;
+  width: 100% !important;
+  transform: none !important;
+}
+
+/* Optional top-right notch; keep it inside the panel */
+.faq-testimonials .hww-inner::after{
+  content:"";
+  position:absolute;
+  top:-140px; right: 24px;
+  width:320px; height:320px;
+  background: rgba(255,255,255,.18);
+  transform: rotate(45deg);
+  border-radius: 24px;
+  filter: blur(2px);
+  z-index:-1;
+  pointer-events:none;
+}
+
+/* Grid proportions + same heights */
+.faq-testimonials .hww-grid{
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;  /* image a touch narrower (like Figma) */
+  column-gap: 48px;
+  align-items: stretch;                  /* key: equal column heights */
+}
+
+/* Equalize card heights */
+.faq-testimonials .hww-figure,
+.faq-testimonials .hww-card{
+  height: 100%;
+  min-height: 520px;                     /* adjust 500–560 to match your comp */
+}
+/* =========================================================
+   HOW WE WORK  —  clean + final
+   (Works with your current markup inside .faq-testimonials)
+   ========================================================= */
+
+/* --- base colors (optional) --- */
+:root{
+  --hww-bg1: #c7f1ff;  /* top-left of blue panel */
+  --hww-bg2: #10b7ff;  /* bottom-right of blue panel */
+  --hww-card: #ffffff;
+  --hww-text: #101114;
+  --hww-sub:  #6a6f77;
+}
+
+/* Make sure nothing in this section gets clipped */
+.faq-testimonials{
+  position: relative;
+  overflow: visible;
+}
+
+/* The block wrapper you already have */
+.hww-inner{
+  max-width: 1140px;               /* matches your page grid */
+  margin: 0 auto;
+  padding: 0 24px;                 /* small site gutters */
+  position: relative;
+  z-index: 1;                      /* content sits above the blue panel */
+}
+
+/* Heading spacing (optional) */
+.hww-header h2{
+  margin: 0 0 6px;
+  font-size: clamp(28px, 3.2vw, 48px);
+  font-weight: 800;
+  color: var(--hww-text);
+}
+.hww-sub{
+  margin: 0;
+  color: var(--hww-sub);
+  font-size: clamp(14px, 1.2vw, 18px);
+}
+
+/* ===========================
+   GRID + BLUE BACKGROUND PANEL
+   =========================== */
+.hww-grid{
+  /* grid */
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;  /* phone a touch narrower like Figma */
+  column-gap: 48px;
+  align-items: stretch;                  /* <— makes both columns equal height */
+
+  /* spacing inside the panel */
+  padding: 48px 56px;
+  margin-top: 16px;
+
+  /* so the ::before panel sits behind just this grid */
+  position: relative;
+  z-index: 0;
+}
+
+/* Full-bleed, rounded blue panel that sits BEHIND the grid only */
+.hww-grid::before{
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);      /* center a 100vw element */
+  top: 0;                           /* begins right under the heading */
+  bottom: 0;                        /* ends just below the CTA */
+  width: 100vw;                     /* no left/right white space */
+  border-radius: 28px;
+  background: linear-gradient(135deg, var(--hww-bg1) 15%, var(--hww-bg2) 85%);
+  box-shadow: 0 24px 60px rgba(0,0,0,.08);
+  z-index: -1;                      /* behind the grid content */
+  pointer-events: none;
+}
+
+/* ===================
+   LEFT: phone image
+   =================== */
+.hww-figure{
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 100%;
+  min-height: 560px;                 /* tweak 520–600 to match your Figma */
+  box-shadow: 0 14px 40px rgba(0,0,0,.14);
+}
+.hww-figure img{
+  display: block;
+  width: 100%;
+  height: 100% !important;           /* kill any earlier fixed heights */
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ===================
+   RIGHT: steps card
+   =================== */
+.hww-card{
+  background: var(--hww-card);
+  border-radius: 18px;
+  padding: 32px 34px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;    /* keeps CTA near the bottom */
+  height: 100%;
+  min-height: 560px;                 /* EXACTLY same height as image side */
+  box-shadow: 0 28px 50px rgba(0,0,0,.10), 0 6px 18px rgba(0,0,0,.06);
+}
+
+/* Steps list (keep your existing HTML) */
+.hww-steps{
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+.hww-step{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  align-items: start;
+}
+.hww-step .badge{
+  display: inline-grid;
+  place-items: center;
+  width: 36px; height: 36px;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  background: radial-gradient(circle at 30% 30%, #7b27d8, #5217a6 70%);
+  box-shadow: 0 6px 16px rgba(111,31,183,.35);
+}
+.hww-step h4{
+  margin: 2px 0 6px;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--hww-text);
+}
+.hww-step p{
+  margin: 0;
+  color: #3e434b;
+  line-height: 1.6;
+  font-size: 15.5px;
+}
+
+/* CTA button */
+.hww-cta{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 230px;
+  padding: 14px 22px;
+  margin-top: 22px;
+  border-radius: 32px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .2px;
+  background: linear-gradient(180deg, #7f3bf5, #6620d8);
+  box-shadow: 0 12px 22px rgba(0,0,0,.18), inset 0 -4px 10px rgba(0,0,0,.12);
+  transition: transform .15s ease, filter .15s ease;
+}
+.hww-cta:hover{ transform: translateY(-2px); filter: brightness(1.03); }
+
+/* =========================
+   BELOW: testimonial section
+   (ensure it shows and has room)
+   ========================= */
+.faq-testimonials .testi-wrap{
+  position: relative;
+  z-index: 2;            /* above the blue panel */
+  margin-top: 56px;      /* breathing room under HWW */
+}
+
+/* =============
+   RESPONSIVE
+   ============= */
+@media (max-width: 1200px){
+  .hww-inner{ padding: 0 20px; }
+  .hww-grid{ column-gap: 36px; padding: 40px 40px; }
+}
+@media (max-width: 1024px){
+  .hww-grid{
+    grid-template-columns: 1fr;   /* stack */
+    row-gap: 24px;
+    padding: 32px 24px;
+  }
+  .hww-figure,
+  .hww-card{
+    min-height: auto;            /* let them size naturally on small screens */
+  }
+  .hww-figure img{
+    height: 420px !important;    /* nice mobile/tablet crop */
+  }
+}
+@media (max-width: 580px){
+  .hww-grid{ padding: 24px 16px; }
+  .hww-figure img{ height: 320px !important; }
 }
