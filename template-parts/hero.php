@@ -208,53 +208,53 @@
     </div>
     
     <div class="hww-inner">
-      <header class="hww-header">
-        <h2>How We Work<span class="dot">.</span></h2>
-        <p class="hww-sub">Clear, Fast, Effective.</p>
-      </header>
+  <header class="hww-header">
+    <h2>How We Work<span class="dot">.</span></h2>
+    <p class="hww-sub">Clear, Fast, Effective.</p>
+  </header>
 
-      <div class="hww-grid">
-        <!-- LEFT: Image -->
-        <figure class="hww-figure">
-          <!-- TODO: replace the src with your phone-in-hand image -->
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/phone_in_hands.jpg" alt="How we work">
-        </figure>
+  <div class="hww-grid">
+    <!-- LEFT: Image -->
+    <figure class="hww-figure">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/phone_in_hands.jpg" alt="How we work">
+    </figure>
 
-        <!-- RIGHT: Card -->
-        <div class="hww-card">
-          <ol class="hww-steps">
-            <li class="hww-step">
-              <span class="badge">1</span>
-              <div class="step-text">
-                <h4>Let’s Talk</h4>
-                <p>Hop on a quick discovery call. We’ll learn about your goals, timeline, budget, and the kind of
-                  talent you need – so we can build the right plan for you.</p>
-              </div>
-            </li>
+    <!-- RIGHT: Card -->
+    <div class="hww-card">
+      <ol class="hww-steps">
+        <li class="hww-step">
+          <span class="badge">1</span>
+          <div class="step-text">
+          <h3>Step 1</h3>
+            <h4>Let’s Talk</h4>
+            <p>Hop on a quick discovery call. We’ll learn about your goals, timeline, budget, and the kind of talent you need – so we can build the right plan for you.</p>
+          </div>
+        </li>
 
-            <li class="hww-step">
-              <span class="badge">2</span>
-              <div class="step-text">
-                <h4>Build the Right Fit.</h4>
-                <p>In just a few days, we’ll shape your solution, lock in the engagement model, and handpick a team
-                  that’s ready to hit the ground running.</p>
-              </div>
-            </li>
+        <li class="hww-step">
+          <span class="badge">2</span>
+          <div class="step-text">
+          <h3>Step 2</h3>
+            <h4>Build the Right Fit.</h4>
+            <p>In just a few days, we’ll shape your solution, lock in the engagement model, and handpick a team that’s ready to hit the ground running.</p>
+          </div>
+        </li>
 
-            <li class="hww-step">
-              <span class="badge">3</span>
-              <div class="step-text">
-                <h4>Launch &amp; Grow.</h4>
-                <p>We get to work fast – tracking milestones, sharing updates, and adjusting along the way to make
-                  sure everything stays on track.</p>
-              </div>
-            </li>
-          </ol>
+        <li class="hww-step">
+          <span class="badge">3</span>
+          <div class="step-text">
+            <h3>Step 3</h3>
+            <h4>Launch &amp; Grow.</h4>
+            <p>We get to work fast – tracking milestones, sharing updates, and adjusting along the way to make sure everything stays on track.</p>
+          </div>
+        </li>
+      </ol>
 
-          <a href="#" class="hww-cta">Schedule a Call</a>
-        </div>
-      </div>
+      <a href="#" class="hww-cta">Schedule a Call</a>
     </div>
+  </div>
+</div>
+
 
   <div class="testi-wrap">
     <h3 class="testi-heading">
