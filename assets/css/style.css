@@ -1080,7 +1080,7 @@ p.featured-meta span.featured-author {
 .cta-section{
   position: relative;
   isolation: isolate;    /* prevents previous section’s vector from overlapping */
-  margin-top: 0;         /* you can increase if you want more gap */
+  margin-top: 160px;         /* you can increase if you want more gap */
 }
 
 
@@ -2263,5 +2263,49 @@ p.featured-meta span.featured-author {
   .hww-figure img{ height: 180px; }
 }
 
+/* IMPACT */
+.ideas-impact {
+  padding: 10px 20px;
+  background-color: #fff; /* white background */
+  text-align: center;
+}
+
+.ideas-impact h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 180px;
+  color: #1a1a1a;
+}
+
+.ideas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  align-items: center;
+}
+
+.idea-item {
+  overflow: hidden;
+}
 
 
+.idea-item img {
+  width: 70%; /* reduced from full width */
+  height: auto; /* keeps proportions */
+  display: block;
+  margin: 0 auto; /* centers inside column */
+}
+.idea-item2 img {
+  width: 70%; /* reduced from full width */
+  height: auto; /* keeps proportions */
+  display: block;
+  margin: -150px auto 0; /* move slightly up & keep centered horizontally */
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ideas-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -64,7 +64,7 @@
 
       <div class="service-item" data-aos="fade-up" data-aos-delay="500">
         <div class="service-icon">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/uiux.svg" alt="UI/UX">
+          <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/uiux.svg" alt="UI/UX"> -->
         </div>
         <h3>UX/UI Design</h3>
         <p>Good design isn’t just pretty—it works. We craft sleek interfaces that feel right at home.</p>
@@ -134,6 +134,23 @@
     </div>
   </div>
 </section>
+
+
+<section class="ideas-impact">
+  <div class="container">
+    <h2>We Turn Ideas Into Impact</h2>
+    <div class="ideas-grid">
+      <div class="idea-item">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sprint.png" alt="Idea Image 1">
+      </div>
+      <div class="idea-item2">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dv.svg" alt="Idea Image 2">
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 <div class="stats-cta-wrap">
   <div class="diagonal-vector" aria-hidden="true">
