@@ -137,7 +137,7 @@
 
 <div class="stats-cta-wrap">
   <div class="diagonal-vector" aria-hidden="true">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vector1.png" alt="">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vector2.png" alt="">
   </div>
   <!-- =============== CTA SECTION =============== -->
   <section class="cta-section">
