@@ -758,6 +758,22 @@ p.featured-meta span.featured-author {
     text-align: center;
   }
 
+  .featured-image {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 1:1 aspect ratio */
+    overflow: hidden;
+  }
+
+  .featured-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fills the square */
+  }
+
   .posts-grid {
     gap: 30px;
   }
