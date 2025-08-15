@@ -22,9 +22,9 @@
     <div class="services-heading-wrapper" data-aos="fade-right">
       <h2 class="services-heading">
         All-in-<span class="highlight-purple">One Marketing</span><br /> Support,
-        From <span class="highlight-cyan">Idea to Impact</span>
+        From <span class="highlight-cyan">Idea <span style="color:black;"> to </span>Impact</span>
       </h2>
-      <a href="#" class="services-link" data-aos="fade-left">Everything we do</a>
+      <a href="https://icreativez.info/contact" class="services-link" data-aos="fade-left">Everything we do</a>
     </div>
 
     <div class="services-grid">
@@ -138,17 +138,64 @@
 
 <section class="ideas-impact">
   <div class="container">
-    <h2>We Turn Ideas Into Impact</h2>
-    <div class="ideas-grid">
-      <div class="idea-item">
+    <h2 data-aos="fade-up">We Turn Ideas Into Impact</h2>
+
+    <!-- Desktop Layout -->
+    <div class="ideas-grid desktop-view">
+      <div class="idea-item" data-aos="fade-right">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sprint.png" alt="Idea Image 1">
       </div>
-      <div class="idea-item2">
+      <div class="idea-item2" data-aos="fade-left">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dv.svg" alt="Idea Image 2">
+      </div>
+    </div>
+
+    <!-- Mobile Layout -->
+    <div class="mobile-view">
+      <div class="idea-step" data-aos="fade-up" data-aos-delay="100">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/strategy.svg" alt="Strategy Icon">
+        <div>
+          <h3>Strategy</h3>
+          <p>Develop long-term AI strategies to maximize the potential of custom software solutions for your business growth.</p>
+        </div>
+      </div>
+
+      <div class="idea-step" data-aos="fade-up" data-aos-delay="200">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/design.svg" alt="Design Icon">
+        <div>
+          <h3>Design</h3>
+          <p>Craft intuitive designs with cutting-edge tools to create AI software development services tailored to your vision.</p>
+        </div>
+      </div>
+
+      <div class="idea-step" data-aos="fade-up" data-aos-delay="300">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dev.svg" alt="Development Icon">
+        <div>
+          <h3>Development & Testing</h3>
+          <p>Build robust, scalable solutions and ensure excellence through rigorous testing of your AI-driven applications.</p>
+        </div>
+      </div>
+
+      <div class="idea-step" data-aos="fade-up" data-aos-delay="400">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/launch.svg" alt="Launch Icon">
+        <div>
+          <h3>Launch</h3>
+          <p>Deploy innovative AI software with precision for seamless integration and immediate business impact.</p>
+        </div>
+      </div>
+
+      <div class="idea-step" data-aos="fade-up" data-aos-delay="500">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/support.svg" alt="Support Icon">
+        <div>
+          <h3>Support</h3>
+          <p>Provide ongoing support for AI software development services to keep your systems optimized and future-ready.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+
 
 
 

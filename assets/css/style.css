@@ -2043,19 +2043,21 @@ p.featured-meta span.featured-author {
 }
 
 /* IMPACT */
+/* IMPACT SECTION */
 .ideas-impact {
   padding: 10px 20px;
-  background-color: #fff; /* white background */
+  background-color: transparent; /* No white bg */
   text-align: center;
-}/**/
+}
 
 .ideas-impact h2 {
   font-size: 2.4rem;
   font-weight: 800;
   margin-bottom: 180px;
-  color: #1a1a1a;
+  color: #000000; /* White text for dark theme background */
 }
 
+/* Desktop View */
 .ideas-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -2063,31 +2065,66 @@ p.featured-meta span.featured-author {
   align-items: center;
 }
 
-.idea-item {
-  overflow: hidden;
-}
-
-
-.idea-item img {
-  width: 70%; /* reduced from full width */
-  height: auto; /* keeps proportions */
-  display: block;
-  margin: 0 auto; /* centers inside column */
-}
+.idea-item img,
 .idea-item2 img {
-  width: 70%; /* reduced from full width */
-  height: auto; /* keeps proportions */
+  width: 70%;
+  height: auto;
   display: block;
-  margin: -150px auto 0; /* move slightly up & keep centered horizontally */
+  margin: 0 auto;
 }
 
+.idea-item2 img {
+  margin-top: -150px;
+}
+
+/* Mobile Layout Styles */
+.mobile-view {
+  display: none;
+}
+
+.idea-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.idea-step img {
+  width: 50px;
+  height: 50px;
+}
+
+.idea-step h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0 0 5px;
+  color: #000000;
+}
+
+.idea-step p {
+  font-size: 0.95rem;
+  font-weight: 100;
+  margin: 0;
+  color: #000000;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
-  .ideas-grid {
-    grid-template-columns: 1fr;
+  .desktop-view {
+    display: none;
+  }
+
+  .mobile-view {
+    display: block;
+  }
+
+  .ideas-impact h2 {
+    margin-bottom: 40px;
+    font-size: 1.8rem;
   }
 }
+
 
 
 
