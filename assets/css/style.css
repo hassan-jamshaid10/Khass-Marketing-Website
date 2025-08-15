@@ -758,22 +758,6 @@ p.featured-meta span.featured-author {
     text-align: center;
   }
 
-  .featured-image {
-    position: relative;
-    width: 100%;
-    padding-top: 100%; /* 1:1 aspect ratio */
-    overflow: hidden;
-  }
-
-  .featured-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* fills the square */
-  }
-
   .posts-grid {
     gap: 30px;
   }
@@ -1211,6 +1195,7 @@ p.featured-meta span.featured-author {
    FAQ + TESTIMONIALS  (Figma-matched, scoped, clean)
    ========================================================= */
 
+
 /* ---------- Section wrapper ---------- */
 .faq-testimonials{
   position: relative;                  /* sits above the diagonal vector */
@@ -1246,7 +1231,7 @@ p.featured-meta span.featured-author {
   color: #0E0E0E;
 }
 
-/* ---------- FAQ list (typography locked to Figma) ---------- */
+/* ---------- FAQ list (new structure matching Image 1) ---------- */
 .faq-testimonials .faq-list{
   list-style: none;
   margin: 0 auto 96px;                  /* gap before testimonial */
@@ -1254,163 +1239,106 @@ p.featured-meta span.featured-author {
   max-width: 1100px;                    /* narrower column */
 }
 
-.faq-testimonials .faq-item{ margin: 0; }
-
-.faq-testimonials .faq-q{
-  /* IMPORTANT: do not change these two – they match the Figma scale */
-  font-size: clamp(20px, 2.2vw, 28px);
-  padding: 28px 0;
-
-  width: 100%;
-  background: transparent;
-  border: 0;
-  text-align: left;
-  line-height: 1.35;
-  color: #171717;
-  font-weight: 500;
-  cursor: pointer;                      /* feels clickable even if static */
-  position: relative;                   /* used for the hover underline */
-  transition: color .25s ease;
-}
-
-/* the thin separators between items */
-.faq-testimonials .faq-item + .faq-item .faq-q{ border-top: 1px solid rgba(0,0,0,.12); }
-.faq-testimonials .faq-item:last-child .faq-q{ border-bottom: 1px solid rgba(0,0,0,.12); }
-
-/* Figma-style hover line, without changing size/spacing */
-.faq-testimonials .faq-q::after{
-  content: "";
-  position: absolute;
-  left: 0; right: 0;
-  bottom: -1px;                         /* sits over the divider line */
-  height: 2px;
-  background: var(--neon-cyan, #0aa9c0);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform .25s ease;
-}
-
-.faq-testimonials .faq-q:hover{
-  color: var(--neon-cyan, #0aa9c0);
-}
-.faq-testimonials .faq-q:hover::after{
-  transform: scaleX(1);
-}
-
-/* =========================================================
-   TESTIMONIAL (portrait card with 4 stacked sheets)
-   ========================================================= */
-
-   
-.faq-testimonials .testi-wrap{
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.faq-testimonials .testi-heading{
-  margin: 0 0 28px;
-  font-weight: 300;                     /* light, Figma vibe */
-  color: #4a4a4a;
-  font-size: clamp(26px, 2.6vw, 38px);
-  line-height: 1.45;
-}
-
-/* Card stack container (portrait proportions) */
-.faq-testimonials .testi-stack{
-  position: relative;
-  width: 420px;                         /* narrow */
-  height: 600px;                        /* tall */
-  margin: 0 auto 20px;
-  perspective: 1000px;                  /* tiny depth for hover lift */
-}
-
-/* shared base style – deliberately flat (Figma look) */
-.faq-testimonials .testi-stack .card{
-  position: absolute;
-  inset: 0;
-  border-radius: 22px;
+.faq-testimonials .faq-item{ 
+  margin: 0; 
+  border: 1px solid #000;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  overflow: hidden;
   background: #fff;
-  border: 1px solid rgba(0,0,0,.03);
-  box-shadow: none;
+  transition: all 0.3s ease;
 }
 
-/* four sheets to the RIGHT, stepped greys (no ground shadow) */
-.faq-testimonials .testi-stack .card-shadow-4{ transform: translate(12px, 10px); background: #F2F2F2; z-index: 1; }
-.faq-testimonials .testi-stack .card-shadow-3{ transform: translate(26px, 18px); background: #E8E8E8; z-index: 2; }
-.faq-testimonials .testi-stack .card-shadow-2{ transform: translate(40px, 26px); background: #DEDEDE; z-index: 3; }
-.faq-testimonials .testi-stack .card-shadow-1{ transform: translate(54px, 34px); background: #D4D4D4; z-index: 4; }
+.faq-testimonials .faq-item:hover{
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
 
-/* top card: very subtle ambient only */
-.faq-testimonials .testi-stack .card-main{
-  z-index: 10;
-  border: 1px solid rgba(0,0,0,.06);
-  box-shadow: 0 8px 18px rgba(0,0,0,.06);
+.faq-testimonials .faq-item.active{
+  border-color: #6F1FB7;
+  box-shadow: 0 6px 20px rgba(111,31,183,0.15);
+}
+
+.faq-testimonials .faq-question{
   display: flex;
-  flex-direction: column;
-  transition: transform .28s ease, box-shadow .28s ease; /* micro motion */
-}
-.faq-testimonials .testi-stack:hover .card-main{
-  transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(0,0,0,.14);
-}
-
-/* back sheets nudge a touch on hover (parallax feel) */
-.faq-testimonials .testi-stack .card-shadow-4,
-.faq-testimonials .testi-stack .card-shadow-3,
-.faq-testimonials .testi-stack .card-shadow-2,
-.faq-testimonials .testi-stack .card-shadow-1{
-  transition: transform .28s ease;
-}
-.faq-testimonials .testi-stack:hover .card-shadow-4{ transform: translate(14px, 10px); }
-.faq-testimonials .testi-stack:hover .card-shadow-3{ transform: translate(28px, 18px); }
-.faq-testimonials .testi-stack:hover .card-shadow-2{ transform: translate(42px, 26px); }
-.faq-testimonials .testi-stack:hover .card-shadow-1{ transform: translate(56px, 34px); }
-
-.faq-testimonials .testi-stack .card-body{
-  padding: 32px 34px 0;
-  text-align: left;
-  color: #616161;
-  font-size: 16px;
-  line-height: 1.75;
+  align-items: center;
+  padding: 24px 32px;
+  background: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
 }
 
-/* footer chip — flat & light */
-.faq-testimonials .testi-stack .card-footer{
-  margin-top: auto;
-  padding: 14px 34px 16px;
-  background: #F6F6F6;
-  border-top: 1px solid rgba(0,0,0,.06);
-  border-bottom-left-radius: 22px;
-  border-bottom-right-radius: 22px;
-  text-align: left;
-  box-shadow: none;
+.faq-testimonials .faq-question:hover{
+  background-color: transparent;
 }
-.faq-testimonials .testi-stack .card-footer .name{ color:#777;  font-size:13px;   font-weight:400; }
-.faq-testimonials .testi-stack .card-footer .role{ color:#A6A6A6; font-size:12.5px; }
 
-/* dots under the card */
-.faq-testimonials .dots{
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  margin-top: 18px;
+.faq-testimonials .faq-number{
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin-right: 24px;
+  min-width: 30px;
 }
-.faq-testimonials .dots span{
-  width: 42px; height: 5px;
-  background: #ececec;
+
+.faq-testimonials .faq-text{
+  flex: 1;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  line-height: 1.4;
+}
+
+.faq-testimonials .faq-toggle{
+  background: #6F1FB7;
+  border: none;
+  width: 40px;
+  height: 40px;
   border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin-left: 16px;
 }
 
-/* ---------- Responsive guards (keep portrait proportions) ---------- */
-@media (max-width: 900px){
-  .faq-testimonials .testi-stack{ width: 360px; height: 520px; }
+.faq-testimonials .faq-toggle:hover{
+  background: #5a1a8f;
+  transform: scale(1.05);
 }
-@media (max-width: 520px){
-  .faq-testimonials{ padding: 72px 20px 110px; }
-  .faq-testimonials .faq-list{ margin-bottom: 72px; }
-  .faq-testimonials .testi-stack{ width: 86vw; height: 520px; }
+
+.faq-testimonials .faq-icon{
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
 }
+
+.faq-testimonials .faq-item.active .faq-icon{
+  transform: rotate(45deg);
+}
+
+.faq-testimonials .faq-answer{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  background: transparent;
+  border-top: 1px solid #e9ecef;
+}
+
+.faq-testimonials .faq-item.active .faq-answer{
+  max-height: 300px;
+  padding: 24px 32px;
+}
+
+.faq-testimonials .faq-answer p{
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #495057;
+}
+
 
 /* =========================================================
    Niceties for other sections (kept simple)
@@ -1442,47 +1370,7 @@ p.featured-meta span.featured-author {
   outline-offset: 3px;
 }
 
-/* =========================================================
-   FIX: Add clear breathing room between FAQ and Testimonial
-   ========================================================= */
 
-/* Bigger, guaranteed gap below the FAQ list (desktop first) */
-.faq-testimonials .faq-list{
-  margin-bottom: 140px !important;  /* was 96px; increase to match Figma */
-}
-
-/* On very large screens give it a touch more */
-@media (min-width: 1400px){
-  .faq-testimonials .faq-list{
-    margin-bottom: 160px !important;
-  }
-}
-
-/* On tablets/phones keep it comfortable without wasting space */
-@media (max-width: 900px){
-  .faq-testimonials .faq-list{
-    margin-bottom: 110px !important;
-  }
-}
-@media (max-width: 520px){
-  .faq-testimonials .faq-list{
-    margin-bottom: 96px !important;
-  }
-}
-
-/* Nudge the testimonial block itself down a bit so the heading
-   never hugs the FAQ divider even if another stylesheet zeroes margins */
-.faq-testimonials .testi-wrap{
-  margin-top: 16px; /* gentle offset below the FAQ block */
-}
-
-/* Make sure the underline on the last FAQ item doesn't eat into the gap */
-.faq-testimonials .faq-list .faq-item:last-child .faq-q{
-  padding-bottom: 32px;  /* gives the underline some space inside the list */
-}
-.faq-testimonials .faq-list .faq-item:last-child .faq-q::after{
-  bottom: 0;             /* keep underline inside the list, not below it */
-}
 
 /* More gap between CTA and FAQ, to match Figma */
 .stats-cta-wrap .faq-testimonials{
@@ -1890,63 +1778,7 @@ p.featured-meta span.featured-author {
   }
 }
 
-/* === MOBILE: FAQ header cap + blue triangles === */
-/* === MOBILE: Figma-style FAQ cap + downward triangles === */
-@media (max-width: 520px) {
-  /* Keep FAQ on its own stacking layer so the cap sits above the blue stripe */
-  .faq-testimonials { position: relative; isolation: isolate; padding-top: 72px; }
 
-  /* Cap line: thicker stroke, big radius (pill corners), no bottom border */
-  .faq-testimonials .faq-top-accent{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 56px;                             /* taller arc = rounder ends */
-    border: 2px solid rgba(0,200,255,.65);    /* cyan stroke */
-    border-bottom: none;
-    border-radius: 999px 999px 0 0;           /* perfectly rounded corners */
-    background: transparent;
-    z-index: 2;
-    width: 100%;                                /* above the diagonal bg */
-  }
-
-  /* Pull the title closer to the cap so it touches like Figma */
-  .faq-testimonials .faq-title { margin-top: -20px; }
-
-  /* Triangle icons on the right, pointing DOWN */
-  .faq-testimonials .faq-q{
-    position: relative;
-    padding-right: 42px;                      /* room for the triangle */
-  }
-  .faq-testimonials .faq-q::before{
-    content: "";
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 0; height: 0;
-    border-top: 10px solid #0aa9c0;           /* ▼ down arrow */
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    border-bottom: 0;
-    opacity: .95;
-  }
-
-   /* Add a straight cyan line at the bottom of the FAQ section */
-  .faq-testimonials::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2px; /* thickness of the line */
-    background-color: rgba(0, 200, 255, 0.65); /* same cyan color as top */
-    border-radius: 0; /* ensure no rounded corners */
-    z-index: 2;
-    width: 100%;
-  }
-}
 
 @media (max-width: 520px) {
   /* Increase service section heading and paragraph font size */
@@ -2020,75 +1852,6 @@ p.featured-meta span.featured-author {
     width: 40px;  /* bigger icons for desktop */
     height: auto;
   }
-}
-
-
-/* Desktop Mode FAQ Lines */
-@media (min-width: 1025px) {
-  /* Stretch top arc */
-  .faq-testimonials .faq-top-accent {
-    left: 0;
-    right: 0;
-    width: 100%;
-    border-radius: 0; /* remove rounded ends if you want a sharp edge */
-  }
-}
-
-  /* Desktop Mode FAQ Lines */
-@media (min-width: 1025px) {
-  /* Stretch top arc but keep rounded ends */
-  .faq-testimonials .faq-top-accent {
-    left: 0;
-    right: 0;
-    width: 100%;
-    border-radius: 999px 999px 0 0; /* keeps both ends rounded */
-  }
-
-  /* Add bottom straight line */
-  .faq-testimonials::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: rgba(0, 200, 255, 0.65); /* same cyan as top */
-  }
-
-  /* Ensure positioning works */
-  .faq-testimonials {
-    position: relative;
-  }
-}
-
-/* === Testimonial card: let content fill the box (desktop + mobile) === */
-.faq-testimonials .testi-stack{
-  height: auto;                 /* hug content */
-}
-
-/* Only the MAIN card becomes normal flow; shadows stay absolute */
-.faq-testimonials .testi-stack .card-main{
-  position: relative;           /* was absolute */
-  inset: auto;                  /* cancel inset:0 */
-  height: auto;                 /* expand to content */
-  display: flex;
-  flex-direction: column;
-}
-
-/* Comfortable padding like Figma, less empty bottom */
-.faq-testimonials .testi-stack .card-body{
-  padding: 28px 32px 18px;      /* reduce bottom padding */
-}
-
-/* Footer sits right after text, not forced to bottom */
-.faq-testimonials .testi-stack .card-footer{
-  margin-top: 0;                /* was auto */
-  padding: 12px 32px 14px;      /* slightly tighter */
-}
-
-/* MOBILE guard: remove the hardcoded fixed height */
-@media (max-width: 520px){
-  .faq-testimonials .testi-stack{ height: auto; }
 }
 
 
@@ -2323,5 +2086,185 @@ p.featured-meta span.featured-author {
 @media (max-width: 768px) {
   .ideas-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+
+
+.testimonial-section {
+  display: flex;
+  flex-direction: column; /* heading on top, cards below */
+  align-items: center;    /* center horizontally */
+  text-align: center;
+  margin: 90px auto;
+  padding-bottom: 200px;
+}
+
+/* Heading */
+h2 {
+  font-size: 30px;
+  font-weight: 300;
+  color: #333;
+  margin-bottom: 50px;
+  line-height: 1.4;
+}
+
+/* Card stack wrapper */
+.card-stack {
+  position: relative;
+  display: flex;           /* allow flex centering */
+  justify-content: center; /* center cards horizontally */
+  width: 300px;            /* desktop default */
+}
+
+/* Individual card */
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 280px;
+  padding: 30px 12px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.05);
+  cursor: grab;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4a4a4a;
+  text-align: left;
+  margin: 0;
+}
+
+.author {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.author .name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111;
+}
+
+.author .role {
+  font-size: 12px;
+  font-weight: 300;
+  color: #999;
+  margin-top: 2px;
+}
+
+/* Stack depth */
+.card:nth-child(1) { z-index: 3; }
+.card:nth-child(2) {
+  transform: scale(0.98) translateY(8px);
+  z-index: 2;
+}
+.card:nth-child(3) {
+  transform: scale(0.96) translateY(16px);
+  z-index: 1;
+}
+
+/* ================= Responsive ================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .card-stack {
+    width: 320px; /* slightly larger for tablets */
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .testimonial-section {
+    margin: 90px auto;
+    padding-bottom: 200px;
+  }
+  .card-stack {
+    width: 90%; /* take up most of screen but still centered */
+    max-width: 240px;
+  }
+  h2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+  .card {
+    height: 270px;
+    padding: 10px;
+
+  }
+  .card p {
+    font-size: 14px;
+  }
+  .author .name {
+    font-size: 12px;
+  }
+  .author .role {
+    font-size: 11px;
+  }
+}
+
+
+
+/* VALUES */
+
+.values-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  position: relative;
+  z-index: 2; /* keeps it on top of your background */
+}
+
+/* Header */
+.values-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.values-line {
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #00d2ff, #8e2de2);
+  margin-right: 10px;
+}
+
+.values-header h2 {
+  font-size: 26px;
+  font-weight: 500;
+  color: #8e2de2;
+}
+
+/* Grid Layout */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 60px;
+}
+
+.value-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.value-item p {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 }

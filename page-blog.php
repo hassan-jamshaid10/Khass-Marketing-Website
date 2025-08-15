@@ -4,8 +4,6 @@
  */
 get_header();
 ?>
-<?php get_template_part('hero'); ?>
-
 
 <!-- BLOG PAGE START -->
 <section class="blog-featured-post">
@@ -13,15 +11,20 @@ get_header();
     <div class="featured-wrapper">
       <div class="featured-text">
         <span class="featured-label">FEATURED POST</span>
-        <h2>Step-by-step guide to choosing great font pairs</h2>
-        <p class="featured-meta">By Zarah Malik | May 23, 2022</p>
+        <h2>Your success is our success. We align stratgies with your business goals.</h2>
+        <p class="featured-meta">
+          By&nbsp;<span class="featured-author">Zenah Malik</span>&nbsp;| May 23, 2022
+        </p>
+
         <p class="featured-description">
-          This step-by-step guide will walk you through the art of font pairing—from understanding typography basics to mastering contrast, hierarchy, and harmony.
+          At Khaas Marketing, we are on a mission to empower brands by delivering bespoke digital marketing solutions
+          that drive real results.
         </p>
         <a href="#" class="btn-read-more">Read More ></a>
       </div>
       <div class="featured-image">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog_purple_character.png" alt="Featured Post Image" />
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog_purple_character.png"
+          alt="Featured Post Image" />
       </div>
     </div>
   </div>
@@ -35,7 +38,6 @@ get_header();
 
   <div class="container">
     <h2 class="section-heading">All posts</h2>
-    
     <div class="posts-grid">
       <!-- Post card -->
       <div class="post-card">
@@ -43,7 +45,8 @@ get_header();
         <div class="post-info">
           <span class="post-category">STARTUP</span>
           <h3>Design tips for designers that cover everything you need</h3>
-          <p>Whether you're a beginner or a seasoned creative, this all-in-one guide is packed with essential design tips...</p>
+          <p>Whether you're a beginner or a seasoned creative, this all-in-one guide is packed with essential design
+            tips...</p>
         </div>
       </div>
 
@@ -52,7 +55,8 @@ get_header();
         <div class="post-info">
           <span class="post-category">BUSINESS</span>
           <h3>How to build rapport with your web design clients</h3>
-          <p>Discover communication strategies, trust-building techniques, and practical tips to create smooth design experiences...</p>
+          <p>Discover communication strategies, trust-building techniques, and practical tips to create smooth design
+            experiences...</p>
         </div>
       </div>
 
@@ -61,7 +65,8 @@ get_header();
         <div class="post-info">
           <span class="post-category">STARTUP</span>
           <h3>Logo design trends to avoid in 2022</h3>
-          <p>in this article, we break down the outdated, overused, and ineffictive logo trends that can weaken your brand in 2022. Learn what to avoid and why timeless.</p>
+          <p>in this article, we break down the outdated, overused, and ineffictive logo trends that can weaken your
+            brand in 2022. Learn what to avoid and why timeless.</p>
         </div>
       </div>
 
@@ -70,7 +75,8 @@ get_header();
         <div class="post-info">
           <span class="post-category">TECHNOLOGY</span>
           <h3>8 Figma design systems you can download for free today</h3>
-          <p>Level up your esign workflow with these 8 free Figma design systems - handpicked for UI/UX designers who value speed, consistency, and quality. From clean UI kits to fully responsive components</p>
+          <p>Level up your esign workflow with these 8 free Figma design systems - handpicked for UI/UX designers who
+            value speed, consistency, and quality. From clean UI kits to fully responsive components</p>
         </div>
       </div>
 
@@ -79,7 +85,8 @@ get_header();
         <div class="post-info">
           <span class="post-category">ECONOMY</span>
           <h3>Font sizes in UI design: The complete guide to follow</h3>
-          <p>This complete guide walks you through best practices for font sizing in UI design, includeing hierarchy, responsiveness, accessibility, and platform-specific tips.</p>
+          <p>This complete guide walks you through best practices for font sizing in UI design, includeing hierarchy,
+            responsiveness, accessibility, and platform-specific tips.</p>
         </div>
       </div>
 
@@ -91,10 +98,7 @@ get_header();
     </div>
   </div>
 </section>
-
-
 <!-- BLOG PAGE END -->
-
 
 <!-- ✅ SERVICES SECTION -->
 <section class="services-section">
@@ -161,7 +165,7 @@ get_header();
 
 <div class="stats-cta-wrap">
   <div class="diagonal-vector" aria-hidden="true">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vector2.png" alt="v1">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vector1.png" alt="">
   </div>
 
   <!-- =============== STATS SECTION =============== -->
@@ -276,50 +280,111 @@ get_header();
       <h2 class="faq-title">Frequently Asked Questions</h2>
 
       <ul class="faq-list">
-        <li class="faq-item"><button class="faq-q" type="button">What differentiates Khaas Marketing from other
-            agencies?</button></li>
-        <li class="faq-item"><button class="faq-q" type="button">Are your designs and campaigns built with scalability
-            in mind?</button></li>
-        <li class="faq-item"><button class="faq-q" type="button">Which industries do you serve with custom
-            software?</button></li>
-        <li class="faq-item"><button class="faq-q" type="button">What is your onboarding process for new
-            clients?</button></li>
-        <li class="faq-item"><button class="faq-q" type="button">What is the timeline for custom software
-            development?</button></li>
+        <li class="faq-item">
+          <div class="faq-question">
+            <span class="faq-number">01</span>
+            <span class="faq-text">What differentiates Khaas Marketing from other agencies?</span>
+            <button class="faq-toggle" type="button" aria-label="Toggle answer">
+              <span class="faq-icon">+</span>
+            </button>
+          </div>
+          <div class="faq-answer">
+            <p>Khaas Marketing stands out through our unique combination of cutting-edge design expertise, data-driven strategies, and personalized client relationships. We don't just create campaigns—we build scalable solutions that grow with your business, backed by transparent communication and measurable results that exceed industry standards.</p>
+          </div>
+        </li>
+        
+        <li class="faq-item">
+          <div class="faq-question">
+            <span class="faq-number">02</span>
+            <span class="faq-text">Are your designs and campaigns built with scalability in mind?</span>
+            <button class="faq-toggle" type="button" aria-label="Toggle answer">
+              <span class="faq-icon">+</span>
+            </button>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely! Every design and campaign we create is built with scalability as a core principle. We use modular design systems, flexible frameworks, and future-proof technologies that allow your marketing assets to grow and adapt as your business expands, ensuring long-term value and consistency.</p>
+          </div>
+        </li>
+        
+        <li class="faq-item">
+          <div class="faq-question">
+            <span class="faq-number">03</span>
+            <span class="faq-text">Which industries do you serve with custom software?</span>
+            <button class="faq-toggle" type="button" aria-label="Toggle answer">
+              <span class="faq-icon">+</span>
+            </button>
+          </div>
+          <div class="faq-answer">
+            <p>We serve a diverse range of industries including e-commerce, healthcare, fintech, education, real estate, and professional services. Our custom software solutions are tailored to meet the specific regulatory, security, and user experience requirements of each industry, ensuring compliance and optimal performance.</p>
+          </div>
+        </li>
+        
+        <li class="faq-item">
+          <div class="faq-question">
+            <span class="faq-number">04</span>
+            <span class="faq-text">What is your onboarding process for new clients?</span>
+            <button class="faq-toggle" type="button" aria-label="Toggle answer">
+              <span class="faq-icon">+</span>
+            </button>
+          </div>
+          <div class="faq-answer">
+            <p>Our onboarding process is designed to be smooth and comprehensive. It starts with a discovery call to understand your goals, followed by a detailed project brief, team assignment, and kickoff meeting. We establish clear communication channels, set milestones, and provide regular updates to ensure you're always in the loop.</p>
+          </div>
+        </li>
+        
+        <li class="faq-item">
+          <div class="faq-question">
+            <span class="faq-number">05</span>
+            <span class="faq-text">What is the timeline for custom software development?</span>
+            <button class="faq-toggle" type="button" aria-label="Toggle answer">
+              <span class="faq-icon">+</span>
+            </button>
+          </div>
+          <div class="faq-answer">
+            <p>Timelines vary based on project complexity, but typically range from 8-16 weeks for standard applications to 6-12 months for enterprise solutions. We use agile methodologies to deliver working prototypes early and often, allowing for iterative improvements and faster time-to-market.</p>
+          </div>
+        </li>
       </ul>
     </div>
 
-    <div class="testi-wrap">
-      <h3 class="testi-heading">
-        Look what people say<br>about our <span>Services</span>
-      </h3>
+    
+<div class="testimonial-section">
+  <h2>Look what people say<br>about our Services</h2>
 
-      <div class="testi-stack">
-        <div class="card card-shadow-4"></div>
-        <div class="card card-shadow-3"></div>
-        <div class="card card-shadow-2"></div>
-        <div class="card card-shadow-1"></div>
-
-        <div class="card card-main">
-          <div class="card-body">
-            <p>
-              Partnering with Khaas Marketing was a game-changer. Their cutting-edge design and seamless
-              functionality elevated our website experience—resulting in increased traffic, higher conversions,
-              and exceptional user feedback. Their team’s strategic insights and top-tier collaboration made all the
-              difference.
-            </p>
-          </div>
-          <div class="card-footer">
-            <div class="name">Alaska Kaur</div>
-            <div class="role">Owner</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dots">
-        <span></span><span></span><span></span><span></span>
+  <div class="card-stack">
+    <div class="card active">
+      <p>
+        Partnering with Khaos Marketing was a game-changer. Their cutting edge design and seamless functionality elevated our website experience resulting in increased traffic, higher conversions, and exceptional user feedback. Their team's strategic insights and top-tier collaboration made all the difference.
+      </p>
+      <div class="author">
+        <div class="name">Alaska Kaur</div>
+        <div class="role">Owner</div>
       </div>
     </div>
+
+    <div class="card">
+      <p>
+        Absolutely fantastic service! The team was proactive, communicative, and creative in ways that took our business to the next level.
+      </p>
+      <div class="author">
+        <div class="name">John Doe</div>
+        <div class="role">CEO</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p>
+        They truly understand our needs and deliver beyond expectations every time. A pleasure to work with!
+      </p>
+      <div class="author">
+        <div class="name">Jane Smith</div>
+        <div class="role">Marketing Director</div>
+      </div>
+    </div>
+  </div>
+</div>
   </section>
 </div>
+
+
 <?php get_footer(); ?>

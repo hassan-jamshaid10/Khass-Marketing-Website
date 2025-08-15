@@ -44,7 +44,7 @@ function khaas_enqueue_assets() {
         wp_enqueue_script(
             'khaas-main-js',
             get_template_directory_uri() . '/assets/js/main.js',
-            array('jquery'),
+            array(), // Remove jQuery dependency to avoid conflicts
             filemtime($custom_js_path),
             true
         );
@@ -108,31 +108,4 @@ function hassan_register_blog_pattern() {
   }
   add_action('init', 'hassan_register_blog_pattern');
   
-  function enqueue_testimonial_slider_assets() {
-    // Swiper CSS
-    wp_enqueue_style(
-        'swiper-css',
-        'https://unpkg.com/swiper/swiper-bundle.min.css',
-        array(),
-        null
-    );
-
-    // Swiper JS
-    wp_enqueue_script(
-        'swiper-js',
-        'https://unpkg.com/swiper/swiper-bundle.min.js',
-        array('jquery'),
-        null,
-        true
-    );
-
-    // Custom slider JS
-    wp_enqueue_script(
-        'testimonial-slider-js',
-        get_template_directory_uri() . '/js/testimonial-slider.js',
-        array('swiper-js'),
-        null,
-        true
-    );
-}
-add_action('wp_enqueue_scripts', 'enqueue_testimonial_slider_assets');
+  // Removed testimonial slider assets as they don't exist and could cause errors
