@@ -1,4 +1,3 @@
-
 .site-header {
   position: sticky;
   top: 0;
@@ -18,8 +17,10 @@
   align-items: center;
   gap: 1rem;
 }
+
 .logo img {
-  height: 48px;     /* was 40px */
+  height: 48px;
+  /* was 40px */
   max-height: 48px;
   width: auto;
   display: block;
@@ -45,13 +46,18 @@
 .nav-links li a {
   text-decoration: none;
   color: #212529;
-  font-weight: 600;                /* Match CTA */
+  font-weight: 600;
+  /* Match CTA */
   transition: all 0.3s ease;
-  padding: 0.6rem 1.4rem;          /* Match CTA size */
-  border-radius: 50px;            /* Match CTA shape */
-  display: inline-flex;           /* Align center vertically */
+  padding: 0.6rem 1.4rem;
+  /* Match CTA size */
+  border-radius: 50px;
+  /* Match CTA shape */
+  display: inline-flex;
+  /* Align center vertically */
   align-items: center;
-  line-height: 1;                 /* Avoid vertical spacing issues */
+  line-height: 1;
+  /* Avoid vertical spacing issues */
 }
 
 
@@ -175,15 +181,16 @@
 /* HERO SECTION  */
 .hero-section {
   position: relative;
-  padding: 150px 20px;
+  padding: clamp(140px, 22vh, 240px) 20px clamp(110px, 16vh, 200px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   background: url('../images/eclipse.png') no-repeat center center;
-  background-size: contain; /* or cover if you want it larger */
+  background-size: contain;
 }
+
 
 
 .hero-content {
@@ -197,14 +204,14 @@
   font-size: 2.8rem;
   font-weight: 500;
   line-height: 1.2;
-  background: linear-gradient(
-    90deg,
-    #000000,
-    #000000,
-    #01CFFF,
-    #000000,
-    rgba(114, 25, 163, 0.7)
-  );
+
+
+  background: linear-gradient(90deg,
+      #000000,
+      #000000,
+      #01CFFF,
+      #000000,
+      rgba(114, 25, 163, 0.7));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -217,6 +224,7 @@
   font-size: 1rem;
   color: #555;
 }
+
 .hero-button {
   display: inline-block;
   margin-top: 30px;
@@ -231,8 +239,10 @@
 }
 
 .hero-button:hover {
-  color: #5F4B8B; /* Slightly darker purple on hover */
+  color: #5F4B8B;
+  /* Slightly darker purple on hover */
 }
+
 /* Vector Arrow */
 .vector-arrow {
   display: inline-block;
@@ -245,7 +255,8 @@
 
 .hero-vector {
   position: absolute;
-  bottom: -1900px; /* move it 50px lower */
+  bottom: -1900px;
+  /* move it 50px lower */
   left: 0;
   width: 100%;
   z-index: 0;
@@ -258,10 +269,13 @@
   width: 100%;
   height: auto;
 }
+
 /* services */
 .services-section {
-  position: relative; /* Crucial to create new stacking context */
-  z-index: 1;         /* Ensures it's in front of z-index: 0 */
+  position: relative;
+  /* Crucial to create new stacking context */
+  z-index: 1;
+  /* Ensures it's in front of z-index: 0 */
   padding: 80px 0;
 }
 
@@ -330,7 +344,7 @@
 .service-icon img {
   width: 32px;
   height: 32px;
-  
+
 }
 
 .service-item h3 {
@@ -361,7 +375,7 @@
   background: linear-gradient(to right, #ddd, #C06BE6);
   color: #222;
   font-family: 'outfit', sans-serif;
-  padding: 40px 20px ;
+  padding: 40px 20px;
   position: relative;
   z-index: 10;
 }
@@ -518,8 +532,10 @@
 
 .featured-label {
   font-size: 0.9rem;
-  font-weight: 700;       /* Keep bold */
-  color: #1A1A1A;          /* Change from #888 to black/dark gray */
+  font-weight: 700;
+  /* Keep bold */
+  color: #1A1A1A;
+  /* Change from #888 to black/dark gray */
   text-transform: uppercase;
 }
 
@@ -563,8 +579,10 @@ p.featured-meta span.featured-author {
 }
 
 .btn-read-more:hover {
-  background-color: #009fcc; /* Slightly darker blue on hover */
-  transform: translateY(-2px); /* Subtle lift effect */
+  background-color: #009fcc;
+  /* Slightly darker blue on hover */
+  transform: translateY(-2px);
+  /* Subtle lift effect */
 }
 
 .featured-image {
@@ -577,7 +595,8 @@ p.featured-meta span.featured-author {
   width: 100%;
   height: auto;
   max-width: 500px;
-  border-radius: 0px; /* 🔄 FIX: Remove border radius to match Figma */
+  border-radius: 0px;
+  /* 🔄 FIX: Remove border radius to match Figma */
   object-fit: cover;
 }
 
@@ -617,29 +636,32 @@ p.featured-meta span.featured-author {
 }
 
 /* Make "All posts" match Figma scale */
-.blog-all-posts .section-heading{
-  font-size: clamp(34px, 4.6vw, 64px); /* was 2rem */
+.blog-all-posts .section-heading {
+  font-size: clamp(34px, 4.6vw, 64px);
+  /* was 2rem */
   line-height: 1.1;
   font-weight: 600;
-  margin-bottom: 12px; /* keeps the rule line close */
+  margin-bottom: 12px;
+  /* keeps the rule line close */
 }
 
 /* Post title size (right column) */
-.blog-all-posts .post-info h3{
-  font-size: clamp(24px, 2.4vw, 42px); /* was default browser size */
+.blog-all-posts .post-info h3 {
+  font-size: clamp(24px, 2.4vw, 42px);
+  /* was default browser size */
   line-height: 1.18;
   font-weight: 700;
   margin: 10px 0 14px;
 }
 
 /* Optional: body copy under titles feels small—nudge it up a bit */
-.blog-all-posts .post-info p{
+.blog-all-posts .post-info p {
   font-size: clamp(15px, 1.05vw, 18px);
   line-height: 1.6;
 }
 
 /* Optional: category label (“STARTUP”, “BUSINESS”) */
-.blog-all-posts .post-info .post-category{
+.blog-all-posts .post-info .post-category {
   font-size: 13px;
   letter-spacing: .14em;
 }
@@ -673,7 +695,8 @@ p.featured-meta span.featured-author {
   width: 40%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0; /* 🔄 FIX: Remove radius */
+  border-radius: 0;
+  /* 🔄 FIX: Remove radius */
 }
 
 .post-info {
@@ -687,7 +710,8 @@ p.featured-meta span.featured-author {
 .post-category {
   font-size: 0.75rem;
   font-weight: 700;
-  color: #7c3aed; /* purple accent */
+  color: #7c3aed;
+  /* purple accent */
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 0.5rem;
@@ -720,21 +744,26 @@ p.featured-meta span.featured-author {
 .pagination a {
   display: inline-block;
   margin: 0 10px;
-  color: #1A1A1A;           /* Neutral dark color for both */
+  color: #1A1A1A;
+  /* Neutral dark color for both */
   text-decoration: none;
-  font-weight: 500;         /* Normal weight */
+  font-weight: 500;
+  /* Normal weight */
   transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
 .pagination a:hover {
-  color: #000;              /* Darker on hover */
-  font-weight: 700;         /* Bold on hover */
+  color: #000;
+  /* Darker on hover */
+  font-weight: 700;
+  /* Bold on hover */
 }
 
 .pagination a::before,
 .pagination a::after {
   padding: 0 4px;
-  content: "";              /* Remove if not needed */
+  content: "";
+  /* Remove if not needed */
 }
 
 
@@ -782,7 +811,8 @@ p.featured-meta span.featured-author {
 /* 🔄 Fix width to match Figma */
 .blog-featured-post .container,
 .blog-all-posts .container {
-  max-width: 1440px; /* or 1280px depending on your Figma width */
+  max-width: 1440px;
+  /* or 1280px depending on your Figma width */
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
@@ -851,7 +881,8 @@ p.featured-meta span.featured-author {
 
 .about-vector {
   position: absolute;
-  bottom: -2100px; /* move it 50px lower */
+  bottom: -2100px;
+  /* move it 50px lower */
   left: 0;
   width: 100%;
   z-index: 0;
@@ -900,7 +931,7 @@ p.featured-meta span.featured-author {
 }
 
 /* RIGHT COLUMN BOX */
-.stats-row > .large-box {
+.stats-row>.large-box {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -918,16 +949,20 @@ p.featured-meta span.featured-author {
 
 /* BOX STYLES */
 .stat-box {
-  background-color: #3F4143; /* exact Figma colour */
+  background-color: #3F4143;
+  /* exact Figma colour */
   color: white;
   padding: 3rem 2.5rem;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  align-items: center;      /* centers horizontally */
-  justify-content: center;  /* centers vertically */
-  text-align: center;       /* centers text content */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  align-items: center;
+  /* centers horizontally */
+  justify-content: center;
+  /* centers vertically */
+  text-align: center;
+  /* centers text content */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   height: 100%;
   box-sizing: border-box;
 }
@@ -962,15 +997,20 @@ p.featured-meta span.featured-author {
 
 /* Make ONLY the big cards left-aligned like Figma */
 .stat-box.large-box {
-  align-items: flex-start;     /* left edge */
-  justify-content: center;     /* vertical middle inside the card */
-  text-align: left;            /* left text */
-  padding: 3rem 3rem;          /* generous padding like Figma */
+  align-items: flex-start;
+  /* left edge */
+  justify-content: center;
+  /* vertical middle inside the card */
+  text-align: left;
+  /* left text */
+  padding: 3rem 3rem;
+  /* generous padding like Figma */
 }
 
 /* Typography & spacing inside the big cards */
 .stat-box.large-box h4 {
-  font-size: 2rem;             /* bigger title like Figma */
+  font-size: 2rem;
+  /* bigger title like Figma */
   line-height: 1.2;
   margin: 0 0 1rem 0;
 }
@@ -978,7 +1018,8 @@ p.featured-meta span.featured-author {
 .stat-box.large-box p {
   font-size: 1rem;
   line-height: 1.7;
-  max-width: 48ch;             /* nicer reading width */
+  max-width: 48ch;
+  /* nicer reading width */
   margin: 0;
 }
 
@@ -996,7 +1037,7 @@ p.featured-meta span.featured-author {
     grid-template-columns: 1fr;
   }
 
-  .stats-row > .large-box {
+  .stats-row>.large-box {
     margin-top: 2rem;
   }
 
@@ -1014,155 +1055,196 @@ p.featured-meta span.featured-author {
 /* Colors to match Figma */
 .stats-section .stat-box h3,
 .stats-section .stat-box h4 {
-  color: #FFFFFF;            /* headings/number = pure white */
+  color: #FFFFFF;
+  /* headings/number = pure white */
   font-weight: 500;
 }
 
 .stats-section .stat-box p {
-  color: rgba(255, 255, 255, 0.65);  /* subtext = soft light gray */
+  color: rgba(255, 255, 255, 0.65);
+  /* subtext = soft light gray */
   /* If you prefer a solid hex close to your Figma swatch:
      color: #B8C0C9; */
 }
 
 /* (keeps your large cards left-aligned while using the same color system) */
-.stats-section .stat-box.large-box h4 { color: #FFFFFF; }
-.stats-section .stat-box.large-box p  { color: rgba(255,255,255,.65); }
-
-/* Position/flip the vector so it goes top-left → bottom-right */
-.stats-section{
-  position: relative;
-  overflow: hidden;      /* clip vector1 to this section */
-  isolation: isolate;    /* its own stacking context */
-  margin-bottom: 120px;  /* ensure space before next section */
+.stats-section .stat-box.large-box h4 {
+  color: #FFFFFF;
 }
 
-.stats-section .stats-vector{
+.stats-section .stat-box.large-box p {
+  color: rgba(255, 255, 255, .65);
+}
+
+/* Position/flip the vector so it goes top-left → bottom-right */
+.stats-section {
+  position: relative;
+  overflow: hidden;
+  /* clip vector1 to this section */
+  isolation: isolate;
+  /* its own stacking context */
+  margin-bottom: 120px;
+  /* ensure space before next section */
+}
+
+.stats-section .stats-vector {
   position: absolute;
-  inset: -120px -120px -120px -120px; /* bleed inside but still clipped */
+  inset: -120px -120px -120px -120px;
+  /* bleed inside but still clipped */
   z-index: 0;
   pointer-events: none;
   line-height: 0;
 }
 
-.stats-section .stats-vector img{
+.stats-section .stats-vector img {
   width: 140%;
   height: auto;
-  transform: scaleX(-1); /* TL → BR */
+  transform: scaleX(-1);
+  /* TL → BR */
   opacity: 1;
 }
 
 /* Keep all real content above the vector */
-.stats-section > *:not(.stats-vector) {
+.stats-section>*:not(.stats-vector) {
   position: relative;
   z-index: 1;
 }
 
 /* Extra guard so cards never get cropped by shadows */
-.stats-row.bottom-row { margin-bottom: 2rem; }
+.stats-row.bottom-row {
+  margin-bottom: 2rem;
+}
 
 /* Heading like Figma */
 .stats-title {
-  font-size: 2.6rem;         /* bump if you want it larger */
+  font-size: 2.6rem;
+  /* bump if you want it larger */
   font-weight: 500;
   line-height: 1.25;
-  color: #000;               /* Figma heading color */
+  color: #000;
+  /* Figma heading color */
   text-align: center;
   margin: 0 0 3rem;
 }
 
 @media (max-width: 900px) {
-  .stats-section .stats-vector { inset: -80px -80px; }
-  .stats-title { font-size: 2rem; margin-bottom: 2rem; }
+  .stats-section .stats-vector {
+    inset: -80px -80px;
+  }
+
+  .stats-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 
 
 /* --- CTA layout wrapper --- */
-.cta-section{
+.cta-section {
   position: relative;
-  isolation: isolate;    /* prevents previous section’s vector from overlapping */
-  margin-top: 160px;         /* you can increase if you want more gap */
+  isolation: isolate;
+  /* prevents previous section’s vector from overlapping */
+  margin-top: 160px;
+  /* you can increase if you want more gap */
 }
 
 
 /* cyan vector (reuse your vector1.png) — top-left to bottom-right */
-.cta-vector{
-  position:absolute;
-  inset:-160px -120px auto -120px;
-  z-index:0;
-  pointer-events:none;
-  line-height:0;
+.cta-vector {
+  position: absolute;
+  inset: -160px -120px auto -120px;
+  z-index: 0;
+  pointer-events: none;
+  line-height: 0;
 }
-.cta-vector img{
-  width:140%;
-  height:auto;
-  transform: scaleX(-1);     /* flips to run TL → BR */
-  opacity:1;
+
+.cta-vector img {
+  width: 140%;
+  height: auto;
+  transform: scaleX(-1);
+  /* flips to run TL → BR */
+  opacity: 1;
 }
 
 /* --- Card --- */
-.cta-card{
-  position:relative;
-  z-index:1;
-  margin:0 auto;
+.cta-card {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
   max-width: 1220px;
   min-height: 420px;
-  background:#1f2021;        /* very dark charcoal like Figma */
+  background: #1f2021;
+  /* very dark charcoal like Figma */
   border-radius: 26px;
-  overflow:hidden;
-  box-shadow: 0 14px 30px rgba(0,0,0,.18);
+  overflow: hidden;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, .18);
 }
 
 /* neon lines canvas */
-.cta-lines{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
+.cta-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* centered content */
-.cta-content{
-  position:relative;
-  z-index:2;
-  height:100%;
+.cta-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
   padding: 84px 40px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 28px;
 }
 
-.cta-content h2{
-  margin:0;
-  font-weight:400;
-  font-size: clamp(34px, 4.6vw, 56px);  /* matches the Figma scale */
-  line-height:1.2;
-  letter-spacing:.2px;
-  color:#F1F3F5;
+.cta-content h2 {
+  margin: 0;
+  font-weight: 400;
+  font-size: clamp(34px, 4.6vw, 56px);
+  /* matches the Figma scale */
+  line-height: 1.2;
+  letter-spacing: .2px;
+  color: #F1F3F5;
 }
 
-.cta-link{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
+.cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-size: clamp(16px, 1.6vw, 20px);
-  color:#EDEDED;
-  text-decoration:none;
-  opacity:.9;
+  color: #EDEDED;
+  text-decoration: none;
+  opacity: .9;
   transition: opacity .2s ease, transform .2s ease;
 }
-.cta-link .arr{font-size:1.2em; line-height:1;}
-.cta-link:hover{opacity:1; transform: translateY(-1px);}
 
-/* responsive tweaks */
-@media (max-width: 780px){
-  .cta-card{min-height: 360px;}
-  .cta-content{padding:64px 24px;}
+.cta-link .arr {
+  font-size: 1.2em;
+  line-height: 1;
 }
 
-.stats-cta-wrap{
+.cta-link:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* responsive tweaks */
+@media (max-width: 780px) {
+  .cta-card {
+    min-height: 360px;
+  }
+
+  .cta-content {
+    padding: 64px 24px;
+  }
+}
+
+.stats-cta-wrap {
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -1171,7 +1253,8 @@ p.featured-meta span.featured-author {
 /* the diagonal image must be absolute so it doesn't push content */
 .stats-cta-wrap .diagonal-vector {
   position: absolute;
-  inset: 0; /* fill container */
+  inset: 0;
+  /* fill container */
   z-index: 0;
   pointer-events: none;
   line-height: 0;
@@ -1179,13 +1262,14 @@ p.featured-meta span.featured-author {
 
 .stats-cta-wrap .diagonal-vector img {
   width: 100%;
-  height: auto%;
-  object-fit: cover; /* make it fit like a background */
+  height: auto;
+  object-fit: cover;
+  /* make it fit like a background */
 }
 
 
 /* make sure sections render above the image */
-.stats-cta-wrap > section{
+.stats-cta-wrap>section {
   position: relative;
   z-index: 1;
 }
@@ -1197,50 +1281,59 @@ p.featured-meta span.featured-author {
 
 
 /* ---------- Section wrapper ---------- */
-.faq-testimonials{
-  position: relative;                  /* sits above the diagonal vector */
+.faq-testimonials {
+  position: relative;
+  /* sits above the diagonal vector */
   z-index: 1;
-  padding: 96px 48px 140px;            /* roomy like Figma */
+  padding: 96px 48px 140px;
   font-family: 'Outfit', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #0d0d0d;
 }
 
 /* thin cyan rim at the very top (from the mock) */
-.faq-testimonials .faq-top-accent{
+.faq-testimonials .faq-top-accent {
   position: absolute;
-  top: 0; left: 24px; right: 24px;
+  top: 0;
+  left: 24px;
+  right: 24px;
   height: 56px;
   border-top-left-radius: 28px;
   border-top-right-radius: 28px;
-  border: 1.5px solid rgba(0,200,255,.35);
+  border: 1.5px solid rgba(0, 200, 255, .35);
   border-bottom: none;
   pointer-events: none;
 }
 
 /* inner max width aligns with your grid */
-.faq-testimonials .faq-inner{ max-width: 1200px; margin: 0 auto; }
+.faq-testimonials .faq-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 /* ---------- FAQ heading ---------- */
-.faq-testimonials .faq-title{
+.faq-testimonials .faq-title {
   margin: 0 0 56px;
   text-align: center;
-  font-weight: 800;                     /* heavy, like Figma */
+  font-weight: 800;
+  /* heavy, like Figma */
   letter-spacing: .2px;
   font-size: clamp(36px, 4vw, 56px);
   color: #0E0E0E;
 }
 
 /* ---------- FAQ list (new structure matching Image 1) ---------- */
-.faq-testimonials .faq-list{
+.faq-testimonials .faq-list {
   list-style: none;
-  margin: 0 auto 96px;                  /* gap before testimonial */
+  margin: 0 auto 96px;
+  /* gap before testimonial */
   padding: 0;
-  max-width: 1100px;                    /* narrower column */
+  max-width: 1100px;
+  /* narrower column */
 }
 
-.faq-testimonials .faq-item{ 
-  margin: 0; 
+.faq-testimonials .faq-item {
+  margin: 0;
   border: 1px solid #000;
   border-radius: 8px;
   margin-bottom: 16px;
@@ -1249,17 +1342,17 @@ p.featured-meta span.featured-author {
   transition: all 0.3s ease;
 }
 
-.faq-testimonials .faq-item:hover{
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.faq-testimonials .faq-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
 }
 
-.faq-testimonials .faq-item.active{
+.faq-testimonials .faq-item.active {
   border-color: #6F1FB7;
-  box-shadow: 0 6px 20px rgba(111,31,183,0.15);
+  box-shadow: 0 6px 20px rgba(111, 31, 183, 0.15);
 }
 
-.faq-testimonials .faq-question{
+.faq-testimonials .faq-question {
   display: flex;
   align-items: center;
   padding: 24px 32px;
@@ -1269,11 +1362,11 @@ p.featured-meta span.featured-author {
   position: relative;
 }
 
-.faq-testimonials .faq-question:hover{
+.faq-testimonials .faq-question:hover {
   background-color: transparent;
 }
 
-.faq-testimonials .faq-number{
+.faq-testimonials .faq-number {
   font-size: 18px;
   font-weight: 600;
   color: #000;
@@ -1281,7 +1374,7 @@ p.featured-meta span.featured-author {
   min-width: 30px;
 }
 
-.faq-testimonials .faq-text{
+.faq-testimonials .faq-text {
   flex: 1;
   font-size: 18px;
   font-weight: 500;
@@ -1289,7 +1382,7 @@ p.featured-meta span.featured-author {
   line-height: 1.4;
 }
 
-.faq-testimonials .faq-toggle{
+.faq-testimonials .faq-toggle {
   background: #6F1FB7;
   border: none;
   width: 40px;
@@ -1303,23 +1396,23 @@ p.featured-meta span.featured-author {
   margin-left: 16px;
 }
 
-.faq-testimonials .faq-toggle:hover{
+.faq-testimonials .faq-toggle:hover {
   background: #5a1a8f;
   transform: scale(1.05);
 }
 
-.faq-testimonials .faq-icon{
+.faq-testimonials .faq-icon {
   color: #fff;
   font-size: 20px;
   font-weight: bold;
   transition: transform 0.3s ease;
 }
 
-.faq-testimonials .faq-item.active .faq-icon{
+.faq-testimonials .faq-item.active .faq-icon {
   transform: rotate(45deg);
 }
 
-.faq-testimonials .faq-answer{
+.faq-testimonials .faq-answer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease, padding 0.4s ease;
@@ -1327,16 +1420,177 @@ p.featured-meta span.featured-author {
   border-top: 1px solid #e9ecef;
 }
 
-.faq-testimonials .faq-item.active .faq-answer{
+.faq-testimonials .faq-item.active .faq-answer {
   max-height: 300px;
   padding: 24px 32px;
 }
 
-.faq-testimonials .faq-answer p{
+.faq-testimonials .faq-answer p {
   margin: 0;
   font-size: 16px;
   line-height: 1.6;
   color: #495057;
+}
+
+@media (max-width: 520px) {
+
+  /* Section padding stays compact */
+  .faq-testimonials {
+    padding: 56px 16px 84px;
+    position: relative;
+  }
+
+  /* Title like figma */
+  .faq-testimonials .faq-title {
+    margin: 0 0 16px;
+    font-size: clamp(22px, 6.6vw, 28px);
+    font-weight: 700;
+  }
+
+  /* List becomes a flat stack with thin borders */
+  .faq-testimonials .faq-list {
+    list-style: none;
+    margin: 0 0 28px;
+    padding: 0;
+    max-width: 100%;
+    border-top: 1px solid #D9E4EC;
+    /* top line like figma */
+    border-radius: 12px 12px 0 0;
+    /* soft top corners */
+    overflow: hidden;
+  }
+
+  /* Kill card look on mobile */
+  .faq-testimonials .faq-item {
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+  }
+
+  .faq-testimonials .faq-item:hover {
+    box-shadow: none;
+    transform: none;
+  }
+
+  /* Each row: compact, flat, divider line on bottom */
+  .faq-testimonials .faq-question {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 12px 16px 12px;
+    background: #fff;
+    border-bottom: 1px solid #D9E4EC;
+    /* row divider */
+    cursor: pointer;
+  }
+
+  /* Hide the left numbers on mobile (figma has none) */
+  .faq-testimonials .faq-number {
+    display: none;
+  }
+
+  /* Question text sizing like figma */
+  .faq-testimonials .faq-text {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 500;
+    color: #0F172A;
+  }
+
+  /* Turn the purple square button into a small cyan chevron */
+  .faq-testimonials .faq-toggle {
+    width: 0;
+    height: 0;
+    margin-left: 8px;
+    background: none;
+    border: none;
+    padding: 0;
+    /* triangle ↓ */
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 9px solid #22D3EE;
+    /* cyan */
+    transform-origin: 50% 45%;
+    transition: transform .2s ease;
+  }
+
+  .faq-testimonials .faq-icon {
+    display: none;
+  }
+
+  /* hide the + sign */
+
+  /* Rotate triangle when open (points up) */
+  .faq-testimonials .faq-item.active .faq-toggle {
+    transform: rotate(180deg);
+  }
+
+  /* Answer panel: simple text block under the question */
+  .faq-testimonials .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .35s ease, padding .25s ease;
+    padding: 0 12px;
+    background: #fff;
+  }
+
+  .faq-testimonials .faq-item.active .faq-answer {
+    max-height: 600px;
+    /* allow tall text */
+    padding: 10px 12px 16px;
+    border-bottom: 1px solid #D9E4EC;
+    /* keep divider after open */
+  }
+
+  .faq-testimonials .faq-answer p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: #495057;
+  }
+
+  /* Top blue line – match Figma */
+  /* Remove the grey top border so it doesn't compete with the blue line */
+  /* Remove the grey top rule so it doesn't compete with the blue line */
+  .faq-testimonials .faq-list {
+    border-top: 0 !important;
+  }
+
+  /* Full-bleed container for the accent */
+  .faq-testimonials .faq-top-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* container edges don't matter; we draw via viewport width */
+    right: 0;
+    height: 32px;
+    /* vertical space above title */
+    border: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* The blue line itself (viewport width, centered) */
+  .faq-testimonials .faq-top-accent::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    /* nudge up/down if needed */
+    left: 50%;
+    width: calc(100vw - 8px);
+    /* full-bleed with 4px inset each side */
+    transform: translateX(-50%);
+    /* center on viewport */
+    height: 3px;
+    /* thickness */
+    background: #6BD3FF;
+    /* blue */
+    border-radius: 9999px;
+    /* rounded ends */
+  }
 }
 
 
@@ -1345,35 +1599,37 @@ p.featured-meta span.featured-author {
    ========================================================= */
 
 /* Large stats cards lift a little on hover */
-.stat-box.large-box{
+.stat-box.large-box {
   transition: transform .28s ease, box-shadow .28s ease, filter .28s ease;
 }
+
 .stat-box.large-box:hover,
-.stat-box.large-box:focus-within{
+.stat-box.large-box:focus-within {
   transform: translateY(-6px);
-  box-shadow: 0 16px 34px rgba(0,0,0,.18);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, .18);
   filter: brightness(1.02);
 }
 
 /* Small stats cards – subtle lift */
-.stats-column.small-stats .stat-box{
+.stats-column.small-stats .stat-box {
   transition: transform .22s ease, box-shadow .22s ease;
 }
-.stats-column.small-stats .stat-box:hover{
+
+.stats-column.small-stats .stat-box:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0,0,0,.14);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, .14);
 }
 
 /* Focus ring for keyboard users */
-.stat-box.large-box:focus-within{
-  outline: 2px solid rgba(0,200,255,.45);
+.stat-box.large-box:focus-within {
+  outline: 2px solid rgba(0, 200, 255, .45);
   outline-offset: 3px;
 }
 
 
 
 /* More gap between CTA and FAQ, to match Figma */
-.stats-cta-wrap .faq-testimonials{
+.stats-cta-wrap .faq-testimonials {
   margin-top: clamp(100px, 12vw, 160px);
 }
 
@@ -1388,13 +1644,13 @@ p.featured-meta span.featured-author {
 .cta-card:hover,
 .cta-card:focus-within {
   transform: translateY(-6px);
-  box-shadow: 0 16px 34px rgba(0,0,0,.18);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, .18);
   filter: brightness(1.02);
 }
 
 /* Optional: keyboard accessibility outline */
 .cta-card:focus-within {
-  outline: 2px solid rgba(0,200,255,.45);
+  outline: 2px solid rgba(0, 200, 255, .45);
   outline-offset: 3px;
 }
 
@@ -1404,14 +1660,15 @@ p.featured-meta span.featured-author {
   transform: translateY(40px);
   transition: transform .28s ease, box-shadow .28s ease, filter .28s ease;
   animation: ctaFadeIn 0.8s ease-out forwards;
-  animation-delay: 0.4s; /* delay before it starts */
+  animation-delay: 0.4s;
+  /* delay before it starts */
 }
 
 /* Hover effect same as stats */
 .cta-card:hover,
 .cta-card:focus-within {
   transform: translateY(-6px);
-  box-shadow: 0 16px 34px rgba(0,0,0,.18);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, .18);
   filter: brightness(1.02);
 }
 
@@ -1424,66 +1681,89 @@ p.featured-meta span.featured-author {
 
 
 /* same hover lift you used on stats */
-.cta-card{
+.cta-card {
   transition: transform .28s ease, box-shadow .28s ease, filter .28s ease;
 }
+
 .cta-card:hover,
-.cta-card:focus-within{
+.cta-card:focus-within {
   transform: translateY(-6px);
-  box-shadow: 0 16px 34px rgba(0,0,0,.18);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, .18);
   filter: brightness(1.02);
 }
 
 /* draw-in animation for the purple lines after AOS applies */
-.cta-card .line-purple{
+.cta-card .line-purple {
   stroke-dasharray: 1600;
   stroke-dashoffset: 1600;
   opacity: 0;
 }
-.aos-animate .cta-card .line-purple{
+
+.aos-animate .cta-card .line-purple {
   animation: ctaLineDraw 1.2s ease-out forwards;
-  animation-delay: .35s; /* start after the card begins to appear */
+  animation-delay: .35s;
+  /* start after the card begins to appear */
 }
-@keyframes ctaLineDraw{
-  0%   { stroke-dashoffset: 1600; opacity: .2; }
-  100% { stroke-dashoffset: 0;    opacity: 1; }
+
+@keyframes ctaLineDraw {
+  0% {
+    stroke-dashoffset: 1600;
+    opacity: .2;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
 }
 
 /* === CTA height tuning to match Figma === */
-.cta-card{
+.cta-card {
   /* give it more vertical presence on desktop */
   min-height: clamp(520px, 58vh, 680px);
 }
 
 /* give the content some breathing room so the headline sits nicely */
-.cta-content{
+.cta-content {
   padding: clamp(72px, 10vh, 120px) 40px;
 }
 
 /* adjust for tablet */
-@media (max-width: 1024px){
-  .cta-card{ min-height: clamp(480px, 52vh, 600px); }
+@media (max-width: 1024px) {
+  .cta-card {
+    min-height: clamp(480px, 52vh, 600px);
+  }
 }
 
 /* adjust for mobile */
-@media (max-width: 780px){
-  .cta-card{ min-height: 420px; }
-  .cta-content{ padding: 64px 24px; }
+@media (max-width: 780px) {
+  .cta-card {
+    min-height: 420px;
+  }
+
+  .cta-content {
+    padding: 64px 24px;
+  }
 }
 
 /* Center CTA content */
 .cta-card {
   display: flex;
-  align-items: center;      /* vertical center */
-  justify-content: center;  /* horizontal center */
-  text-align: center;       /* keep text centered */
-  flex-direction: column;   /* stack heading & link */
+  align-items: center;
+  /* vertical center */
+  justify-content: center;
+  /* horizontal center */
+  text-align: center;
+  /* keep text centered */
+  flex-direction: column;
+  /* stack heading & link */
 }
 
 /* H2 + underline exactly like the mock */
 .blog-all-posts .section-heading {
   position: relative;
-  margin: 0 0 90px; /* bigger bottom gap */
+  margin: 0 0 90px;
+  /* bigger bottom gap */
   font-weight: 500;
 }
 
@@ -1492,7 +1772,8 @@ p.featured-meta span.featured-author {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -16px; /* gap between text & line */
+  bottom: -16px;
+  /* gap between text & line */
   height: 1px;
   background: rgba(0, 0, 0, .16);
 }
@@ -1506,80 +1787,210 @@ p.featured-meta span.featured-author {
    Add at the very end of your CSS
    ========================= */
 @media (max-width: 520px) {
+
   /* 1) Featured block — tighter & centered like Figma */
-  .blog-featured-post { padding: 56px 0 28px; }
-  .featured-text, .featured-image { max-width: 100%; text-align: center; }
-  .featured-text h2 { font-size: clamp(22px, 6vw, 28px); line-height: 1.25; margin: 10px 0 8px; }
-  .featured-description { max-width: 100%; font-size: 15px; margin: 10px auto 18px; }
-  .featured-image img { max-width: 320px; margin: 0 auto; display: block; }
+  .blog-featured-post {
+    padding: 56px 0 28px;
+  }
+
+  .featured-text,
+  .featured-image {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .featured-text h2 {
+    font-size: clamp(22px, 6vw, 28px);
+    line-height: 1.25;
+    margin: 10px 0 8px;
+  }
+
+  .featured-description {
+    max-width: 100%;
+    font-size: 15px;
+    margin: 10px auto 18px;
+  }
+
+  .featured-image img {
+    max-width: 320px;
+    margin: 0 auto;
+    display: block;
+  }
 
   /* 2) “All posts” heading + underline spacing */
-  .blog-all-posts { padding: 48px 0 56px; }
-  .blog-all-posts .container { padding-top: 24px; padding-bottom: 48px; }
-  .blog-all-posts .section-heading { 
-    text-align: left; 
-    margin: 0 0 56px; 
-    font-weight: 600; 
+  .blog-all-posts {
+    padding: 48px 0 56px;
+  }
+
+  .blog-all-posts .container {
+    padding-top: 24px;
+    padding-bottom: 48px;
+  }
+
+  .blog-all-posts .section-heading {
+    text-align: left;
+    margin: 0 0 56px;
+    font-weight: 600;
     font-size: clamp(24px, 7vw, 30px);
   }
-  .blog-all-posts .section-heading::after { bottom: -12px; }
+
+  .blog-all-posts .section-heading::after {
+    bottom: -12px;
+  }
 
   /* 3) Hide or soften the blue vector that overlaps text on phones */
-  .vector-background { display: none; } /* If Figma shows it, change to: opacity:.25; transform: translateY(-20px) scale(1.1); */
+  .vector-background {
+    display: none;
+  }
+
+  /* If Figma shows it, change to: opacity:.25; transform: translateY(-20px) scale(1.1); */
 
   /* 4) Post cards — ensure image ratio + comfy padding */
-  .post-card { gap: 0; }
+  .post-card {
+    gap: 0;
+  }
+
   .post-card img {
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9;   /* keeps thumbnails consistent */
+    aspect-ratio: 16 / 9;
+    /* keeps thumbnails consistent */
     object-fit: cover;
     object-position: center;
   }
+
   .post-info {
     width: 100%;
     padding: 14px 12px 18px;
   }
-  .blog-all-posts .post-info h3 { 
+
+  .blog-all-posts .post-info h3 {
     font-size: clamp(18px, 5.4vw, 22px);
     line-height: 1.25;
     margin: 8px 0 8px;
   }
-  .blog-all-posts .post-info p { font-size: 14.5px; line-height: 1.55; }
-  .blog-all-posts .post-info .post-category { font-size: 11px; letter-spacing: .12em; }
+
+  .blog-all-posts .post-info p {
+    font-size: 14.5px;
+    line-height: 1.55;
+  }
+
+  .blog-all-posts .post-info .post-category {
+    font-size: 11px;
+    letter-spacing: .12em;
+  }
 
   /* 5) Pagination touch targets */
-  .pagination { margin-top: 36px; }
-  .pagination a { padding: 8px 10px; font-size: 14px; }
+  .pagination {
+    margin-top: 36px;
+  }
+
+  .pagination a {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
 
   /* 6) Stats section — single column + smaller numbers */
-  .stats-section { margin-top: 48px; padding: 36px 0; }
-  .stats-title { font-size: 22px; margin-bottom: 28px; }
-  .stats-row { grid-template-columns: 1fr; gap: 16px; margin: 0 0 20px; }
-  .stats-column.small-stats { grid-template-columns: 1fr; gap: 14px; }
-  .stat-box { padding: 20px 16px; border-radius: 12px; }
-  .stat-box h3 { font-size: 28px; }
-  .stat-box p { font-size: 14px; }
-  .stat-box.large-box { align-items: flex-start; text-align: left; padding: 22px 18px; }
-  .stat-box.large-box h4 { font-size: 18px; }
-  .stat-box.large-box p { font-size: 14.5px; line-height: 1.55; }
+  .stats-section {
+    margin-top: 48px;
+    padding: 36px 0;
+  }
+
+  .stats-title {
+    font-size: 22px;
+    margin-bottom: 28px;
+  }
+
+  .stats-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 0 0 20px;
+  }
+
+  .stats-column.small-stats {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .stat-box {
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+
+  .stat-box h3 {
+    font-size: 28px;
+  }
+
+  .stat-box p {
+    font-size: 14px;
+  }
+
+  .stat-box.large-box {
+    align-items: flex-start;
+    text-align: left;
+    padding: 22px 18px;
+  }
+
+  .stat-box.large-box h4 {
+    font-size: 18px;
+  }
+
+  .stat-box.large-box p {
+    font-size: 14.5px;
+    line-height: 1.55;
+  }
 
   /* 7) Diagonal vector behind stats/cta — reduce bleed */
-  .stats-cta-wrap .diagonal-vector { inset: -60px -40px -80px -40px; }
-  .stats-cta-wrap .diagonal-vector img { width: 140%; }
+  .stats-cta-wrap .diagonal-vector {
+    inset: -60px -40px -80px -40px;
+  }
+
+  .stats-cta-wrap .diagonal-vector img {
+    width: 140%;
+  }
 
   /* 8) CTA card — tighter vertical rhythm */
-  .cta-card { min-height: 380px; }
-  .cta-content { padding: 48px 20px; gap: 18px; }
-  .cta-content h2 { font-size: clamp(22px, 6.6vw, 28px); line-height: 1.25; }
-  .cta-link { font-size: 15px; }
+  .cta-card {
+    min-height: 380px;
+  }
+
+  .cta-content {
+    padding: 48px 20px;
+    gap: 18px;
+  }
+
+  .cta-content h2 {
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.25;
+  }
+
+  .cta-link {
+    font-size: 15px;
+  }
 
   /* 9) FAQ/Testimonial — preserve portrait card proportions but fit viewport */
-  .faq-testimonials { padding: 56px 20px 84px; }
-  .faq-testimonials .faq-title { font-size: clamp(22px, 6.6vw, 28px); margin-bottom: 28px; }
-  .faq-testimonials .faq-list { margin-bottom: 72px !important; }
-  .faq-testimonials .faq-q { font-size: 18px; padding: 18px 0; }
-  .faq-testimonials .testi-stack { width: 88vw; height: 480px; }
+  .faq-testimonials {
+    padding: 56px 20px 84px;
+  }
+
+  .faq-testimonials .faq-title {
+    font-size: clamp(22px, 6.6vw, 28px);
+    margin-bottom: 28px;
+  }
+
+  .faq-testimonials .faq-list {
+    margin-bottom: 72px !important;
+  }
+
+  .faq-testimonials .faq-q {
+    font-size: 18px;
+    padding: 18px 0;
+  }
+
+  .faq-testimonials .testi-stack {
+    width: 88vw;
+    height: 480px;
+  }
 
   /* 10) Container side padding (global mobile gutters) */
   .blog-featured-post .container,
@@ -1591,10 +2002,12 @@ p.featured-meta span.featured-author {
 }
 
 @media (max-width: 520px) {
+
   /* Change order so text comes first on mobile */
   .featured-wrapper {
     flex-direction: column;
-    align-items: flex-start; /* left align */
+    align-items: flex-start;
+    /* left align */
   }
 
   /* Ensure text block full width and left aligned */
@@ -1624,10 +2037,13 @@ p.featured-meta span.featured-author {
   }
 }
 
-  /* === Featured Post: mobile exact layout + truly centered full-bleed image === */
+/* === Featured Post: mobile exact layout + truly centered full-bleed image === */
 @media (max-width: 520px) {
+
   /* use a single mobile gutter var so both sides stay equal */
-  :root { --mobile-gutter: 16px; }
+  :root {
+    --mobile-gutter: 16px;
+  }
 
   .blog-featured-post .container {
     padding-left: var(--mobile-gutter);
@@ -1638,7 +2054,8 @@ p.featured-meta span.featured-author {
   .featured-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: stretch; /* image can be full width */
+    align-items: stretch;
+    /* image can be full width */
   }
 
   /* unwrap so we can re-order label/h2/meta/desc/button */
@@ -1664,15 +2081,20 @@ p.featured-meta span.featured-author {
     margin-left: calc(-1 * var(--mobile-gutter));
     margin-right: calc(-1 * var(--mobile-gutter));
     width: calc(100% + (2 * var(--mobile-gutter)));
-    max-width: none;        /* kill desktop cap */
-    flex: 0 0 auto;         /* don't let flex shrink it oddly */
-    text-align: initial;    /* override any right alignment */
+    max-width: none;
+    /* kill desktop cap */
+    flex: 0 0 auto;
+    /* don't let flex shrink it oddly */
+    text-align: initial;
+    /* override any right alignment */
   }
+
   .featured-image img {
     display: block;
     width: 100%;
     max-width: none;
-    aspect-ratio: 16 / 10;  /* bump if you want it taller (try 16/9) */
+    aspect-ratio: 16 / 10;
+    /* bump if you want it taller (try 16/9) */
     object-fit: cover;
     object-position: center;
   }
@@ -1702,45 +2124,57 @@ p.featured-meta span.featured-author {
   /* ✅ Button should NOT stretch */
   .btn-read-more {
     order: 6;
-    display: inline-flex;    /* keeps size to content */
-    align-self: flex-start;  /* prevents full-row stretch */
-    width: auto;             /* explicit */
+    display: inline-flex;
+    /* keeps size to content */
+    align-self: flex-start;
+    /* prevents full-row stretch */
+    width: auto;
+    /* explicit */
     max-width: none;
-    padding: .72rem 1.4rem;  /* slightly less wide per your note */
+    padding: .72rem 1.4rem;
+    /* slightly less wide per your note */
     font-size: .98rem;
     margin: 0 0 18px 0;
   }
 
-  .blog-featured-post { padding: 40px 0 28px; }
+  .blog-featured-post {
+    padding: 40px 0 28px;
+  }
 
-    /* === Typography scale like Figma === */
+  /* === Typography scale like Figma === */
   .featured-label {
-    font-size: 1.2rem;   /* was 0.85rem */
+    font-size: 1.2rem;
+    /* was 0.85rem */
     letter-spacing: 1.8px;
     margin-bottom: 0px;
   }
 
   .featured-text h2 {
-    font-size: clamp(25px, 7vw, 32px);  /* bigger headline */
+    font-size: clamp(25px, 7vw, 32px);
+    /* bigger headline */
     line-height: 1.3;
     font-weight: 650;
     margin: 0px 0 0px;
   }
 
   .featured-meta {
-    font-size: 0.9rem;    /* was 0.8rem */
+    font-size: 0.9rem;
+    /* was 0.8rem */
     margin-bottom: 0px;
   }
 
   .featured-description {
-    font-size: 1.2rem;      /* was 0.95rem */
+    font-size: 1.2rem;
+    /* was 0.95rem */
     line-height: 1.6;
-    max-width: 38ch;      /* allow a touch more width */
+    max-width: 38ch;
+    /* allow a touch more width */
     margin-bottom: 0px;
   }
 
   .btn-read-more {
-    font-size: 1rem;      /* slightly larger text on button */
+    font-size: 1rem;
+    /* slightly larger text on button */
     padding: 0.8rem 1.5rem;
   }
 
@@ -1748,25 +2182,32 @@ p.featured-meta span.featured-author {
 
 /* === MOBILE FIX: keep 2x2 grid for the small stats on phones === */
 @media (max-width: 520px) {
-  .stats-row { grid-template-columns: 1fr; } /* large cards stay full width */
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* large cards stay full width */
   .stats-column.small-stats {
-    grid-template-columns: 1fr 1fr;  /* 2 columns like Figma */
-    gap: 12px;                       /* tighter gaps like your mock */
+    grid-template-columns: 1fr 1fr;
+    /* 2 columns like Figma */
+    gap: 12px;
+    /* tighter gaps like your mock */
   }
 
   /* compact padding so numbers look balanced */
-  .stats-column.small-stats .stat-box { 
-    padding: 20px 14px; 
+  .stats-column.small-stats .stat-box {
+    padding: 20px 14px;
   }
 
   /* large cards stack beneath the 2x2 grid (as in Figma) */
-  .stat-box.large-box { 
-    margin-top: 16px; 
+  .stat-box.large-box {
+    margin-top: 16px;
   }
 }
 
 /* === MOBILE FIX: reduce gap between Expert Team and CTA === */
 @media (max-width: 520px) {
+
   /* Remove bottom margin from last stat card */
   .stats-row.bottom-row .stat-box.large-box:last-child {
     margin-bottom: 0;
@@ -1774,44 +2215,55 @@ p.featured-meta span.featured-author {
 
   /* Pull CTA section closer */
   .cta-section {
-    margin-top: 24px; /* was larger — adjust to match Figma */
+    margin-top: 24px;
+    /* was larger — adjust to match Figma */
   }
 }
 
 
 
 @media (max-width: 520px) {
+
   /* Increase service section heading and paragraph font size */
   .services-section .service-item h3 {
-    font-size: 1.75rem;   /* was smaller, now ~20px */
+    font-size: 1.75rem;
+    /* was smaller, now ~20px */
     line-height: 1.3;
   }
+
   .services-section .service-item p {
-    font-size: 1.35rem;   /* was ~14-15px, now ~15-16px */
+    font-size: 1.35rem;
+    /* was ~14-15px, now ~15-16px */
     line-height: 1.55;
   }
 
-    /* Increase icon/logo size in services section */
+  /* Increase icon/logo size in services section */
   .services-section .service-icon img {
-    width: 48px;   /* was likely ~32px-40px */
-    height: auto;  /* keep proportions */
+    width: 48px;
+    /* was likely ~32px-40px */
+    height: auto;
+    /* keep proportions */
   }
 }
 
 @media (max-width: 520px) {
+
   /* 1) Reduce space between post content and pagination */
   .pagination {
-    margin-top: 20px; /* was bigger, now tighter */
+    margin-top: 20px;
+    /* was bigger, now tighter */
   }
 
   /* 2) Increase size and weight of Prev/Next links */
   .pagination a {
-    font-size: 1.05rem;  /* ~16–17px */
+    font-size: 1.05rem;
+    /* ~16–17px */
     font-weight: 900;
   }
 }
 
 @media (max-width: 520px) {
+
   /* Remove bottom margin from last service item */
   .services-section .service-item:last-child {
     margin-bottom: 0;
@@ -1819,7 +2271,8 @@ p.featured-meta span.featured-author {
 
   /* Reduce top margin of stats section */
   .stats-section {
-    margin-top: 20px; /* was bigger, now tighter */
+    margin-top: 20px;
+    /* was bigger, now tighter */
   }
 }
 
@@ -1827,8 +2280,10 @@ p.featured-meta span.featured-author {
 /* === DESKTOP: Increase size of Prev/Next links === */
 @media (min-width: 1025px) {
   .pagination a {
-    font-size: 1.2rem;    /* ~19px */
-    font-weight: 600;     /* bolder for emphasis */
+    font-size: 1.2rem;
+    /* ~19px */
+    font-weight: 600;
+    /* bolder for emphasis */
   }
 }
 
@@ -1837,19 +2292,22 @@ p.featured-meta span.featured-author {
 
   /* Increase service titles */
   .services-section .service-item h3 {
-    font-size: 1.6rem;  /* ~25-26px */
+    font-size: 1.6rem;
+    /* ~25-26px */
     line-height: 1.3;
   }
 
   /* Increase service descriptions */
   .services-section .service-item p {
-    font-size: 1.05rem;  /* ~17px */
+    font-size: 1.05rem;
+    /* ~17px */
     line-height: 1.6;
   }
 
   /* Increase service icons */
   .services-section .service-icon img {
-    width: 40px;  /* bigger icons for desktop */
+    width: 40px;
+    /* bigger icons for desktop */
     height: auto;
   }
 }
@@ -1857,16 +2315,16 @@ p.featured-meta span.featured-author {
 
 /* CALL how we work   */
 
-:root{
+:root {
   --hww-bg1: #c7f1ff;
   --hww-bg2: #10b7ff;
   --hww-card: #ffffff;
   --hww-text: #101114;
-  --hww-sub:  #6a6f77;
+  --hww-sub: #6a6f77;
 }
 
 /* Wrapper */
-.hww-inner{
+.hww-inner {
   max-width: 1140px;
   margin: 50px auto;
   padding: 20px 24px;
@@ -1875,7 +2333,7 @@ p.featured-meta span.featured-author {
 }
 
 /* Blue background */
-.hww-inner::before{
+.hww-inner::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -1885,51 +2343,58 @@ p.featured-meta span.featured-author {
   width: 100vw;
   border-radius: 28px;
   background: linear-gradient(135deg, var(--hww-bg1) 15%, var(--hww-bg2) 85%);
-  box-shadow: 0 24px 60px rgba(0,0,0,.08);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .08);
   z-index: -1;
 }
 
 /* Heading */
-.hww-header{
+.hww-header {
   padding-top: 28px;
 }
-.hww-header h2{
+
+.hww-header h2 {
   margin: 0 0 4px;
   font-size: clamp(26px, 3vw, 38px);
   font-weight: 800;
   color: var(--hww-text);
 }
-.hww-sub{
+
+.hww-sub {
   margin: 0;
   color: var(--hww-sub);
   font-size: clamp(13px, 1.1vw, 17px);
 }
 
 /* Grid */
-.hww-grid{
+.hww-grid {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  column-gap: 32px;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 48px;
   align-items: stretch;
-  padding: 20px 30px 30px;
+  padding: 20px 0px 30px;
   margin-top: 28px;
   margin-bottom: 28px;
 }
 
+
+
+
 /* Fixed equal height for both image and card */
 .hww-figure,
-.hww-card{
-  height: 450px; /* fixed height */
+.hww-card {
+  height: 450px;
+  /* fixed height */
 }
 
 /* Left image */
-.hww-figure{
+.hww-figure {
   margin: 0;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 14px 40px rgba(0,0,0,.14);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, .14);
 }
-.hww-figure img{
+
+.hww-figure img {
   display: block;
   width: 100%;
   height: 100%;
@@ -1937,13 +2402,13 @@ p.featured-meta span.featured-author {
 }
 
 /* Right card */
-.hww-card{
+.hww-card {
   background: var(--hww-card);
   border-radius: 18px;
   padding: 0px 24px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 20px 40px rgba(0,0,0,.10), 0 6px 18px rgba(0,0,0,.06);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .10), 0 6px 18px rgba(0, 0, 0, .06);
   position: relative;
 }
 
@@ -1952,18 +2417,22 @@ p.featured-meta span.featured-author {
   list-style: none;
   margin: 0;
   padding: 36px 8px;
-  flex: 0; /* no stretching */
+  flex: 0;
+  /* no stretching */
   display: flex;
   flex-direction: column;
-  gap: 14px; /* equal normal spacing between steps */
+  gap: 14px;
+  /* equal normal spacing between steps */
 
 }
-.hww-step{
+
+.hww-step {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 15px;
 }
-.hww-step .badge{
+
+.hww-step .badge {
   display: inline-grid;
   place-items: center;
   width: 30px;
@@ -1973,10 +2442,10 @@ p.featured-meta span.featured-author {
   font-weight: 700;
   font-size: 15px;
   background: radial-gradient(circle at 30% 30%, #7b27d8, #5217a6 70%);
-  box-shadow: 0 6px 16px rgba(111,31,183,.35);
+  box-shadow: 0 6px 16px rgba(111, 31, 183, .35);
 }
 
-.hww-step h3{
+.hww-step h3 {
   margin: 0 0 2px;
   font-size: 19px;
   font-weight: 500;
@@ -1984,13 +2453,15 @@ p.featured-meta span.featured-author {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.hww-step h4{
+
+.hww-step h4 {
   margin: 0 0 2px;
   font-size: 18px;
   font-weight: 600;
   color: var(--hww-text);
 }
-.hww-step p{
+
+.hww-step p {
   margin: 0;
   color: #3e434b;
   line-height: 1.0;
@@ -2002,20 +2473,30 @@ p.featured-meta span.featured-author {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 30px ;
-  min-width: 160px;
-  padding: 10px 18px;
-  border-radius: 14px;
+  min-height: 20px;
+  min-width: 140px;
+  width: auto;
+  padding: 10px 24px;
+  border-radius: 9999px;
   text-decoration: none;
   color: #fff;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: .2px;
-  background: linear-gradient(180deg, #7f3bf5, #6620d8);
-  box-shadow: 0 8px 18px rgba(0,0,0,.18), inset 0 -3px 8px rgba(0,0,0,.12);
+  background: linear-gradient(90deg, #2FCDA7 0%, #8157d5 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .10), inset 0 -3px 8px rgba(0, 0, 0, .12);
   transition: transform .15s ease, filter .15s ease;
-  align-self: flex-start; /* aligns to left inside card */
-  margin-top: -10px; /* move slightly upward */
+  align-self: flex-start;
+  /* aligns to left inside card */
+  margin-top: -10px;
+  /* move slightly upward */
 }
+
+@media (min-width: 781px) {
+  .hww-cta {
+    margin-left: 14px;
+  }
+}
+
 
 .hww-cta:hover {
   transform: translateY(-2px);
@@ -2024,29 +2505,40 @@ p.featured-meta span.featured-author {
 
 
 /* Responsive */
-@media (max-width: 1024px){
-  .hww-grid{
+@media (max-width: 1024px) {
+  .hww-grid {
     grid-template-columns: 1fr;
     row-gap: 16px;
     padding: 20px;
   }
+
   .hww-figure,
-  .hww-card{ height: auto; }
-  .hww-figure img{ height: 220px; }
-  .hww-cta{
+  .hww-card {
+    height: auto;
+  }
+
+  /*.hww-figure img {
+    height: 220px;
+  }*/
+
+  .hww-cta {
     position: static;
     margin-top: 14px;
   }
 }
-@media (max-width: 580px){
-  .hww-figure img{ height: 180px; }
-}
+
+/*@media (max-width: 580px) {
+  .hww-figure img {
+    height: 180px;
+  }
+}*/
 
 /* IMPACT */
 /* IMPACT SECTION */
 .ideas-impact {
   padding: 10px 20px;
-  background-color: transparent; /* No white bg */
+  background-color: transparent;
+  /* No white bg */
   text-align: center;
 }
 
@@ -2054,7 +2546,8 @@ p.featured-meta span.featured-author {
   font-size: 2.4rem;
   font-weight: 800;
   margin-bottom: 180px;
-  color: #000000; /* White text for dark theme background */
+  color: #000000;
+  /* White text for dark theme background */
 }
 
 /* Desktop View */
@@ -2130,8 +2623,10 @@ p.featured-meta span.featured-author {
 
 .testimonial-section {
   display: flex;
-  flex-direction: column; /* heading on top, cards below */
-  align-items: center;    /* center horizontally */
+  flex-direction: column;
+  /* heading on top, cards below */
+  align-items: center;
+  /* center horizontally */
   text-align: center;
   margin: 90px auto;
   padding-bottom: 200px;
@@ -2149,9 +2644,12 @@ h2 {
 /* Card stack wrapper */
 .card-stack {
   position: relative;
-  display: flex;           /* allow flex centering */
-  justify-content: center; /* center cards horizontally */
-  width: 300px;            /* desktop default */
+  display: flex;
+  /* allow flex centering */
+  justify-content: center;
+  /* center cards horizontally */
+  width: 300px;
+  /* desktop default */
 }
 
 /* Individual card */
@@ -2196,11 +2694,15 @@ h2 {
 }
 
 /* Stack depth */
-.card:nth-child(1) { z-index: 3; }
+.card:nth-child(1) {
+  z-index: 3;
+}
+
 .card:nth-child(2) {
   transform: scale(0.98) translateY(8px);
   z-index: 2;
 }
+
 .card:nth-child(3) {
   transform: scale(0.96) translateY(16px);
   z-index: 1;
@@ -2211,7 +2713,8 @@ h2 {
 /* Tablets */
 @media (max-width: 1024px) {
   .card-stack {
-    width: 320px; /* slightly larger for tablets */
+    width: 320px;
+    /* slightly larger for tablets */
   }
 }
 
@@ -2221,25 +2724,32 @@ h2 {
     margin: 90px auto;
     padding-bottom: 200px;
   }
+
   .card-stack {
-    width: 90%; /* take up most of screen but still centered */
+    width: 90%;
+    /* take up most of screen but still centered */
     max-width: 240px;
   }
+
   h2 {
     font-size: 22px;
     margin-bottom: 30px;
   }
+
   .card {
     height: 270px;
     padding: 10px;
 
   }
+
   .card p {
     font-size: 14px;
   }
+
   .author .name {
     font-size: 12px;
   }
+
   .author .role {
     font-size: 11px;
   }
@@ -2254,7 +2764,8 @@ h2 {
   margin: 0 auto;
   padding: 60px 20px;
   position: relative;
-  z-index: 2; /* keeps it on top of your background */
+  z-index: 2;
+  /* keeps it on top of your background */
 }
 
 /* Header */
@@ -2303,5 +2814,98 @@ h2 {
   .values-grid {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+}
+
+/* ===== HOW WE WORK — robust mobile (≤680px) ===== */
+@media (max-width: 680px) {
+
+  /* Single column, consistent gutters */
+  .hww-grid {
+    grid-template-columns: 1fr;
+    gap: clamp(28px, 7vw, 48px);
+    padding: 0 clamp(14px, 4vw, 24px);
+    /* ~16–24px side gutters */
+  }
+
+  /* Image: fluid aspect, rounded corners, no fixed heights */
+  .hww-figure {
+    margin: 0;
+  }
+
+  .hww-figure img {
+     display: block;
+    width: 100%;
+    /* ↑ keep full width, but make it visually larger by increasing height */
+    height: clamp(260px, 75vw, 360px);   /* was auto/aspect-ratio */
+    object-fit: cover;
+    border-radius: 18px;
+  }
+
+  /* White card: comfy padding + same radius as image */
+  .hww-card {
+    padding: clamp(16px, 3.5vw, 24px);
+    border-radius: 18px;
+  }
+
+  /* Steps spacing + readable type on small screens */
+  .hww-steps {
+    padding: 0;
+    gap: clamp(10px, 2.8vw, 16px);
+  }
+
+  .hww-step {
+    gap: clamp(10px, 2.6vw, 16px);
+  }
+
+  .hww-step .badge {
+    width: clamp(26px, 7vw, 34px);
+    height: clamp(26px, 7vw, 34px);
+    font-size: clamp(12px, 3.6vw, 16px);
+  }
+
+  .hww-step h3 {
+    font-size: clamp(16px, 4.6vw, 20px);
+  }
+
+  /* “Step 1” */
+  .hww-step h4 {
+    font-size: clamp(16px, 4.4vw, 20px);
+  }
+
+  /* title */
+  .hww-step p {
+    font-size: clamp(13px, 3.8vw, 16px);
+    line-height: 1.5;
+  }
+
+  /* CTA: centered, stretches nicely, never overflows */
+  .hww-cta {
+    /* kill any leftover desktop offset */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    /* center + safe width on all phones */
+    display: inline-flex;
+    align-self: center;
+    margin-top: 16px;
+    width: min(72%, 280px);
+    /* smaller than before */
+    min-width: 200px;
+    /* keeps presence on tiny phones */
+    padding: 10px 18px;
+    min-width: 0;
+    border-radius: 9999px;
+  }
+
+  .hww-card {
+    padding-bottom: clamp(16px, 4vw, 22px);
+  }
+}
+
+/* Ultra-narrow safety: make CTA full-width if needed */
+@media (max-width: 360px) {
+  .hww-cta {
+    width: 100%;
   }
 }
