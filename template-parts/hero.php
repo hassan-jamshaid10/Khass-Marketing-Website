@@ -368,7 +368,7 @@
         </li>
       </ol>
 
-      <a href="#" class="hww-cta">Schedule a Call</a>
+      <a href="#" class="hww-cta">Schedule Call</a>
     </div>
   </div>
 </div>

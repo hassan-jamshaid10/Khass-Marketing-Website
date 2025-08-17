@@ -347,91 +347,42 @@ get_header();
       </ul>
     </div>
 
-    <div class="testi-wrap">
-      <h3 class="testi-heading">
-        Look what people say<br>about our <span>Services</span>
-      </h3>
+    
+<div class="testimonial-section">
+  <h2>Look what people say<br>about our Services</h2>
 
-      <div class="testi-stack" id="testimonialStack">
-        <!-- Shadow cards for depth effect -->
-        <div class="card card-shadow-4"></div>
-        <div class="card card-shadow-3"></div>
-        <div class="card card-shadow-2"></div>
-        <div class="card card-shadow-1"></div>
-
-        <!-- Main testimonial cards -->
-        <div class="card card-main active" data-index="0">
-          <div class="card-body">
-            <p>
-              Partnering with Khaas Marketing was a game-changer. Their cutting-edge design and seamless
-              functionality elevated our website experience—resulting in increased traffic, higher conversions,
-              and exceptional user feedback. Their team's strategic insights and top-tier collaboration made all the
-              difference.
-            </p>
-          </div>
-          <div class="card-footer">
-            <div class="name">Alaska Kaur</div>
-            <div class="role">Owner</div>
-          </div>
-        </div>
-
-        <div class="card card-main" data-index="1">
-          <div class="card-body">
-            <p>
-              The team at Khaas Marketing exceeded our expectations in every way. Their innovative approach to digital marketing transformed our online presence, driving a 300% increase in qualified leads within just three months. Their attention to detail and commitment to results is unmatched.
-            </p>
-          </div>
-          <div class="card-footer">
-            <div class="name">Michael Chen</div>
-            <div class="role">Marketing Director</div>
-          </div>
-        </div>
-
-        <div class="card card-main" data-index="2">
-          <div class="card-body">
-            <p>
-              Working with Khaas Marketing has been a revelation. They didn't just build us a website—they created a comprehensive digital ecosystem that perfectly captures our brand essence. The user experience improvements alone resulted in a 40% boost in customer engagement.
-            </p>
-          </div>
-          <div class="card-footer">
-            <div class="name">Sarah Johnson</div>
-            <div class="role">CEO</div>
-          </div>
-        </div>
-
-        <div class="card card-main" data-index="3">
-          <div class="card-body">
-            <p>
-              Khaas Marketing's expertise in custom software development is exceptional. They delivered our project on time, within budget, and with features that went beyond our initial requirements. Their technical knowledge and business acumen make them the perfect partner for any digital project.
-            </p>
-          </div>
-          <div class="card-footer">
-            <div class="name">David Rodriguez</div>
-            <div class="role">CTO</div>
-          </div>
-        </div>
-
-        <div class="card card-main" data-index="4">
-          <div class="card-body">
-            <p>
-              The results we've seen since partnering with Khaas Marketing are incredible. Their data-driven approach to marketing campaigns has increased our ROI by 250%. They truly understand our industry and have become an extension of our team.
-            </p>
-          </div>
-          <div class="card-footer">
-            <div class="name">Emily Watson</div>
-            <div class="role">VP of Growth</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dots" id="testimonialDots">
-        <span class="active" data-index="0"></span>
-        <span data-index="1"></span>
-        <span data-index="2"></span>
-        <span data-index="3"></span>
-        <span data-index="4"></span>
+  <div class="card-stack">
+    <div class="card active">
+      <p>
+        Partnering with Khaos Marketing was a game-changer. Their cutting edge design and seamless functionality elevated our website experience resulting in increased traffic, higher conversions, and exceptional user feedback. Their team's strategic insights and top-tier collaboration made all the difference.
+      </p>
+      <div class="author">
+        <div class="name">Alaska Kaur</div>
+        <div class="role">Owner</div>
       </div>
     </div>
+
+    <div class="card">
+      <p>
+        Absolutely fantastic service! The team was proactive, communicative, and creative in ways that took our business to the next level.
+      </p>
+      <div class="author">
+        <div class="name">John Doe</div>
+        <div class="role">CEO</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p>
+        They truly understand our needs and deliver beyond expectations every time. A pleasure to work with!
+      </p>
+      <div class="author">
+        <div class="name">Jane Smith</div>
+        <div class="role">Marketing Director</div>
+      </div>
+    </div>
+  </div>
+</div>
   </section>
 </div>
 
