@@ -6,7 +6,7 @@ get_header();
 ?>
 
 <!-- BLOG PAGE START -->
-<section class="blog-featured-post">
+<!-- <section class="blog-featured-post">
   <div class="container">
     <div class="featured-wrapper">
       <div class="featured-text">
@@ -28,7 +28,51 @@ get_header();
       </div>
     </div>
   </div>
+</section> -->
+<section class="blog-featured-post">
+  <div class="container">
+    <div class="featured-wrapper">
+      <?php
+      // Query latest post from "featured" category
+      $featured = new WP_Query(array(
+        'category_name'  => 'featured', // slug of your category
+        'posts_per_page' => 1
+      ));
+
+      if ($featured->have_posts()) :
+        while ($featured->have_posts()) : $featured->the_post(); ?>
+          <div class="featured-text">
+            <span class="featured-label">FEATURED POST</span>
+
+            <h2><?php the_title(); ?></h2>
+
+            <p class="featured-meta">
+              By&nbsp;<span class="featured-author"><?php the_author(); ?></span>&nbsp;| 
+              <?php echo get_the_date(); ?>
+            </p>
+
+            <p class="featured-description">
+              <?php echo wp_trim_words(get_the_excerpt(), 25); ?>
+            </p>
+
+            <a href="<?php the_permalink(); ?>" class="btn-read-more">Read More ></a>
+          </div>
+
+          <div class="featured-image">
+            <?php 
+            if (has_post_thumbnail()) {
+              the_post_thumbnail('large', array('alt' => get_the_title()));
+            } else { ?>
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog_purple_character.png" alt="Default Image" />
+            <?php } ?>
+          </div>
+        <?php endwhile;
+        wp_reset_postdata();
+      endif; ?>
+    </div>
+  </div>
 </section>
+
 
 <section class="blog-all-posts">
   <!-- Blue vector background -->
@@ -162,6 +206,10 @@ get_header();
   </div>
 </section>
 
+
+
+
+<!-- cta -->
 
 <div class="stats-cta-wrap">
   <div class="diagonal-vector" aria-hidden="true">
