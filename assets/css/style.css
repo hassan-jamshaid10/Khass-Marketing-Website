@@ -217,6 +217,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+  
 }
 
 
@@ -1441,7 +1442,7 @@ p.featured-meta span.featured-author {
   margin: 0 auto 96px;
   /* gap before testimonial */
   padding: 0;
-  max-width: 1100px;
+  max-width: 800px;
   /* narrower column */
 }
 
@@ -1451,7 +1452,7 @@ p.featured-meta span.featured-author {
   border-radius: 8px;
   margin-bottom: 16px;
   overflow: hidden;
-  background: #fff;
+  background: none;
   transition: all 0.3s ease;
 }
 
@@ -1467,40 +1468,45 @@ p.featured-meta span.featured-author {
 
 .faq-testimonials .faq-question {
   display: flex;
-  align-items: center;
-  padding: 24px 32px;
-  background: #fff;
+  align-items: stretch;  /* let children (like .faq-toggle) stretch full height */
+  padding: 0 0 0 32px;   /* remove top/bottom padding so toggle fills height */
+  min-height: 60px;      /* control row height */
+  background: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
   position: relative;
 }
+
 
 .faq-testimonials .faq-question:hover {
   background-color: transparent;
 }
 
 .faq-testimonials .faq-number {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 700;
   color: #000;
+  margin-top: 16px;
+  margin-left: 16px;
   margin-right: 24px;
   min-width: 30px;
 }
 
 .faq-testimonials .faq-text {
   flex: 1;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 700;
   color: #000;
   line-height: 1.4;
+  margin-top: 16px;
 }
 
 .faq-testimonials .faq-toggle {
   background: #6F1FB7;
   border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 6px;
+  width: 60px;            /* make it wider (optional) */
+  height: 61px;           /* full height of the parent row */
+  border-radius: 0 6px 6px 0; /* rounded only on right side */
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -1510,7 +1516,7 @@ p.featured-meta span.featured-author {
 }
 
 .faq-testimonials .faq-toggle:hover {
-  background: #5a1a8f;
+  background: #01CFFF ;
   transform: scale(1.05);
 }
 
@@ -2651,7 +2657,6 @@ p.featured-meta span.featured-author {
 .ideas-impact {
   padding: 10px 20px;
   background-color: transparent;
-  /* No white bg */
   text-align: center;
 }
 

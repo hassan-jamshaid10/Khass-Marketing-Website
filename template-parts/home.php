@@ -5,7 +5,7 @@ get_header();
 <section class="hero-section">
   <div class="hero-content">
     <h1 class="gradient-text">
-      Empowering Brands Through<br>
+      Empowering Brands Through<br/>
       Strategy-Driven Digital Solutions
     </h1>
     <p>
