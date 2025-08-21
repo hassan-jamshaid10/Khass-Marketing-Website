@@ -1,7 +1,7 @@
 /*
 Theme Name: Khass Theme
 Theme URI: http://localhost/khass-marketing-website/
-Author: Hassan Jamshaid
+Authors: Hassan Jamshaid | Ali Usman Khan Durani
 Author URI: https://www.hassanjamshaid.com/
 Description: Custom WordPress theme for Khaas Marketing website.
 Version: 1.0
@@ -14,7 +14,5 @@ Text Domain: khaas
 
 body {
   font-family: 'Outfit', sans-serif;
-  background-color: #ffff;
 }
-/* updated */
 

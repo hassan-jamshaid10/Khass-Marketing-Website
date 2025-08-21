@@ -83,65 +83,62 @@ get_header();
   <div class="container">
     <h2 class="section-heading">All posts</h2>
     <div class="posts-grid">
-      <!-- Post card -->
-      <div class="post-card">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog_post1.jpg" alt="Post 1" />
-        <div class="post-info">
-          <span class="post-category">STARTUP</span>
-          <h3>Design tips for designers that cover everything you need</h3>
-          <p>Whether you're a beginner or a seasoned creative, this all-in-one guide is packed with essential design
-            tips...</p>
-        </div>
-      </div>
+      <?php
+      $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-      <div class="post-card">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog_post2.jpg" alt="Post 2" />
-        <div class="post-info">
-          <span class="post-category">BUSINESS</span>
-          <h3>How to build rapport with your web design clients</h3>
-          <p>Discover communication strategies, trust-building techniques, and practical tips to create smooth design
-            experiences...</p>
-        </div>
-      </div>
+      $allposts = new WP_Query(array(
+        'posts_per_page'   => 5, // only 5 per page
+        'paged'            => $paged,
+        'category__not_in' => array(get_cat_ID('featured')),
+        'order'            => 'ASC', // oldest first
+      ));
 
-      <div class="post-card">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog_post3.jpg" alt="Post 3" />
-        <div class="post-info">
-          <span class="post-category">STARTUP</span>
-          <h3>Logo design trends to avoid in 2022</h3>
-          <p>in this article, we break down the outdated, overused, and ineffictive logo trends that can weaken your
-            brand in 2022. Learn what to avoid and why timeless.</p>
-        </div>
-      </div>
+      if ($allposts->have_posts()) :
+        while ($allposts->have_posts()) : $allposts->the_post(); ?>
+          
+          <div class="post-card">
+            <?php if (has_post_thumbnail()) : ?>
+              <?php the_post_thumbnail('medium', ['alt' => get_the_title()]); ?>
+            <?php else : ?>
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/default-post.jpg" alt="Default Post Image" />
+            <?php endif; ?>
 
-      <div class="post-card">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog_post4.jpg" alt="Post 4" />
-        <div class="post-info">
-          <span class="post-category">TECHNOLOGY</span>
-          <h3>8 Figma design systems you can download for free today</h3>
-          <p>Level up your esign workflow with these 8 free Figma design systems - handpicked for UI/UX designers who
-            value speed, consistency, and quality. From clean UI kits to fully responsive components</p>
-        </div>
-      </div>
+            <div class="post-info">
+              <span class="post-category">
+                <?php
+                $categories = get_the_category();
+                if (!empty($categories)) {
+                  echo esc_html($categories[0]->name);
+                }
+                ?>
+              </span>
+              <h3><?php the_title(); ?></h3>
+              <p><?php echo get_the_excerpt(); ?></p>
+            </div>
+          </div>
 
-      <div class="post-card">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog_post5.jpg" alt="Post 5" />
-        <div class="post-info">
-          <span class="post-category">ECONOMY</span>
-          <h3>Font sizes in UI design: The complete guide to follow</h3>
-          <p>This complete guide walks you through best practices for font sizing in UI design, includeing hierarchy,
-            responsiveness, accessibility, and platform-specific tips.</p>
-        </div>
-      </div>
-
+        <?php endwhile; ?>
+      <?php endif; wp_reset_postdata(); ?>
     </div>
 
+    <!-- Pagination -->
     <div class="pagination">
-      <a href="#" class="prev">&lt; Prev</a>
-      <a href="#" class="next">Next &gt;</a>
+      <?php
+      $big = 999999999; // need an unlikely integer
+      echo paginate_links(array(
+        'base'      => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+        'format'    => '?paged=%#%',
+        'current'   => max(1, get_query_var('paged')),
+        'total'     => $allposts->max_num_pages,
+        'prev_text' => '&lt; Prev',
+        'next_text' => 'Next &gt;',
+      ));
+      ?>
     </div>
   </div>
 </section>
+
+
 <!-- BLOG PAGE END -->
 
 <!-- ✅ SERVICES SECTION -->
@@ -212,8 +209,8 @@ get_header();
 <!-- cta -->
 
 <div class="stats-cta-wrap">
-  <div class="diagonal-vector" aria-hidden="true">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vector1.png" alt="">
+<div class="diagonal-vector" aria-hidden="true">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vector2.png" alt="">
   </div>
 
   <!-- =============== STATS SECTION =============== -->
@@ -276,39 +273,23 @@ get_header();
   <section class="cta-section">
     <!-- fade up like your stats boxes -->
     <div class="cta-card" data-aos="fade-up" data-aos-delay="150" data-aos-duration="800">
-      <!-- decorative neon lines -->
-      <svg class="cta-lines" viewBox="0 0 1440 560" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-          <!-- cyan ambient glow -->
-          <filter id="glowCyan" x="-30%" y="-30%" width="160%" height="160%">
-            <feGaussianBlur stdDeviation="18" result="blur" />
-            <feMerge>
-              <feMergeNode in="blur" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-          <!-- subtle purple edge glow -->
-          <filter id="glowPurple" x="-30%" y="-30%" width="160%" height="160%">
-            <feGaussianBlur stdDeviation="1.5" result="blur2" />
-            <feMerge>
-              <feMergeNode in="blur2" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-        </defs>
-
-        <!-- TOP curve (soft arc like Figma) -->
-        <path d="M -80 300 C 300 220, 900 180, 1520 160" fill="none" stroke="#0aa9c0" stroke-width="36" opacity="0.25"
-          filter="url(#glowCyan)" />
-        <path d="M -80 300 C 300 220, 900 180, 1520 160" fill="none" stroke="#6F1FB7" stroke-width="6"
-          filter="url(#glowPurple)" />
-
-        <!-- BOTTOM curve -->
-        <path d="M -120 500 C 400 420, 1100 400, 1600 440" fill="none" stroke="#0aa9c0" stroke-width="36" opacity="0.25"
-          filter="url(#glowCyan)" />
-        <path d="M -120 500 C 400 420, 1100 400, 1600 440" fill="none" stroke="#6F1FB7" stroke-width="6"
-          filter="url(#glowPurple)" />
-      </svg>
+  <!-- decorative gradient line -->
+  <svg class="cta-lines" viewBox="0 0 1296 495" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path 
+      d="M499.5 511.888C838.44 324.063 1100.17 231.733 1357.44 228.337M890.085 -17.1082C690.015 156.232 29.2423 128.993 -61.4377 330.886" 
+      stroke="url(#paint0_linear_630_20)" 
+      stroke-width="6.72453" 
+      stroke-linecap="round" 
+    />
+    <defs>
+      <linearGradient id="paint0_linear_630_20" x1="626.154" y1="-176.513" x2="412.881" y2="1599.47" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#111010"/>
+        <stop offset="0.37" stop-color="#7219A3"/>
+        <stop offset="0.71" stop-color="#EAFDFF"/>
+        <stop offset="1" stop-color="#EAFDFF" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+  </svg>
 
 
       <!-- slight stagger for the text/link -->

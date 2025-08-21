@@ -1,3 +1,7 @@
+<?php
+get_header();
+// get_template_part('template-parts/site-about.php');
+?>
 <section class="hero-section">
   <div class="hero-content">
     <h1 class="gradient-text">
@@ -5,24 +9,36 @@
       Strategy-Driven Digital Solutions
     </h1>
     <p>
-      We blend creativity with strategy to craft high-performance websites
+      We blend creativity with strategy to craft high-performance websites<br/>
       that convert visitors into loyal customers.
     </p>
     <a href="/contact" class="hero-button">Start a project request<span class="vector-arrow">›</span></a>
   </div>
 
   <div class="hero-vector">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-graphic-transparent.svg"
-      alt="Hero Vector" />
-  </div>
+  <picture>
+    <!-- Mobile first -->
+    <source media="(max-width: 768px)" 
+            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/v1.svg">
+    <!-- Default / Desktop -->
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-graphic-transparent.svg" 
+         alt="Hero Vector" />
+  </picture>
+</div>
+
 </section>
-<!-- <---------------------------------->
+
+
+
+
+
 <section class="services-section">
   <div class="container">
     <div class="services-heading-wrapper" data-aos="fade-right">
       <h2 class="services-heading">
         All-in-<span class="highlight-purple">One Marketing</span><br /> Support,
-        From <span class="highlight-cyan">Idea <span style="color:black;"> to </span>Impact</span>
+        From <span class="highlight-cyan">Idea <span style="color: #000;">to</span>
+        Impact</span>
       </h2>
       <a href="https://icreativez.info/contact" class="services-link" data-aos="fade-left">Everything we do</a>
     </div>
@@ -82,6 +98,7 @@
 </section>
 
 
+
 <section class="stats-section" data-aos="fade-up">
   <h2 class="stats-title">Unlock Revenue Growth for Your Business</h2>
 
@@ -134,7 +151,6 @@
     </div>
   </div>
 </section>
-
 
 <section class="ideas-impact">
   <div class="container">
@@ -197,49 +213,41 @@
 
 
 
-
-
 <div class="stats-cta-wrap">
-  <div class="diagonal-vector" aria-hidden="true">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vector2.png" alt="">
-  </div>
+<div class="diagonal-vector" aria-hidden="true">
+  <picture>
+    <!-- Mobile first -->
+    <source media="(max-width: 768px)" 
+            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/v2.svg">
+    <!-- Default / Desktop -->
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vector2.png" 
+         alt="Diagonal Vector" />
+  </picture>
+</div>
+
   <!-- =============== CTA SECTION =============== -->
   <section class="cta-section">
     <!-- fade up like your stats boxes -->
     <div class="cta-card" data-aos="fade-up" data-aos-delay="150" data-aos-duration="800">
-      <!-- decorative neon lines -->
-      <svg class="cta-lines" viewBox="0 0 1440 560" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-          <!-- cyan ambient glow -->
-          <filter id="glowCyan" x="-30%" y="-30%" width="160%" height="160%">
-            <feGaussianBlur stdDeviation="18" result="blur" />
-            <feMerge>
-              <feMergeNode in="blur" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-          <!-- subtle purple edge glow -->
-          <filter id="glowPurple" x="-30%" y="-30%" width="160%" height="160%">
-            <feGaussianBlur stdDeviation="1.5" result="blur2" />
-            <feMerge>
-              <feMergeNode in="blur2" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-        </defs>
+  <!-- decorative gradient line -->
+  <svg class="cta-lines" viewBox="0 0 1296 495" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path 
+      d="M499.5 511.888C838.44 324.063 1100.17 231.733 1357.44 228.337M890.085 -17.1082C690.015 156.232 29.2423 128.993 -61.4377 330.886" 
+      stroke="url(#paint0_linear_630_20)" 
+      stroke-width="6.72453" 
+      stroke-linecap="round" 
+    />
+    <defs>
+      <linearGradient id="paint0_linear_630_20" x1="626.154" y1="-176.513" x2="412.881" y2="1599.47" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#111010"/>
+        <stop offset="0.37" stop-color="#7219A3"/>
+        <stop offset="0.71" stop-color="#EAFDFF"/>
+        <stop offset="1" stop-color="#EAFDFF" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+  </svg>
 
-        <!-- TOP curve (soft arc like Figma) -->
-        <path d="M -80 300 C 300 220, 900 180, 1520 160" fill="none" stroke="#0aa9c0" stroke-width="36" opacity="0.25"
-          filter="url(#glowCyan)" />
-        <path d="M -80 300 C 300 220, 900 180, 1520 160" fill="none" stroke="#6F1FB7" stroke-width="6"
-          filter="url(#glowPurple)" />
 
-        <!-- BOTTOM curve -->
-        <path d="M -120 500 C 400 420, 1100 400, 1600 440" fill="none" stroke="#0aa9c0" stroke-width="36" opacity="0.25"
-          filter="url(#glowCyan)" />
-        <path d="M -120 500 C 400 420, 1100 400, 1600 440" fill="none" stroke="#6F1FB7" stroke-width="6"
-          filter="url(#glowPurple)" />
-      </svg>
 
 
       <!-- slight stagger for the text/link -->
@@ -250,7 +258,8 @@
     </div>
   </section>
 
-  <!-- =============== FAQ + TESTIMONIALS (inside same wrap so vector continues) =============== -->
+
+
   <section class="faq-testimonials">
     <div class="faq-top-accent"></div>
 
@@ -324,7 +333,7 @@
         </li>
       </ul>
     </div>
-    
+
     <div class="hww-inner">
   <header class="hww-header">
     <h2>How We Work<span class="dot">.</span></h2>
@@ -373,6 +382,9 @@
   </div>
 </div>
 
+    
+ 
+
 <div class="testimonial-section">
   <h2>Look what people say<br>about our Services</h2>
 
@@ -411,5 +423,4 @@
 
   </section>
 
-  
-</div>
+<?php get_footer(); ?>

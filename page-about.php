@@ -15,7 +15,14 @@ get_header();
   </div>
 
   <div class="about-vector">
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-graphic-transparent.svg" alt="about Vector" />
+  <picture>
+    <!-- Mobile first -->
+    <source media="(max-width: 768px)" 
+            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/v1.svg">
+    <!-- Default / Desktop -->
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-graphic-transparent.svg" 
+         alt="about Vector" />
+  </picture>
 </div>
 
 
@@ -28,6 +35,8 @@ get_header();
       <div class="text-box">
         <hr class="accent-line">
         <h2>Who We Are</h2>
+      </div>
+      <div class="text-description">
         <p>We are an enthusiastic team sharing creativity and efficiency, passion and expertise.</p>
       </div>
       <div class="image-box">
@@ -36,6 +45,7 @@ get_header();
     </div>
   </div>
 </section>
+
 
 
 <section class="services-section">
@@ -130,6 +140,7 @@ get_header();
   </div>
 </section>
 
+
 <section class="stats-section" data-aos="fade-up">
   <h2 class="stats-title">Unlock Revenue Growth for Your Business</h2>
 
@@ -183,49 +194,101 @@ get_header();
   </div>
 </section>
 
+<section class="ideas-impact">
+  <div class="container">
+    <h2 data-aos="fade-up">We Turn Ideas Into Impact</h2>
+
+    <!-- Desktop Layout -->
+    <div class="ideas-grid desktop-view">
+      <div class="idea-item" data-aos="fade-right">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sprint.png" alt="Idea Image 1">
+      </div>
+      <div class="idea-item2" data-aos="fade-left">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dv.svg" alt="Idea Image 2">
+      </div>
+    </div>
+
+    <!-- Mobile Layout -->
+    <div class="mobile-view">
+      <div class="idea-step" data-aos="fade-up" data-aos-delay="100">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/strategy.svg" alt="Strategy Icon">
+        <div>
+          <h3>Strategy</h3>
+          <p>Develop long-term AI strategies to maximize the potential of custom software solutions for your business growth.</p>
+        </div>
+      </div>
+
+      <div class="idea-step" data-aos="fade-up" data-aos-delay="200">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/design.svg" alt="Design Icon">
+        <div>
+          <h3>Design</h3>
+          <p>Craft intuitive designs with cutting-edge tools to create AI software development services tailored to your vision.</p>
+        </div>
+      </div>
+
+      <div class="idea-step" data-aos="fade-up" data-aos-delay="300">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dev.svg" alt="Development Icon">
+        <div>
+          <h3>Development & Testing</h3>
+          <p>Build robust, scalable solutions and ensure excellence through rigorous testing of your AI-driven applications.</p>
+        </div>
+      </div>
+
+      <div class="idea-step" data-aos="fade-up" data-aos-delay="400">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/launch.svg" alt="Launch Icon">
+        <div>
+          <h3>Launch</h3>
+          <p>Deploy innovative AI software with precision for seamless integration and immediate business impact.</p>
+        </div>
+      </div>
+
+      <div class="idea-step" data-aos="fade-up" data-aos-delay="500">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/support.svg" alt="Support Icon">
+        <div>
+          <h3>Support</h3>
+          <p>Provide ongoing support for AI software development services to keep your systems optimized and future-ready.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 <div class="stats-cta-wrap">
-  <div class="diagonal-vector" aria-hidden="true">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vector2.png" alt="">
-  </div>
+<div class="diagonal-vector" aria-hidden="true">
+  <picture>
+    <!-- Mobile first -->
+    <source media="(max-width: 768px)" 
+            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/v2.svg">
+    <!-- Default / Desktop -->
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vector2.png" 
+         alt="Diagonal Vector" />
+  </picture>
+</div>
   <!-- =============== CTA SECTION =============== -->
   <section class="cta-section">
     <!-- fade up like your stats boxes -->
     <div class="cta-card" data-aos="fade-up" data-aos-delay="150" data-aos-duration="800">
-      <!-- decorative neon lines -->
-      <svg class="cta-lines" viewBox="0 0 1440 560" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-          <!-- cyan ambient glow -->
-          <filter id="glowCyan" x="-30%" y="-30%" width="160%" height="160%">
-            <feGaussianBlur stdDeviation="18" result="blur" />
-            <feMerge>
-              <feMergeNode in="blur" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-          <!-- subtle purple edge glow -->
-          <filter id="glowPurple" x="-30%" y="-30%" width="160%" height="160%">
-            <feGaussianBlur stdDeviation="1.5" result="blur2" />
-            <feMerge>
-              <feMergeNode in="blur2" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-        </defs>
+  <!-- decorative gradient line -->
+  <svg class="cta-lines" viewBox="0 0 1296 495" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path 
+      d="M499.5 511.888C838.44 324.063 1100.17 231.733 1357.44 228.337M890.085 -17.1082C690.015 156.232 29.2423 128.993 -61.4377 330.886" 
+      stroke="url(#paint0_linear_630_20)" 
+      stroke-width="6.72453" 
+      stroke-linecap="round" 
+    />
+    <defs>
+      <linearGradient id="paint0_linear_630_20" x1="626.154" y1="-176.513" x2="412.881" y2="1599.47" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#111010"/>
+        <stop offset="0.37" stop-color="#7219A3"/>
+        <stop offset="0.71" stop-color="#EAFDFF"/>
+        <stop offset="1" stop-color="#EAFDFF" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+  </svg>
 
-        <!-- TOP curve (soft arc like Figma) -->
-        <path d="M -80 300 C 300 220, 900 180, 1520 160" fill="none" stroke="#0aa9c0" stroke-width="36" opacity="0.25"
-          filter="url(#glowCyan)" />
-        <path d="M -80 300 C 300 220, 900 180, 1520 160" fill="none" stroke="#6F1FB7" stroke-width="6"
-          filter="url(#glowPurple)" />
 
-        <!-- BOTTOM curve -->
-        <path d="M -120 500 C 400 420, 1100 400, 1600 440" fill="none" stroke="#0aa9c0" stroke-width="36" opacity="0.25"
-          filter="url(#glowCyan)" />
-        <path d="M -120 500 C 400 420, 1100 400, 1600 440" fill="none" stroke="#6F1FB7" stroke-width="6"
-          filter="url(#glowPurple)" />
-      </svg>
 
 
       <!-- slight stagger for the text/link -->

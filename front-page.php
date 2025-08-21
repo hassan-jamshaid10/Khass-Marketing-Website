@@ -1,8 +1,8 @@
 <?php
 get_header();
-get_template_part('template-parts/hero');
+get_template_part('template-parts/home');
 ?>
 
-<!-- homepage-specific content -->
+
 
 <?php get_footer(); ?>

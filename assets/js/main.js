@@ -208,3 +208,6 @@ cards.forEach((card, index) => {
     endDrag(card);
   });
 });
+
+
+
