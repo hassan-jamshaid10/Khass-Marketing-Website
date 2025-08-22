@@ -226,37 +226,54 @@ get_header();
 </div>
 
   <!-- =============== CTA SECTION =============== -->
-  <section class="cta-section">
-    <!-- fade up like your stats boxes -->
-    <div class="cta-card" data-aos="fade-up" data-aos-delay="150" data-aos-duration="800">
-  <!-- decorative gradient line -->
-  <svg class="cta-lines" viewBox="0 0 1296 495" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path 
-      d="M499.5 511.888C838.44 324.063 1100.17 231.733 1357.44 228.337M890.085 -17.1082C690.015 156.232 29.2423 128.993 -61.4377 330.886" 
-      stroke="url(#paint0_linear_630_20)" 
-      stroke-width="6.72453" 
-      stroke-linecap="round" 
-    />
-    <defs>
-      <linearGradient id="paint0_linear_630_20" x1="626.154" y1="-176.513" x2="412.881" y2="1599.47" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#111010"/>
-        <stop offset="0.37" stop-color="#7219A3"/>
-        <stop offset="0.71" stop-color="#EAFDFF"/>
-        <stop offset="1" stop-color="#EAFDFF" stop-opacity="0"/>
-      </linearGradient>
-    </defs>
-  </svg>
+ <!-- =============== CTA SECTION =============== -->
+<section class="cta-section">
+  <!-- glowing ellipse background -->
+  <div class="cta-bg-svg">
+    <svg width="1300" height="1090" viewBox="0 0 1300 1090" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g filter="url(#filter0_f_275_127)">
+        <ellipse cx="650" cy="545" rx="450" ry="345" fill="url(#paint0_linear_275_127)" fill-opacity="0.5"/>
+      </g>
+      <defs>
+        <filter id="filter0_f_275_127" x="0" y="0" width="1300" height="1090" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+          <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_275_127"/>
+        </filter>
+        <linearGradient id="paint0_linear_275_127" x1="387.313" y1="241.194" x2="547.519" y2="914.388" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#7219A3"/>
+          <stop offset="1" stop-color="#7219A3"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
 
+  <div class="cta-card" data-aos="fade-up" data-aos-delay="150" data-aos-duration="800">
+    <!-- decorative gradient line -->
+    <svg class="cta-lines" viewBox="0 0 1296 495" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path 
+        d="M499.5 511.888C838.44 324.063 1100.17 231.733 1357.44 228.337M890.085 -17.1082C690.015 156.232 29.2423 128.993 -61.4377 330.886" 
+        stroke="url(#paint0_linear_630_20)" 
+        stroke-width="6.72453" 
+        stroke-linecap="round" 
+      />
+      <defs>
+        <linearGradient id="paint0_linear_630_20" x1="626.154" y1="-176.513" x2="412.881" y2="1599.47" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#111010"/>
+          <stop offset="0.37" stop-color="#7219A3"/>
+          <stop offset="0.71" stop-color="#EAFDFF"/>
+          <stop offset="1" stop-color="#EAFDFF" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+    </svg>
 
-
-
-      <!-- slight stagger for the text/link -->
-      <div class="cta-content" data-aos="fade" data-aos-delay="450" data-aos-duration="600">
-        <h2>Interested in<br>working together?</h2>
-        <a class="cta-link" href="#">Start a project request <span class="arr">›</span></a>
-      </div>
+    <div class="cta-content" data-aos="fade" data-aos-delay="450" data-aos-duration="600">
+      <h2>Interested in<br>working together?</h2>
+      <a class="cta-link" href="#">Start a project request <span class="arr">›</span></a>
     </div>
-  </section>
+  </div>
+</section>
+
 
 
 

@@ -30,20 +30,24 @@ get_header();
 
 
 <section class="who-we-are" data-aos="fade-up" data-aos-duration="1200">
-  <div class="container">
-    <div class="who-we-are-content">
-      <div class="text-box">
-        <hr class="accent-line">
-        <h2>Who We Are</h2>
-      </div>
-      <div class="text-description">
-        <p>We are an enthusiastic team sharing creativity and efficiency, passion and expertise.</p>
-      </div>
-      <div class="image-box">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/image.jpg" alt="Who We Are Image">
-      </div>
-    </div>
-  </div>
+  
+
+<div class="container">
+            <div class="who-we-are-content">
+                <div class="text-box">
+                    <div class="heading-line">
+                        <svg class="accent-line" width="58" height="3" viewBox="0 0 58 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="0.599976" width="58" height="2" fill="#01CFFF"/>
+                        </svg>
+                        <h2>Who We Are</h2>
+                    </div>
+                    <p>We are an enthusiastic team sharing creativity and efficiency, passion and expertise.</p>
+                </div>
+                <div class="image-box">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/image.jpg" alt="Who We Are Image">
+                </div>
+            </div>
+        </div>
 </section>
 
 
@@ -194,23 +198,12 @@ get_header();
   </div>
 </section>
 
-<section class="ideas-impact">
+<section class="ideas-impact-inner">
   <div class="container">
-    <h2 data-aos="fade-up">We Turn Ideas Into Impact</h2>
+    <div class="ideas-list-inner">
+      <h2 data-aos="fade-up">We Turn Ideas Into Impact</h2>
 
-    <!-- Desktop Layout -->
-    <div class="ideas-grid desktop-view">
-      <div class="idea-item" data-aos="fade-right">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sprint.png" alt="Idea Image 1">
-      </div>
-      <div class="idea-item2" data-aos="fade-left">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dv.svg" alt="Idea Image 2">
-      </div>
-    </div>
-
-    <!-- Mobile Layout -->
-    <div class="mobile-view">
-      <div class="idea-step" data-aos="fade-up" data-aos-delay="100">
+      <div class="idea-step-inner" data-aos="fade-up" data-aos-delay="100">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/strategy.svg" alt="Strategy Icon">
         <div>
           <h3>Strategy</h3>
@@ -218,7 +211,7 @@ get_header();
         </div>
       </div>
 
-      <div class="idea-step" data-aos="fade-up" data-aos-delay="200">
+      <div class="idea-step-inner" data-aos="fade-up" data-aos-delay="200">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/design.svg" alt="Design Icon">
         <div>
           <h3>Design</h3>
@@ -226,7 +219,7 @@ get_header();
         </div>
       </div>
 
-      <div class="idea-step" data-aos="fade-up" data-aos-delay="300">
+      <div class="idea-step-inner" data-aos="fade-up" data-aos-delay="300">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dev.svg" alt="Development Icon">
         <div>
           <h3>Development & Testing</h3>
@@ -234,7 +227,7 @@ get_header();
         </div>
       </div>
 
-      <div class="idea-step" data-aos="fade-up" data-aos-delay="400">
+      <div class="idea-step-inner" data-aos="fade-up" data-aos-delay="400">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/launch.svg" alt="Launch Icon">
         <div>
           <h3>Launch</h3>
@@ -242,7 +235,7 @@ get_header();
         </div>
       </div>
 
-      <div class="idea-step" data-aos="fade-up" data-aos-delay="500">
+      <div class="idea-step-inner" data-aos="fade-up" data-aos-delay="500">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/support.svg" alt="Support Icon">
         <div>
           <h3>Support</h3>

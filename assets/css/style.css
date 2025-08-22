@@ -895,9 +895,12 @@ p.featured-meta span.featured-author {
 
 
 /* About */
-
 .who-we-are {
-  padding: 80px 20px;
+  padding: 80px 0;
+  background: none;
+  margin: 0 60px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .who-we-are .container {
@@ -910,53 +913,129 @@ p.featured-meta span.featured-author {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 5px;
 }
 
 .text-box {
   flex: 1;
-  min-width: 250px;
+  min-width: 300px;
+  max-width: 500px;
+  margin-left: 80px;
+}
+
+.heading-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .text-box .accent-line {
-  width: 40px;
+  width: 50px;
   height: 3px;
-  background: linear-gradient(to right, #00c3ff, #9b2fc4);
-  border: none;
-  margin-bottom: 10px;
+  margin: 0;
+  flex-shrink: 0;
+  display: block;
 }
 
 .text-box h2 {
   color: #6B1E8C;
   font-size: 28px;
-  margin-bottom: 10px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.2;
 }
 
 .text-box p {
-  color: #777;
-  font-size: 16px;
-  max-width: 400px;
+  color: #757474;
+  font-size: 20px;
+  font-weight: 200;
   line-height: 1.6;
+  margin: 0;
+  max-width: 400px;
 }
 
 .image-box {
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-width: 300px;
 }
 
 .image-box img {
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 380px;
   object-fit: cover;
-  border-radius: 50%;
-  border: 6px solid #e6f7ff;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 50%; 
+  border: 4px solid #e6f7ff;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .who-we-are {
+    padding: 60px 15px;
+    margin: 0 auto; /* centers section */
+  }
+  
+  .who-we-are-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    margin: 0 auto; /* centers content */
+  }
+  
+  .text-box {
+    max-width: 100%;
+    margin: 0 auto; /* equal margins left/right */
+  }
+  .text-box .accent-line {
+    width: 50px;
+    height: 3px;
+    margin: 0;
+    flex-shrink: 0;
+    display: block;
+    margin-left: 10px;
+  }
+  
+  .text-box h2 {
+    font-size: 28px;
+    margin-left:15px;
+  }
+  
+  .image-box img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto; /* centers image */
+    display: block; /* ensures auto margins work */
+  }
+}
+
+
+@media (max-width: 480px) {
+  .who-we-are {
+    padding: 40px 10px;
+  }
+  
+  .text-box h2 {
+    font-size: 24px;
+  }
+  
+  .text-box p {
+    font-size: 15px;
+  }
+  
+  .image-box img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
 
 .about-vector {
   position: absolute;
-  bottom: -2100px;
+  bottom: -1900px;
   /* move it 50px lower */
   left: 0;
   width: 100%;
@@ -973,7 +1052,7 @@ p.featured-meta span.featured-author {
 
 @media (max-width: 768px) {
   .about-vector {
-    bottom: -4900px;   /* adjust based on your design */
+    bottom: -4600px;   /* adjust based on your design */
   }
 
   .about-vector img {
@@ -1230,18 +1309,19 @@ p.featured-meta span.featured-author {
   margin-top: 200px;
   margin-bottom: 100px;
 }
+
 .cta-bg-svg {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  right: 50%;
+  top: 62%;          /* moves it lower */
+  left: 38%;         /* keeps it centered horizontally */
   width: 1000px;
   max-width: 100%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /* centers on its middle */
   z-index: -1; 
   pointer-events: none;
   line-height: 0;
 }
+
 
 .cta-card {
   position: relative;
@@ -1331,6 +1411,13 @@ p.featured-meta span.featured-author {
     padding: 64px 24px;
   }
 }
+/* Hide background ellipse on small devices */
+@media (max-width: 768px) {
+  .cta-bg-svg {
+    display: none;
+  }
+}
+
 
 .stats-cta-wrap {
   position: relative;
@@ -2658,6 +2745,7 @@ p.featured-meta span.featured-author {
   padding: 10px 20px;
   background-color: transparent;
   text-align: center;
+  margin-top: -50px;
 }
 
 .ideas-impact h2 {
@@ -2729,12 +2817,95 @@ p.featured-meta span.featured-author {
   .mobile-view {
     display: block;
   }
-
+  .ideas-impact {
+    margin-top: -50px;
+    margin-bottom: 70px;
+  }
   .ideas-impact h2 {
     margin-bottom: 40px;
     font-size: 1.8rem;
   }
 }
+
+
+/* For about page impact css */
+.ideas-impact-inner {
+  padding: 10px 20px;
+  background-color: transparent;
+  text-align: center;
+  margin: 0; /* reset */
+}
+
+.ideas-impact-inner h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 180px;
+  color: #000000;
+}
+
+/* Main Layout (hidden by default on desktop) */
+.ideas-list-inner {
+  display: none;
+}
+
+.idea-step-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.idea-step-inner img {
+  width: 50px;
+  height: 50px;
+}
+
+.idea-step-inner h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0 0 5px;
+  color: #000000;
+}
+
+.idea-step-inner p {
+  font-size: 0.95rem;
+  font-weight: 100;
+  margin: 0;
+  color: #000000;
+}
+
+/* ✅ Desktop / Web view */
+@media (min-width: 769px) {
+  .ideas-impact-inner {
+    margin-top: -250px; /* only on desktop */
+  }
+}
+/* ✅ Apply ONLY on desktop screens (>= 1024px wide) */
+@media (min-width: 1024px) {
+  .ideas-impact-inner {
+    margin-top: -250px;
+  }
+}
+
+
+/* ✅ Mobile view */
+@media (max-width: 768px) {
+  .ideas-impact-inner {
+    margin-top: -100px;  /* only on mobile */
+    margin-bottom: 70px;
+  }
+
+  .ideas-list-inner {
+    display: block;
+  }
+
+  .ideas-impact-inner h2 {
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+  }
+}
+
 
 
 
