@@ -28,30 +28,12 @@ get_header();
     </div>
     
     <!-- Right Side Form -->
+    
     <div class="contact-form">
-      <form>
-        <div class="form-row">
-          <input type="text" placeholder="First Name" name="first_name" required>
-          <input type="text" placeholder="Last Name" name="last_name" required>
-        </div>
-        
-        <div class="form-row">
-          <input type="email" placeholder="Email" name="email" required>
-          <input type="tel" placeholder="Phone Number +91" name="phone">
-        </div>
-        
-        <div class="form-row services">
-          <label><input type="radio" name="service" value="brand"> Brand Startup</label>
-          <label><input type="radio" name="service" value="smm"> Social Media Marketing</label>
-          <label><input type="radio" name="service" value="uiux"> UI/UX</label>
-          <label><input type="radio" name="service" value="web"> Web Development</label>
-        </div>
-        
-        <textarea name="message" placeholder="Write your message..."></textarea>
-        
-        <button type="submit" class="send-btn">Send Message</button>
-      </form>
+      <?php echo do_shortcode('[contact-form-7 id="ffe35b8" title="contact"]'); ?>
     </div>
+
+  
     
   </div>
 </section>

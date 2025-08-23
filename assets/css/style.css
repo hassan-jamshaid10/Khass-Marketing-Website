@@ -3578,9 +3578,11 @@ h2 {
 .contact-container::before {
   content: "";
   position: absolute;
-  inset: 0; /* stretch full */
-  border-radius: 16px;
-  padding: 2px; /* border thickness */
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  border-radius: 18px; /* a bit larger to match curve */
   background: linear-gradient(
     122.47deg,
     #FFFFFF 33.94%,
@@ -3596,6 +3598,7 @@ h2 {
   pointer-events: none;
   z-index: -1;
 }
+
 
 
 .contact-info {
@@ -3655,24 +3658,54 @@ h2 {
   gap: 15px;
 }
 
-.form-row input {
+.field {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label,
+.field-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #000; /* black text */
+}
+
+.form-row input,
+textarea {
   padding: 12px;
   border: none;
   border-bottom: 1px solid #aaa;
   outline: none;
   background: transparent;
+  color: #000;
 }
 
 textarea {
   width: 100%;
-  border: none;
-  border-bottom: 1px solid #aaa;
-  padding: 12px;
-  outline: none;
   resize: none;
   min-height: 80px;
-  background: transparent;
+}
+
+.services {
+  display: flex;
+  flex-direction: column; /* heading on top, radios below */
+  gap: 8px;
+}
+
+.services .field-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 4px;
+}
+
+.services .radio-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;   /* all radios stay in one line */
+  gap: 20px;
 }
 
 .services label {
@@ -3680,10 +3713,17 @@ textarea {
   display: flex;
   align-items: center;
   gap: 6px;
+  color: #000;
 }
 
 .services input[type="radio"] {
   accent-color: #9b5de5;
+}
+
+/* Align button to right */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .send-btn {
@@ -3692,7 +3732,6 @@ textarea {
   padding: 12px 25px;
   border-radius: 6px;
   cursor: pointer;
-  align-self: flex-start;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: 0.3s;
 }
