@@ -3547,3 +3547,156 @@ h2 {
 
 
 
+/*CONTACT */
+
+.contact-section {
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.contact-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  max-width: 1100px;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  z-index: 1;
+  background: linear-gradient(
+    117.39deg,
+    rgba(1, 207, 255, 0.1) 22.32%,
+    rgba(114, 25, 163, 0.1) 77.27%
+  ); /* inner background */
+}
+
+/* Pseudo-element for gradient border */
+.contact-container::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* stretch full */
+  border-radius: 16px;
+  padding: 2px; /* border thickness */
+  background: linear-gradient(
+    122.47deg,
+    #FFFFFF 33.94%,
+    rgba(152, 255, 206, 0.68) 60.78%,
+    #3771C8 82.93%,
+    #7E69FF 101.05%
+  );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+.contact-info {
+  padding: 40px;
+  background: rgba(255,255,255,0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-info h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  color: #444;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin-right: 12px;
+  font-size: 20px;
+  color: #333;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #0077b5;
+}
+
+.contact-form {
+  padding: 40px;
+  background: transparent;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  outline: none;
+  background: transparent;
+}
+
+textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  padding: 12px;
+  outline: none;
+  resize: none;
+  min-height: 80px;
+  background: transparent;
+}
+
+.services label {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.services input[type="radio"] {
+  accent-color: #9b5de5;
+}
+
+.send-btn {
+  background: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  align-self: flex-start;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.send-btn:hover {
+  background: #f0f0f0;
+}
