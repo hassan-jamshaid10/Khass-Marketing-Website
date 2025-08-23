@@ -120,31 +120,43 @@ get_header();
 
 
 <!-- VALUES -->
-<section class="values-section">
-  <div class="values-header">
-    <span class="values-line"></span>
-    <h2>Our values</h2>
-  </div>
+<section class="our-values">
+  <div class="container">
+    <div class="values-header" data-aos="fade-up">
+      <svg class="accent-line" width="58" height="3" viewBox="0 0 58 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect y="0.599976" width="58" height="2" fill="#01CFFF"/>
+      </svg>
+      <h2>Our values</h2>
+    </div>
 
-  <div class="values-grid">
-    <div class="value-item">
-      <h3>We love what we do</h3>
-      <p>With our personalities we combine work and play. Having our ideas clearly in mind we follow our strategies leaving conventions behind.</p>
-    </div>
-    <div class="value-item">
-      <h3>We keep on thinking new</h3>
-      <p>Curiosity and mind games are our triggers in our projects. We’re constantly developing our solutions and stay lifelong learners.</p>
-    </div>
-    <div class="value-item">
-      <h3>We challenge our results</h3>
-      <p>We share honest feedback and challenge ideas but we focus on the common values. We are critical for the sake of better work but never just like this. No one’s got time for that.</p>
-    </div>
-    <div class="value-item">
-      <h3>We grow as a team</h3>
-      <p>We spend our days building user experiences. For the best results we work in teams and we build up each other. A new project gives us the opportunity to collaborate and celebrate our clients and teammates.</p>
+    <div class="values-content">
+      <div class="values-column" data-aos="fade-right">
+        <div class="value-item" data-aos="zoom-in" data-aos-delay="100">
+          <h3>We love what we do</h3>
+          <p>With our personalities we combine work and play. Having our ideas clearly in mind we follow our strategies leaving conventions behind.</p>
+        </div>
+
+        <div class="value-item" data-aos="zoom-in" data-aos-delay="200">
+          <h3>We challenge our results</h3>
+          <p>We share honest feedback and challenge ideas but we focus on the common values. We are critical for the sake of better work but never just like this. No one's got time for that.</p>
+        </div>
+      </div>
+
+      <div class="values-column" data-aos="fade-left">
+        <div class="value-item" data-aos="zoom-in" data-aos-delay="300">
+          <h3>We keep on thinking new</h3>
+          <p>Curiosity and mind games are our triggers in our projects. We're constantly developing our solutions and stay lifelong learners.</p>
+        </div>
+
+        <div class="value-item" data-aos="zoom-in" data-aos-delay="400">
+          <h3>We grow as a team</h3>
+          <p>We spend our days building user experiences. For the best results we work in teams and we build up each other. A new project gives us the opportunity to collaborate and celebrate our clients and teammates.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
 
 
 <section class="stats-section" data-aos="fade-up">
