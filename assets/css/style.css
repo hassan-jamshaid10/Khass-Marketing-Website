@@ -895,6 +895,128 @@ p.featured-meta span.featured-author {
 
 
 /* About */
+.about-hero-section {
+  position: relative;
+  padding: clamp(140px, 22vh, 240px) 20px clamp(110px, 16vh, 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url('../images/eclipse2.svg') no-repeat center  35px;
+  background-size: contain;
+
+}
+
+
+
+.about-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1500px;
+  margin: -60px auto;
+}
+
+.about-gradient-text {
+  font-size: 78px;
+  font-weight: 400;
+  line-height: 1.2;
+
+
+  background: linear-gradient(90deg,
+  #000000 49%,
+  rgba(114, 25, 163, 0.9) 54%,
+  #000000 7%,
+  #01CFFF 63%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 32px;
+}
+
+
+.about-hero-content p {
+  font-size: 34px;
+  font-weight: 100; /* lighter */
+  color: #676666;
+  line-height: 1.2;
+}
+.about-hero-content a {
+  font-size: 20px;
+  font-weight: 100; /* lighter */
+  color: #999999;
+  line-height: 1.2;
+}
+
+@media (max-width: 1024px) {
+  .about-gradient-text {
+    font-size: 56px;
+  }
+  .about-hero-content p {
+    font-size: 26px;
+  }
+  .about-hero-content a {
+    font-size: 18px;
+  }
+}
+
+/* Mobile large (up to 768px) */
+@media (max-width: 768px) {
+  .about-hero-section {
+    padding: 120px 15px 100px;
+    background-position: center 20px;
+    background-size: contain;
+  }
+  .about-gradient-text {
+    font-size: 42px;
+  }
+  .about-hero-content p {
+    font-size: 20px;
+  }
+  .about-hero-content a {
+    font-size: 16px;
+  }
+}
+
+/* Small mobile (up to 480px) */
+@media (max-width: 480px) {
+  .about-hero-section {
+    padding: 100px 10px 80px;
+  }
+  .about-gradient-text {
+    font-size: 32px;
+  }
+  .about-hero-content p {
+    font-size: 18px;
+  }
+  .about-hero-content a {
+    font-size: 14px;
+  }
+}
+
+/* Extra small devices (up to 320px) */
+@media (max-width: 320px) {
+  .about-hero-section {
+    padding: 80px 8px 60px;
+    margin-bottom: 50px;
+  }
+  .about-gradient-text {
+    font-size: 26px;
+    margin-left: 10px;
+  }
+  .about-hero-content p {
+    font-size: 16px;
+    margin-left: 10px;
+
+  }
+  .about-hero-content a {
+    font-size: 13px;
+    margin-left: 10px;
+  }
+}
+
 .who-we-are {
   padding: 80px 0;
   background: none;
@@ -1011,6 +1133,34 @@ p.featured-meta span.featured-author {
     display: block; /* ensures auto margins work */
   }
 }
+@media (max-width: 320px) {
+  .who-we-are {
+    padding: 40px 10px;
+  }
+
+  .who-we-are-content {
+    gap: 20px;
+  }
+
+  .text-box .accent-line {
+    width: 40px;
+    margin-left: 10px;
+  }
+
+  .text-box h2 {
+    font-size: 22px;
+    margin-left: 10px;
+  }
+  .text-box p {
+    font-size: 20px;
+  
+  }
+
+  .image-box img {
+    width: 160px;
+    height: 160px;
+  }
+}
 
 
 @media (max-width: 480px) {
@@ -1035,7 +1185,7 @@ p.featured-meta span.featured-author {
 
 .about-vector {
   position: absolute;
-  bottom: -1900px;
+  bottom: -2000px;
   /* move it 50px lower */
   left: 0;
   width: 100%;
@@ -1052,7 +1202,7 @@ p.featured-meta span.featured-author {
 
 @media (max-width: 768px) {
   .about-vector {
-    bottom: -4600px;   /* adjust based on your design */
+    bottom: -4800px;   /* adjust based on your design */
   }
 
   .about-vector img {
@@ -3198,3 +3348,6 @@ h2 {
     width: 100%;
   }
 }
+
+
+

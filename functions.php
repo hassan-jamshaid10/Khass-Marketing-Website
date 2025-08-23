@@ -109,3 +109,8 @@ function hassan_register_blog_pattern() {
   add_action('init', 'hassan_register_blog_pattern');
   
   // Removed testimonial slider assets as they don't exist and could cause errors
+
+
+
+
+  

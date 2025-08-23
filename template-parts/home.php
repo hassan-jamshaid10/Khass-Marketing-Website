@@ -63,7 +63,7 @@ get_header();
 
       <div class="service-item" data-aos="fade-up" data-aos-delay="300">
         <div class="service-icon">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ai.jpg" alt="AI">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ai.svg" alt="AI">
         </div>
         <h3>AI and Data Science</h3>
         <p>Unlock the true potential of your data. AI, machine learning, and advanced engineering to fuel success.</p>
@@ -72,7 +72,7 @@ get_header();
       <!-- Row 2 -->
       <div class="service-item" data-aos="fade-up" data-aos-delay="400">
         <div class="service-icon">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/social.jpg" alt="Social Media">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/code.svg" alt="Social Media">
         </div>
         <h3>Social Media Marketing</h3>
         <p>Execute high-impact social strategies that perform seamlessly across all platforms.</p>
@@ -88,7 +88,7 @@ get_header();
 
       <div class="service-item" data-aos="fade-up" data-aos-delay="600">
         <div class="service-icon">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/testing.jpg" alt="Testing">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/qa.svg" alt="Testing">
         </div>
         <h3>QA & Testing</h3>
         <p>From manual to automated testing, your product is rock-solid before launch.</p>
