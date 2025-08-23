@@ -744,11 +744,12 @@ p.featured-meta span.featured-author {
 
 /* 🔄 FIX: Make post cards appear in full width rows */
 .posts-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr); /* always 5 slots vertically */
   gap: 40px;
-  z-index: 2;
+  min-height: 2000px; /* adjust so 5 rows fit your design */
   position: relative;
+  z-index: 2;
 }
 
 /* 🔹 INDIVIDUAL POST CARD */
@@ -760,6 +761,7 @@ p.featured-meta span.featured-author {
   overflow: hidden;
   box-shadow: none !important;
   transition: transform 0.3s ease;
+  margin-left: 80px;
 }
 
 .post-card:hover {
@@ -767,43 +769,47 @@ p.featured-meta span.featured-author {
 }
 
 .post-card img {
-  width: 40%;
-  height: 100%;
+  width: 30%;
+  height: 80%;
   object-fit: cover;
   border-radius: 0;
-  /* 🔄 FIX: Remove radius */
+  flex-shrink: 0;          /* 🆕 Prevents the image from shrinking */
+  display: block;          /* 🆕 Removes inline whitespace gap */
+  align-self: center;      /* 🆕 Vertically center inside .post-card */
 }
+
 
 .post-info {
   padding: 2rem;
-  width: 60%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .post-category {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #7c3aed;
+  font-size: 16px;
+  font-weight: 400;
+  color: #592EA9;
   /* purple accent */
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 3px;
   margin-bottom: 0.5rem;
   display: inline-block;
 }
 
 .post-info h3 {
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: 36px;
+  font-weight: 500;
   margin: 0.2rem 0 0.5rem;
-  color: #111;
+  color: #232536;
 }
 
 .post-info p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #555;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color:#6D6E76;
 }
 
 /* 🔹 PAGINATION - Figma Accurate */
@@ -864,15 +870,17 @@ p.featured-meta span.featured-author {
 
   .posts-grid {
     gap: 30px;
+  
   }
 
   .post-card {
     flex-direction: column;
+    margin-left: 10px;
   }
 
   .post-card img {
-    width: 100%;
-    height: auto;
+    width: 416px;
+    height: 318px;
   }
 
   .post-info {
@@ -1061,16 +1069,16 @@ p.featured-meta span.featured-author {
 }
 
 .text-box h2 {
-  color: #6B1E8C;
-  font-size: 28px;
-  font-weight: 500;
+  color: #7219A3;
+  font-size: 38px;
+  font-weight: 400;
   margin: 0;
   line-height: 1.2;
 }
 
 .text-box p {
-  color: #757474;
-  font-size: 20px;
+  color: #18251888;
+  font-size: 24px;
   font-weight: 200;
   line-height: 1.6;
   margin: 0;
