@@ -10,7 +10,7 @@
           <input type="email" id="email" placeholder="E-MAIL" />
           <button type="submit">SUBSCRIBE</button>
         </div>
-        <a href="mailto:Qira@khaasmarketing.com" class="email-link">Qira@khaasmarketing.com</a>
+        <a href="mailto:Info@khaasmarketing.com" class="email-link">Info@khaasmarketing.com</a>
       </div>
 
       <div class="social-links">
@@ -38,16 +38,15 @@
       <div class="footer-column">
         <h4>Services</h4>
         <ul>
-          <li><a href="#">Mobile App Development</a></li>
+          <li><a href="#">Web designing</a></li>
+          <li><a href="#"></a>Rebranding</li>
+          <li><a href="#">Social Media Management</a></li>
           <li><a href="#">UI/UX Design</a></li>
-          <li><a href="#">AI Based Solution</a></li>
-          <li><a href="#">Social Media Marketing</a></li>
         </ul>
       </div>
       <div class="footer-column">
         <h4>Head Office</h4>
-        <p>7711 Street, STE 297<br/>Sacramento, CA 95814, United States.</p>
-        <p>Phone: +44 7946 078587</p>
+        <p>71-75 Shelton Street, Covent Garden<br/>WC2H 9JQ, London, United Kingdom.</p>
       </div>
     </div>
   </div>
