@@ -447,7 +447,7 @@
 
 /* Footer Main Styles */
 .footer {
-  background: linear-gradient(to right, #ddd, #C06BE6);
+  background: linear-gradient(249.09deg, #C06BE6 26.13%, rgba(1, 1, 1, 0) 83.44%);
   color: #222;
   font-family: 'outfit', sans-serif;
   padding: 40px 20px;
@@ -474,31 +474,44 @@
   margin-bottom: 20px;
 }
 
+.newsletter{
+  border-radius: 10px;
+}
 .newsletter label {
   font-weight: 600;
   display: block;
   margin-bottom: 8px;
 }
-
 .newsletter-input {
   display: flex;
   margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden; /* ensures children follow the radius */
+  border: 1px solid #ccc; /* optional, gives definition */
 }
 
 .newsletter-input input {
-  padding: 10px;
+  padding: 10px 14px;
   border: none;
   flex: 1;
+  outline: none;
+  font-size: 14px;
 }
 
 .newsletter-input button {
-  padding: 10px 16px;
+  padding: 10px 20px;
   background-color: #5E00A2;
   color: white;
   border: none;
   font-weight: bold;
   cursor: pointer;
+  transition: background 0.3s;
 }
+
+.newsletter-input button:hover {
+  background-color: #49007d;
+}
+
 
 .email-link {
   display: inline-block;
@@ -568,6 +581,11 @@
   margin-top: 40px;
   font-size: 13px;
   color: #333;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
 }
 
 

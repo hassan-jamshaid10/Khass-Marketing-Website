@@ -53,5 +53,6 @@
 
   <div class="footer-bottom">
     <p>Copyright 2025 – Khaas Marketing. All Rights Reserved.</p>
+    <p>Designed & devloped by: <a>Hassan Jamshaid</a></p>
   </div>
 </footer>
