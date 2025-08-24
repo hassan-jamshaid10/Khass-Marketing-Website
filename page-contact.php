@@ -2,7 +2,7 @@
 get_header();
 ?>
 <!-- Contact HERO (Figma match) -->
-<section class="contact-hero">
+<!-- <section class="contact-hero">
   <div class="contact-hero__inner">
     <h1 class="contact-hero__title">
       Connect <span class="grad grad-bluepurple">with the</span><br>
@@ -18,47 +18,13 @@ get_header();
       Contact us our team <span class="arr">›</span>
     </a>
   </div>
-</section>
+</section> -->
 
-<!-- Right Side Form -->
+<section class="contact-section" data-aos="fade-up">
+
+<?php echo do_shortcode('[contact-form-7 id="d773739" title="form1"]'); ?>
 
 
-
-<!-- 2-scroll gradient contact card -->
-<section class="contact-section" id="contact-form" data-aos="fade-up">
-  <div class="contact-container contact-card-2scrolls">
-
-    <!-- FORM AREA (uses your imported CF7 form) -->
-    <div class="contact-form">
-      <?php echo do_shortcode('[contact-form-7 id="08ccf09" title="Contact"]'); ?>
-      <!-- If your CF7 ID is numeric and different, replace 08ccf09 with that number.
-           If the ID causes issues, you can also use: echo do_shortcode('[contact-form-7 title="Contact"]'); -->
-    </div>
-
-    <!-- CONTACT INFO (centered block inside the same card) -->
-   <!-- CONTACT INFO (centered block inside the same card) -->
-    <div class="contact-info info-centered">
-      <h2>Contact Information</h2>
-
-      <p class="contact-email">
-        <span class="ci-icon"><i class="fas fa-envelope"></i></span>
-        <a href="mailto:info@khaasmarketing.com">info@khaasmarketing.com</a>
-      </p>
-
-      <p class="contact-address">
-        <span class="ci-icon"><i class="fas fa-map-marker-alt"></i></span>
-        71-75 Shelton Street, Covent Garden, WC2H 9JQ, 
-        London, United Kingdom.
-      </p>
-
-      <div class="social-icons social-centered">
-        <a aria-label="Twitter" href="#"><i class="fab fa-twitter"></i></a>
-        <a aria-label="Instagram" href="#"><i class="fab fa-instagram"></i></a>
-        <a aria-label="LinkedIn" href="#"><i class="fab fa-linkedin"></i></a>
-      </div>
-    </div>
-
-  </div>
 </section>
 
 <section class="faq-testimonials">

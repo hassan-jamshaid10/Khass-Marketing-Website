@@ -110,8 +110,36 @@ function hassan_register_blog_pattern() {
   
   // Removed testimonial slider assets as they don't exist and could cause errors
 
+// Disable Contact Form 7 default styles (keep JS for AJAX/validation)
+add_filter( 'wpcf7_load_css', '__return_false' );
+function mytheme_assets() {
+  // Your contact page CSS
+  wp_enqueue_style( 'contact-css', get_stylesheet_directory_uri() . '/assets/css/style.css', [], null );
 
-  
+  // OPTIONAL: Font Awesome (for your <i> icons)
+  // wp_enqueue_style( 'fa', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css', [], '6.5.0' );
 
+  // OPTIONAL: AOS (since you used data-aos)
+  // wp_enqueue_style( 'aos', 'https://unpkg.com/aos@2.3.4/dist/aos.css', [], '2.3.4' );
+  // wp_enqueue_script( 'aos', 'https://unpkg.com/aos@2.3.4/dist/aos.js', [], '2.3.4', true );
+  // add_action('wp_footer', function(){ echo "<script>AOS.init();</script>"; });
+}
+add_action( 'wp_enqueue_scripts', 'mytheme_assets' );
+
+
+
+
+function mytheme_enqueue_contact_styles() {
+  // Only load on the contact page (optional, recommended)
+  if ( is_page( 'contact' ) ) {
+      wp_enqueue_style(
+          'contact-css',
+          get_stylesheet_directory_uri() . '/assets/css/contact.css',
+          array(), // dependencies
+          filemtime( get_stylesheet_directory() . '/assets/css/contact.css' ) // cache-busting
+      );
+  }
+}
+add_action( 'wp_enqueue_scripts', 'mytheme_enqueue_contact_styles' );
 
   

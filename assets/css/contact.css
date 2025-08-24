@@ -1,0 +1,281 @@
+/* CONTACT */
+html, body {
+    overflow-x: hidden;
+  }
+  
+  .contact-section {
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow-x: hidden; /* prevent horizontal scroll */
+  }
+  
+  .contact-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto; /* center properly */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    z-index: 1;
+    background: linear-gradient(
+      117.39deg,
+      rgba(1, 207, 255, 0.1) 22.32%,
+      rgba(114, 25, 163, 0.1) 77.27%
+    );
+  }
+  
+  /* Pseudo-element for gradient border */
+  .contact-container::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* shorthand for top/right/bottom/left: 0 */
+    border-radius: 18px; /* slightly larger than container */
+    padding: 2px; /* thickness of border */
+    background: linear-gradient(
+      122.47deg,
+      #FFFFFF 33.94%,
+      rgba(152, 255, 206, 0.68) 60.78%,
+      #3771C8 82.93%,
+      #7E69FF 101.05%
+    );
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .contact-info {
+    padding: 40px;
+    background: rgba(255,255,255,0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .contact-info h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info p {
+    margin: 10px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
+  .contact-info p a {
+    color: #000;          /* black text */
+    text-decoration: none; /* remove underline */
+  }
+  
+  .contact-info p a:hover {
+    color: #555;          /* optional: softer black on hover */
+    text-decoration: none;
+  }
+  
+  
+  .contact-info i {
+    margin-right: 10px;
+    color: #444;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    margin-right: 12px;
+    font-size: 20px;
+    transition: 0.3s;
+    color: inherit; /* inherit default Font Awesome brand color */
+  }
+  
+  .social-icons a:hover {
+    opacity: 0.7; /* simple hover effect without changing brand color */
+  }
+  
+  
+  .contact-form {
+    padding: 40px;
+    background: transparent;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form label,
+  .field-label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #000; /* black text */
+  }
+  
+  .form-row input {
+    padding: 12px;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    outline: none;
+    background: transparent;
+    color: #000;
+    width: 100%;
+  }
+  
+  textarea,
+  .wpcf7 textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    outline: none;
+    background: transparent;
+    color: #000;
+    min-height: 80px;
+    resize: none;
+  }
+  
+  .services {
+    display: flex;
+    flex-direction: column; /* heading on top, radios below */
+    gap: 8px;
+  }
+  
+  .services .field-label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 4px;
+  }
+  
+  .services .radio-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;   /* all radios stay in one line */
+    gap: 20px;
+  }
+  
+  .services label {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #000;
+  }
+  
+  .services input[type="radio"] {
+    accent-color: #9b5de5;
+  }
+  
+  /* Align button to right */
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* CF7 input elements inherit your styles */
+  .wpcf7 input[type="text"],
+  .wpcf7 input[type="email"],
+  .wpcf7 input[type="tel"],
+  .wpcf7 textarea {
+    padding: 12px;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    outline: none;
+    background: transparent;
+    color: #000;
+    width: 100%;
+  }
+  
+  /* Inline radio layout */
+  .wpcf7 .radio-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+  }
+  .wpcf7 .radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  /* Submit button */
+  .wpcf7 .send-btn {
+    background: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+  }
+  .wpcf7 .send-btn:hover {
+    background: #f0f0f0;
+  }
+  
+  /* CF7 response output (styled) */
+  .wpcf7 form .wpcf7-response-output {
+    margin-top: 16px;
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  .wpcf7 form.sent .wpcf7-response-output {
+    border-color: #46b450;
+  }
+  .wpcf7 form.invalid .wpcf7-response-output,
+  .wpcf7 form.failed .wpcf7-response-output {
+    border-color: #dc3232;
+  }
+  
+  /* CF7 field errors (inline tips) */
+  .wpcf7-not-valid-tip {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #dc3232;
+  }
+  
+
+.screen-reader-response {
+    position: absolute !important;
+    overflow: hidden !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    border: 0 !important;
+  }
+  .hidden-fields-container {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .hidden-fields-container input {
+    display: none !important;
+  }
+  
