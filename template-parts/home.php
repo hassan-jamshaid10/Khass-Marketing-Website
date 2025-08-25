@@ -12,7 +12,7 @@ get_header();
       We blend creativity with strategy to craft high-performance websites<br />
       that convert visitors into loyal customers.
     </p>
-    <a href="/contact" class="hero-button">Start a project request<span class="vector-arrow">›</span></a>
+    <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>" class="hero-button">Start a project request<span class="vector-arrow">›</span></a>
   </div>
 
   <div class="hero-vector">
@@ -412,7 +412,9 @@ get_header();
             </li>
           </ol>
 
-          <a href="#" class="hww-cta">Schedule Call</a>
+          <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>" class="hww-cta"><span class="cta-text">Schedule Call</span></a>
+
+
         </div>
       </div>
     </div>

@@ -279,3 +279,130 @@ html, body {
     display: none !important;
   }
   
+
+  /* ============================= */
+/* FLUID TYPOGRAPHY + RESPONSIVE */
+/* ============================= */
+
+/* Fluid text scaling between 320px and 1440px */
+.contact-info h2 {
+    font-size: clamp(18px, 2vw, 22px);
+  }
+  
+  .contact-info p,
+  .contact-form label,
+  .field-label,
+  .services label {
+    font-size: clamp(13px, 1.5vw, 14px);
+  }
+  
+  .services .field-label {
+    font-size: clamp(14px, 1.8vw, 15px);
+  }
+  
+  .wpcf7-response-output {
+    font-size: clamp(12px, 1.5vw, 14px);
+  }
+  
+  /* Layout scaling */
+  @media (max-width: 992px) {
+    .contact-container {
+      grid-template-columns: 1fr; /* stack layout */
+    }
+  
+    .contact-info,
+    .contact-form {
+      padding: clamp(20px, 4vw, 30px);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .contact-section {
+      padding: clamp(15px, 5vw, 20px);
+    }
+  
+    .form-row {
+      flex-direction: column;
+      gap: clamp(8px, 3vw, 12px);
+    }
+  
+    .services .radio-group {
+      flex-wrap: wrap;
+      gap: clamp(10px, 3vw, 15px);
+    }
+  
+    .wpcf7 .send-btn {
+      width: 100%;
+      text-align: center;
+      font-size: clamp(14px, 2vw, 16px);
+      padding: clamp(10px, 3vw, 14px) clamp(18px, 5vw, 25px);
+    }
+  }
+  /* ============================= */
+/* MOBILE DEVICES (320px - 600px) */
+/* ============================= */
+
+@media (max-width: 600px) {
+    .contact-section {
+      padding: 15px; /* tighter padding for small screens */
+    }
+  
+    .contact-container {
+      grid-template-columns: 1fr; /* stack info and form */
+      border-radius: 12px;
+    }
+  
+    .contact-info,
+    .contact-form {
+      padding: 20px; /* reduce padding */
+    }
+  
+    .contact-info h2 {
+      font-size: 18px;
+    }
+  
+    .contact-info p {
+      font-size: 13px;
+      flex-direction: column; /* stack icon + text if space is tight */
+      align-items: flex-start;
+    }
+  
+    .form-row {
+      flex-direction: column; /* stack inputs */
+      gap: 12px;
+    }
+  
+    .services {
+      gap: 6px;
+    }
+  
+    .services .radio-group {
+      flex-wrap: wrap; /* radios wrap instead of overflowing */
+      gap: 12px;
+    }
+  
+    .social-icons {
+        display: flex;
+        flex-direction: row; /* horizontal */
+        flex-wrap: nowrap;   /* prevent wrapping */
+        justify-content: flex-start; /* align left, can also use center or space-between */
+        gap: 10px; /* space between icons */
+        margin-top: 16px;
+      }
+    
+      .social-icons a {
+        font-size: 18px;
+        margin: 0; /* remove extra margin, gap handles spacing */
+      }
+    .wpcf7 .send-btn {
+      width: 100%; /* full-width button */
+      padding: 12px;
+      font-size: 14px;
+    }
+  
+    .wpcf7-response-output {
+      font-size: 13px;
+      padding: 8px 10px;
+    }
+  }
+  

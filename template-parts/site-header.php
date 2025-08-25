@@ -20,7 +20,10 @@
 
     <div class="right-controls">
       <div class="cta-button mobile-hide">
-        <a href="#contact" class="btn-primary">Let’s Build Together <span>&rarr;</span></a>
+      <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>" class="btn-primary">
+    Let’s Build Together <span>&rarr;</span>
+</a>
+
       </div>
 
       <div class="menu-toggle" id="menu-toggle">

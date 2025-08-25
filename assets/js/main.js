@@ -213,3 +213,23 @@ cards.forEach((card, index) => {
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const button = document.querySelector('.hww-cta');
+
+  button.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    // Prevent multiple clicks
+    if (button.classList.contains('loading') || button.classList.contains('scheduled')) return;
+
+    // Start animation
+    button.classList.add('loading');
+
+    // Simulate scheduling process (2s)
+    setTimeout(() => {
+      button.classList.remove('loading');
+      button.classList.add('scheduled');
+      button.querySelector('.cta-text').textContent = 'Scheduled';
+    }, 2000);
+  });
+});

@@ -1,24 +1,20 @@
 <?php
 get_header();
 ?>
-<!-- Contact HERO (Figma match) -->
-<!-- <section class="contact-hero">
-  <div class="contact-hero__inner">
-    <h1 class="contact-hero__title">
-      Connect <span class="grad grad-bluepurple">with the</span><br>
-      Khaas <span class="grad grad-bluepurple">Team!</span>
+<section class="hero-section">
+  <div class="hero-content">
+    <h1 class="gradient-text">
+    Connect with the Khaas Team!
     </h1>
-
-    <p class="contact-hero__sub">
-      Our team is ready to provide tailored solutions to meet your business goals.
-      Reach out today, and let’s create impactful strategies that set your brand apart.
+    <p>
+    Our team is ready to provide tailored solutions to meet your business<br/>
+ goals. Reach out today, and let’s create impactful strategies that set your brand apart.
     </p>
-
-    <a class="contact-hero__link" href="#contact-form">
-      Contact us our team <span class="arr">›</span>
-    </a>
+    <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>" class="hero-button">Contact us with our team<span class="vector-arrow">›</span></a>
   </div>
-</section> -->
+
+
+</section>
 
 <section class="contact-section" data-aos="fade-up">
 
@@ -160,7 +156,7 @@ get_header();
           </li>
         </ol>
 
-        <a href="#" class="hww-cta">Schedule Call</a>
+        <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>" class="hww-cta"><span class="cta-text">Schedule Call</span></a>
       </div>
     </div>
   </div>
