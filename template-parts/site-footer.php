@@ -16,10 +16,9 @@
       <div class="social-links">
         <p><strong>Follow us</strong></p>
         <div class="icons">
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/khaas-marketing/"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/khaasmarketingofficial?igsh=dnhxOGRnN2UyNnFi"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/share/1FkHxDNQUb/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
         </div>
       </div>
     </div>
@@ -29,24 +28,25 @@
       <div class="footer-column">
         <h4>Insights</h4>
         <ul>
-          <li><a href="#">Case Study</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">Life At Khaas</a></li>
+          <li><a>Case Study</a></li>
+          <li><a>Careers</a></li>
+          <li><a>Testimonials</a></li>
+          <li><a>Life At Khaas</a></li>
         </ul>
       </div>
       <div class="footer-column">
         <h4>Services</h4>
         <ul>
-          <li><a href="#">Web designing</a></li>
-          <li><a href="#"></a>Rebranding</li>
-          <li><a href="#">Social Media Management</a></li>
-          <li><a href="#">UI/UX Design</a></li>
+          <li><a>Web designing</a></li>
+          <li><a>Rebranding</a></li>
+          <li><a>Social Media Management</a></li>
+          <li><a>UI/UX Design</a></li>
         </ul>
       </div>
       <div class="footer-column">
         <h4>Head Office</h4>
-        <p>71-75 Shelton Street, Covent Garden<br/>WC2H 9JQ, London, United Kingdom.</p>
+        <p>717 k Street, STE 207<br/> Sacramento, CA 95814, United<br/>
+        State.<br/> Phone: +44 7946 081367</p>
       </div>
     </div>
   </div>

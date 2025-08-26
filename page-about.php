@@ -3,16 +3,19 @@ get_header();
 // get_template_part('template-parts/site-about.php');
 ?>
 <section class="about-hero-section">
-  <div class="about-hero-content">
-    <h1 class="about-gradient-text">
-      Our Story
-    </h1>
-    <p>
+<div class="about-hero-content" data-aos="fade-in" data-aos-duration="1000">
+  <h1 class="about-gradient-text" data-aos="fade-in" data-aos-duration="1200">
+    Our Story
+  </h1>
+  <p data-aos="fade-in" data-aos-duration="1400" data-aos-delay="200">
     We are a passionate team of experts<br/>
     dedicated to creating your digital value.
-    </p>
- <a>We create magical digital ideas, products and experiences.</a>
-  </div>
+  </p>
+  <a data-aos="fade-in" data-aos-duration="1600" data-aos-delay="400">
+    We create magical digital ideas, products and experiences.
+  </a>
+</div>
+
 
   <div class="about-vector">
   <picture>

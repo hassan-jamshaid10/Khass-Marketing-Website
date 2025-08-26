@@ -128,7 +128,8 @@
   background-color: #000;
 }
 
-@media screen and (max-width: 768px) {
+/* 📱 Mobiles + 📲 Tablets (up to 1024px) */
+@media screen and (max-width: 1024px) {
   .header-container {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -191,6 +192,7 @@
 .desktop-hide {
   display: none;
 }
+
 
 
 
@@ -310,6 +312,11 @@
   }
 }
 
+@media (min-width: 540px){
+  .hero-vector {
+    display: none !important;
+  }
+}
 
 
 @media (max-width: 1024px) {
@@ -517,7 +524,8 @@
 }
 
 .newsletter label {
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 16px;
   display: block;
   margin-bottom: 8px;
 }
@@ -568,6 +576,7 @@
 
 .social-links p {
   margin-bottom: 10px;
+  font-size: 24px;
   color: #130066;
 }
 
@@ -606,12 +615,15 @@
 
 .footer-column ul li a {
   text-decoration: none;
-  color: #000;
+  color: #FFFFFF;
   font-size: 14px;
+  font-weight: 400;
 }
 
 .footer-column p {
+  color: #FFFFFF;
   font-size: 14px;
+  font-weight: 400;
   margin-bottom: 8px;
 }
 
@@ -731,17 +743,7 @@ p.featured-meta span.featured-author {
 }
 
 /* 🔹 ALL POSTS SECTION */
-.blog-all-posts {
-  position: relative;
-  background: #fff;
-  padding: 80px 0;
-  z-index: 1;
-}
 
-.blog-all-posts .container {
-  padding-top: 60px;
-  padding-bottom: 80px;
-}
 
 .vector-background {
   position: absolute;
@@ -762,7 +764,17 @@ p.featured-meta span.featured-author {
     display: none !important;
   }
 }
+.blog-all-posts {
+  position: relative;
+  background: #fff;
+  padding: 80px 0;
+  z-index: 1;
+}
 
+.blog-all-posts .container {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
 
 
 .section-heading {
@@ -916,6 +928,44 @@ p.featured-meta span.featured-author {
   position: relative;
   z-index: 1;
 }
+
+/* 📱 Responsive for tablets (portrait & small tablets) */
+@media (max-width: 1024px) {
+  .posts-grid {
+    grid-template-rows: unset; /* auto-fit rows naturally */
+    grid-template-columns: 1fr;
+    gap: 30px;
+    min-height: auto;
+  }
+
+  .post-card {
+    flex-direction: column; /* stack image + content */
+    margin-left: 0;  /* remove large side margin */
+    align-items: center; /* center content */
+  }
+
+  .post-card img {
+    width: 100%;       /* full width on tablet */
+    height: auto;      /* maintain aspect ratio */
+    max-height: 320px; /* prevent super tall images */
+  }
+
+  .post-info {
+    width: 100%;      /* take full width */
+    padding: 1.5rem;  /* less padding */
+    text-align: center; /* center align text */
+  }
+
+  .post-info h3 {
+    font-size: clamp(22px, 3.5vw, 30px); /* scale nicely */
+  }
+
+  .post-info p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
 
 
 /* 🔹 RESPONSIVE FIXES */
@@ -4164,7 +4214,7 @@ h2 {
   }
 
   .newsletter-input button {
-    background: linear-gradient(135deg, #6e8efb, #a777e3) !important;
+    background:#7219A3 !important;
     color: white !important;
     border: none !important;
     cursor: pointer !important;
@@ -4351,8 +4401,9 @@ h2 {
 
 .blog-description {
   font-size: 16px;
+  font-weight: 400;
   line-height: 1.8;
-  color: #000000;
+  color: #718096;
 
 }
 
@@ -4364,7 +4415,7 @@ h2 {
   line-height: 100%;
   letter-spacing: 0;
   margin: 20px 0 10px;
-  color: #000;
+  color: #2D3748;
 }
 
 /* H3 Styling */
@@ -4375,5 +4426,5 @@ h2 {
   line-height: 100%;
   letter-spacing: 0;
   margin: 15px 0 8px;
-  color: #000;
+  color: #2D3748;
 }

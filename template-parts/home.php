@@ -3,17 +3,24 @@ get_header();
 // get_template_part('template-parts/site-about.php');
 ?>
 <section class="hero-section">
-  <div class="hero-content">
-    <h1 class="gradient-text">
-      Empowering Brands Through<br />
-      Strategy-Driven Digital Solutions
-    </h1>
-    <p>
-      We blend creativity with strategy to craft high-performance websites<br />
-      that convert visitors into loyal customers.
-    </p>
-    <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>" class="hero-button">Start a project request<span class="vector-arrow">›</span></a>
-  </div>
+<div class="hero-content" data-aos="fade-in" data-aos-duration="1500">
+  <h1 class="gradient-text" data-aos="fade-in" data-aos-duration="1200">
+    Empowering Brands Through<br />
+    Strategy-Driven Digital Solutions
+  </h1>
+  <p data-aos="fade-in" data-aos-duration="1400" data-aos-delay="200">
+    We blend creativity with strategy to craft high-performance websites<br />
+    that convert visitors into loyal customers.
+  </p>
+  <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>" 
+     class="hero-button" 
+     data-aos="fade-in" 
+     data-aos-duration="1600" 
+     data-aos-delay="400">
+     Start a project request<span class="vector-arrow">›</span>
+  </a>
+</div>
+
 
   <div class="hero-vector">
     <picture>
