@@ -207,24 +207,25 @@
 
 
   background: linear-gradient(90deg,
-  #000000 0%,
-  #000000 38%,
-  #01CFFF 54%,
-  #000000 64%,
-  rgba(114, 25, 163, 0.9) 30%);
+      #000000 0%,
+      #000000 38%,
+      #01CFFF 54%,
+      #000000 64%,
+      rgba(114, 25, 163, 0.9) 30%);
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  
+
 }
 
 
 .hero-content p {
   margin-top: 20px;
   font-size: 1.3rem;
-  font-weight: 100; /* lighter */
+  font-weight: 100;
+  /* lighter */
   color: #555;
   line-height: 1.8;
 }
@@ -300,13 +301,16 @@
     font-size: 3.5rem;
     line-height: 1.2;
   }
+
   .hero-content p {
     font-size: 1.15rem;
     line-height: 1.6;
   }
+
   .hero-button {
     font-size: 0.95rem;
   }
+
   .vector-arrow {
     font-size: 1.4rem;
   }
@@ -316,19 +320,24 @@
 @media (max-width: 768px) {
   .hero-content {
     margin: -20px auto;
-    text-align: center; /* center text for mobile */
+    text-align: center;
+    /* center text for mobile */
   }
+
   .gradient-text {
     font-size: 2.5rem;
     line-height: 1.3;
   }
+
   .hero-content p {
     font-size: 1rem;
     line-height: 1.6;
   }
+
   .hero-button {
     font-size: 0.9rem;
   }
+
   .vector-arrow {
     font-size: 1.2rem;
   }
@@ -340,17 +349,21 @@
     font-size: 2rem;
     line-height: 1.3;
   }
+
   .hero-content p {
     font-size: 0.9rem;
     line-height: 1.5;
   }
+
   .hero-button {
     font-size: 0.85rem;
   }
+
   .vector-arrow {
     font-size: 1rem;
   }
 }
+
 /* services */
 .services-section {
   position: relative;
@@ -392,13 +405,15 @@
 }
 
 .services-link {
-  display: inline-block;       /* allow sizing */
+  display: inline-block;
+  /* allow sizing */
   color: #0ea5e9;
   text-decoration: none;
-  border-bottom: 2px solid #000000; 
+  border-bottom: 2px solid #000000;
   font-weight: 500;
   font-size: 0.95rem;
-  padding: 0 8px 4px 8px;      /* left/right = extra length, bottom = space */
+  padding: 0 8px 4px 8px;
+  /* left/right = extra length, bottom = space */
   transition: 0.3s ease;
 }
 
@@ -481,20 +496,24 @@
   margin-bottom: 20px;
 }
 
-.newsletter{
+.newsletter {
   border-radius: 10px;
 }
+
 .newsletter label {
   font-weight: 600;
   display: block;
   margin-bottom: 8px;
 }
+
 .newsletter-input {
   display: flex;
   margin-bottom: 10px;
   border-radius: 10px;
-  overflow: hidden; /* ensures children follow the radius */
-  border: 1px solid #ccc; /* optional, gives definition */
+  overflow: hidden;
+  /* ensures children follow the radius */
+  border: 1px solid #ccc;
+  /* optional, gives definition */
 }
 
 .newsletter-input input {
@@ -771,9 +790,11 @@ p.featured-meta span.featured-author {
 /* 🔄 FIX: Make post cards appear in full width rows */
 .posts-grid {
   display: grid;
-  grid-template-rows: repeat(5, 1fr); /* always 5 slots vertically */
+  grid-template-rows: repeat(5, 1fr);
+  /* always 5 slots vertically */
   gap: 40px;
-  min-height: 2000px; /* adjust so 5 rows fit your design */
+  min-height: 2000px;
+  /* adjust so 5 rows fit your design */
   position: relative;
   z-index: 2;
 }
@@ -799,9 +820,12 @@ p.featured-meta span.featured-author {
   height: 80%;
   object-fit: cover;
   border-radius: 0;
-  flex-shrink: 0;          /* 🆕 Prevents the image from shrinking */
-  display: block;          /* 🆕 Removes inline whitespace gap */
-  align-self: center;      /* 🆕 Vertically center inside .post-card */
+  flex-shrink: 0;
+  /* 🆕 Prevents the image from shrinking */
+  display: block;
+  /* 🆕 Removes inline whitespace gap */
+  align-self: center;
+  /* 🆕 Vertically center inside .post-card */
 }
 
 
@@ -835,7 +859,7 @@ p.featured-meta span.featured-author {
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
-  color:#6D6E76;
+  color: #6D6E76;
 }
 
 /* 🔹 PAGINATION - Figma Accurate */
@@ -896,7 +920,7 @@ p.featured-meta span.featured-author {
 
   .posts-grid {
     gap: 30px;
-  
+
   }
 
   .post-card {
@@ -937,7 +961,7 @@ p.featured-meta span.featured-author {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url('../images/eclipse2.svg') no-repeat center  35px;
+  background: url('../images/eclipse2.svg') no-repeat center 35px;
   background-size: contain;
 
 }
@@ -958,10 +982,10 @@ p.featured-meta span.featured-author {
 
 
   background: linear-gradient(90deg,
-  #000000 49%,
-  rgba(114, 25, 163, 0.9) 54%,
-  #000000 7%,
-  #01CFFF 63%);
+      #000000 49%,
+      rgba(114, 25, 163, 0.9) 54%,
+      #000000 7%,
+      #01CFFF 63%);
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -973,13 +997,16 @@ p.featured-meta span.featured-author {
 
 .about-hero-content p {
   font-size: 34px;
-  font-weight: 100; /* lighter */
+  font-weight: 100;
+  /* lighter */
   color: #676666;
   line-height: 1.2;
 }
+
 .about-hero-content a {
   font-size: 20px;
-  font-weight: 100; /* lighter */
+  font-weight: 100;
+  /* lighter */
   color: #999999;
   line-height: 1.2;
 }
@@ -988,9 +1015,11 @@ p.featured-meta span.featured-author {
   .about-gradient-text {
     font-size: 56px;
   }
+
   .about-hero-content p {
     font-size: 26px;
   }
+
   .about-hero-content a {
     font-size: 18px;
   }
@@ -1003,12 +1032,15 @@ p.featured-meta span.featured-author {
     background-position: center 20px;
     background-size: contain;
   }
+
   .about-gradient-text {
     font-size: 42px;
   }
+
   .about-hero-content p {
     font-size: 20px;
   }
+
   .about-hero-content a {
     font-size: 16px;
   }
@@ -1019,12 +1051,15 @@ p.featured-meta span.featured-author {
   .about-hero-section {
     padding: 100px 10px 80px;
   }
+
   .about-gradient-text {
     font-size: 32px;
   }
+
   .about-hero-content p {
     font-size: 18px;
   }
+
   .about-hero-content a {
     font-size: 14px;
   }
@@ -1036,15 +1071,18 @@ p.featured-meta span.featured-author {
     padding: 80px 8px 60px;
     margin-bottom: 50px;
   }
+
   .about-gradient-text {
     font-size: 26px;
     margin-left: 10px;
   }
+
   .about-hero-content p {
     font-size: 16px;
     margin-left: 10px;
 
   }
+
   .about-hero-content a {
     font-size: 13px;
     margin-left: 10px;
@@ -1123,7 +1161,7 @@ p.featured-meta span.featured-author {
   width: 400px;
   height: 380px;
   object-fit: cover;
-  border-radius: 50%; 
+  border-radius: 50%;
   border: 4px solid #e6f7ff;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
@@ -1132,20 +1170,24 @@ p.featured-meta span.featured-author {
 @media (max-width: 768px) {
   .who-we-are {
     padding: 60px 15px;
-    margin: 0 auto; /* centers section */
+    margin: 0 auto;
+    /* centers section */
   }
-  
+
   .who-we-are-content {
     flex-direction: column;
     text-align: center;
     gap: 30px;
-    margin: 0 auto; /* centers content */
+    margin: 0 auto;
+    /* centers content */
   }
-  
+
   .text-box {
     max-width: 100%;
-    margin: 0 auto; /* equal margins left/right */
+    margin: 0 auto;
+    /* equal margins left/right */
   }
+
   .text-box .accent-line {
     width: 50px;
     height: 3px;
@@ -1154,19 +1196,22 @@ p.featured-meta span.featured-author {
     display: block;
     margin-left: 10px;
   }
-  
+
   .text-box h2 {
     font-size: 28px;
-    margin-left:15px;
+    margin-left: 15px;
   }
-  
+
   .image-box img {
     width: 300px;
     height: 300px;
-    margin: 0 auto; /* centers image */
-    display: block; /* ensures auto margins work */
+    margin: 0 auto;
+    /* centers image */
+    display: block;
+    /* ensures auto margins work */
   }
 }
+
 @media (max-width: 320px) {
   .who-we-are {
     padding: 40px 10px;
@@ -1185,9 +1230,10 @@ p.featured-meta span.featured-author {
     font-size: 22px;
     margin-left: 10px;
   }
+
   .text-box p {
     font-size: 20px;
-  
+
   }
 
   .image-box img {
@@ -1201,15 +1247,15 @@ p.featured-meta span.featured-author {
   .who-we-are {
     padding: 40px 10px;
   }
-  
+
   .text-box h2 {
     font-size: 24px;
   }
-  
+
   .text-box p {
     font-size: 15px;
   }
-  
+
   .image-box img {
     width: 250px;
     height: 250px;
@@ -1236,7 +1282,8 @@ p.featured-meta span.featured-author {
 
 @media (max-width: 768px) {
   .about-vector {
-    bottom: -4800px;   /* adjust based on your design */
+    bottom: -4800px;
+    /* adjust based on your design */
   }
 
   .about-vector img {
@@ -1505,12 +1552,15 @@ p.featured-meta span.featured-author {
 
 .cta-bg-svg {
   position: absolute;
-  top: 62%;          /* moves it lower */
-  left: 38%;         /* keeps it centered horizontally */
+  top: 62%;
+  /* moves it lower */
+  left: 38%;
+  /* keeps it centered horizontally */
   width: 1000px;
   max-width: 100%;
-  transform: translate(-50%, -50%); /* centers on its middle */
-  z-index: -1; 
+  transform: translate(-50%, -50%);
+  /* centers on its middle */
+  z-index: -1;
   pointer-events: none;
   line-height: 0;
 }
@@ -1518,7 +1568,7 @@ p.featured-meta span.featured-author {
 
 .cta-card {
   position: relative;
-  z-index: 1; 
+  z-index: 1;
   margin: 0 auto;
   max-width: 1220px;
   min-height: 420px;
@@ -1604,6 +1654,7 @@ p.featured-meta span.featured-author {
     padding: 64px 24px;
   }
 }
+
 /* Hide background ellipse on small devices */
 @media (max-width: 768px) {
   .cta-bg-svg {
@@ -1617,12 +1668,15 @@ p.featured-meta span.featured-author {
   isolation: isolate;
   overflow: hidden;
 }
+
 /* Default / Desktop */
 /* Desktop / default */
 .stats-cta-wrap .diagonal-vector {
   position: absolute;
-  inset: 0;              /* stretch full container */
-  z-index: 0;            /* stays in background */
+  inset: 0;
+  /* stretch full container */
+  z-index: 0;
+  /* stays in background */
   pointer-events: none;
   line-height: 0;
 }
@@ -1635,7 +1689,7 @@ p.featured-meta span.featured-author {
 
 @media (max-width: 768px) {
   .stats-cta-wrap .diagonal-vector {
-    position: absolute;   
+    position: absolute;
     top: auto !important;
     right: auto !important;
     bottom:100px !important;  /* match about-vector bottom */
@@ -1663,7 +1717,8 @@ p.featured-meta span.featured-author {
 @media (max-width: 480px) {
   .stats-cta-wrap .diagonal-vector img {
     width: 70%;
-    margin: 0 auto;       /* center it horizontally */
+    margin: 0 auto;
+    /* center it horizontally */
   }
 }
 
@@ -1760,9 +1815,12 @@ p.featured-meta span.featured-author {
 
 .faq-testimonials .faq-question {
   display: flex;
-  align-items: stretch;  /* let children (like .faq-toggle) stretch full height */
-  padding: 0 0 0 32px;   /* remove top/bottom padding so toggle fills height */
-  min-height: 60px;      /* control row height */
+  align-items: stretch;
+  /* let children (like .faq-toggle) stretch full height */
+  padding: 0 0 0 32px;
+  /* remove top/bottom padding so toggle fills height */
+  min-height: 60px;
+  /* control row height */
   background: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -1796,9 +1854,12 @@ p.featured-meta span.featured-author {
 .faq-testimonials .faq-toggle {
   background: #6F1FB7;
   border: none;
-  width: 60px;            /* make it wider (optional) */
-  height: 61px;           /* full height of the parent row */
-  border-radius: 0 6px 6px 0; /* rounded only on right side */
+  width: 60px;
+  /* make it wider (optional) */
+  height: 61px;
+  /* full height of the parent row */
+  border-radius: 0 6px 6px 0;
+  /* rounded only on right side */
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -1808,7 +1869,7 @@ p.featured-meta span.featured-author {
 }
 
 .faq-testimonials .faq-toggle:hover {
-  background: #01CFFF ;
+  background: #01CFFF;
   transform: scale(1.05);
 }
 
@@ -2899,8 +2960,10 @@ p.featured-meta span.featured-author {
   transition: transform .15s ease, filter .15s ease;
   align-self: flex-start;
   margin-top: -10px;
-  position: relative; /* for animation pseudo-element */
-  overflow: hidden;   /* keep pseudo-element inside */
+  position: relative;
+  /* for animation pseudo-element */
+  overflow: hidden;
+  /* keep pseudo-element inside */
 }
 
 @media (min-width: 781px) {
@@ -3055,10 +3118,12 @@ p.featured-meta span.featured-author {
   .mobile-view {
     display: block;
   }
+
   .ideas-impact {
     margin-top: -50px;
     margin-bottom: 70px;
   }
+
   .ideas-impact h2 {
     margin-bottom: 40px;
     font-size: 1.8rem;
@@ -3071,7 +3136,8 @@ p.featured-meta span.featured-author {
   padding: 10px 20px;
   background-color: transparent;
   text-align: center;
-  margin: 0; /* reset */
+  margin: 0;
+  /* reset */
 }
 
 .ideas-impact-inner h2 {
@@ -3116,9 +3182,11 @@ p.featured-meta span.featured-author {
 /* ✅ Desktop / Web view */
 @media (min-width: 769px) {
   .ideas-impact-inner {
-    margin-top: -250px; /* only on desktop */
+    margin-top: -250px;
+    /* only on desktop */
   }
 }
+
 /* ✅ Apply ONLY on desktop screens (>= 1024px wide) */
 @media (min-width: 1024px) {
   .ideas-impact-inner {
@@ -3130,7 +3198,8 @@ p.featured-meta span.featured-author {
 /* ✅ Mobile view */
 @media (max-width: 768px) {
   .ideas-impact-inner {
-    margin-top: -100px;  /* only on mobile */
+    margin-top: -100px;
+    /* only on mobile */
     margin-bottom: 70px;
   }
 
@@ -3368,69 +3437,72 @@ h2 {
 /* Tablet and below (<=1024px) */
 @media (max-width: 1024px) {
   .values-header {
-    margin-left: 0;      
+    margin-left: 0;
     justify-content: flex-start;
   }
 
   .values-header h2 {
-    color: #000000;      /* heading black */
-    white-space: nowrap;  /* keep heading in one line */
+    color: #000000;
+    /* heading black */
+    white-space: nowrap;
+    /* keep heading in one line */
   }
 
   .values-content {
-    margin-left: 0;      
+    margin-left: 0;
     justify-content: center;
-    grid-template-columns: 1fr !important; /* stack into one column */
+    grid-template-columns: 1fr !important;
+    /* stack into one column */
   }
 
   .values-column {
-    align-items: center;  
-    text-align: center;   
-    gap: 40px;            
+    align-items: center;
+    text-align: center;
+    gap: 40px;
   }
 
   .value-item {
-    text-align: center;  
+    text-align: center;
   }
 }
 
 /* Tablet Portrait & Mobile (<=768px) */
 @media (max-width: 768px) {
   .values-header {
-    flex-direction: row;    
-    align-items: center;    
-    justify-content: center;  
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     gap: 15px;
     margin-bottom: 60px;
-    text-align: center;      
+    text-align: center;
   }
 
   .values-header h2 {
-    color: #000000;      
-    font-size: 38px;      
-    white-space: nowrap;  
+    color: #000000;
+    font-size: 38px;
+    white-space: nowrap;
   }
 
   .values-content {
     grid-template-columns: 1fr;
     gap: 60px;
     margin-left: 0;
-    justify-items: center;   
+    justify-items: center;
   }
 
   .values-column {
-    align-items: center;   
+    align-items: center;
     text-align: center;
-    gap: 40px;              
+    gap: 40px;
   }
 
   .value-item h3 {
-    font-size: 28px;       
+    font-size: 28px;
     color: #000000;
   }
 
   .value-item p {
-    font-size: 18px;       
+    font-size: 18px;
     color: #82878F;
   }
 }
@@ -3564,10 +3636,11 @@ h2 {
   }
 
   .hww-figure img {
-     display: block;
+    display: block;
     width: 100%;
     /* ↑ keep full width, but make it visually larger by increasing height */
-    height: clamp(260px, 75vw, 360px);   /* was auto/aspect-ratio */
+    height: clamp(260px, 75vw, 360px);
+    /* was auto/aspect-ratio */
     object-fit: cover;
     border-radius: 18px;
   }
@@ -3638,4 +3711,566 @@ h2 {
   .hww-cta {
     width: 100%;
   }
+}
+
+
+
+
+/* iPad Mini Responsive Fix */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* Reposition contact information to appear after form */
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-section {
+    order: 1;
+  }
+
+  .contact-section {
+    order: 2;
+  }
+
+  .contact-info {
+    order: 3;
+    margin-top: 30px;
+  }
+
+  /* Form layout adjustments */
+  .form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .field {
+    width: 100%;
+  }
+
+  /* Specific adjustment for email field */
+  .field:nth-child(2) {
+    margin-top: 10px;
+  }
+
+  /* Specific adjustment for phone field */
+  .field:nth-child(3) {
+    margin-top: 10px;
+  }
+
+  /* Add gap between first name and last name */
+  .form-row:first-child .field:first-child {
+    margin-bottom: 15px;
+  }
+
+  /* Adjust radio group for better spacing */
+  .radio-group {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  /* Make first name and last name appear on the same line */
+  .form-row:first-child {
+    flex-direction: row !important;
+    gap: 20px !important;
+  }
+
+  /* Ensure each field takes half the width minus gap */
+  .form-row:first-child .field {
+    width: calc(50% - 10px) !important;
+    flex: 0 0 calc(50% - 10px) !important;
+  }
+
+  /* Add spacing between the fields */
+  .form-row:first-child .field:first-child {
+    margin-right: 10px;
+  }
+
+  /* Reset any conflicting styles first */
+  .form-row:first-child {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    /* This ensures both fields have same height */
+    justify-content: space-between !important;
+    gap: 20px !important;
+  }
+
+  /* Ensure perfect vertical alignment */
+  .form-row:first-child .field {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+
+  /* Make sure labels are perfectly aligned */
+  .form-row:first-child .field label {
+    margin-bottom: 8px;
+    height: 20px;
+    /* Fixed height for perfect alignment */
+    display: flex;
+    align-items: center;
+  }
+
+  /* Ensure inputs have exactly the same styling */
+  .form-row:first-child .field input {
+    width: 100%;
+    height: 44px;
+    /* Fixed height for perfect alignment */
+    box-sizing: border-box;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  /* Force exact same styling for both fields */
+  .form-row:first-child .field:first-child,
+  .form-row:first-child .field:last-child {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Remove any block styling and ensure proper line appearance */
+  .form-row:first-child .field input {
+    height: auto !important;
+    padding: 8px 12px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* Ensure both fields have the same appearance */
+  .form-row:first-child .field:first-child input,
+  .form-row:first-child .field:last-child input {
+    border-bottom: 2px solid #555 !important;
+  }
+
+  /* Focus state for better visual feedback */
+  .form-row:first-child .field input:focus {
+    border-color: #a777e3 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(167, 119, 227, 0.2) !important;
+  }
+
+  /* Adjust the container to ensure proper spacing */
+  .form-row:first-child {
+    margin-bottom: 15px !important;
+  }
+
+  /* Make sure labels are properly aligned */
+  .form-row:first-child .field label {
+    margin-bottom: 5px !important;
+    font-size: 14px !important;
+    color: #555 !important;
+  }
+
+  /* Add line styling to First Name and Last Name fields */
+  .form-row:first-child .field input {
+    border: none !important;
+    border-bottom: 2px solid #ddd !important;
+    border-radius: 0 !important;
+    padding: 8px 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* Focus state for line fields */
+  .form-row:first-child .field input:focus {
+    border-bottom-color: #6e8efb !important;
+    outline: none !important;
+  }
+
+  /* Ensure proper spacing between First Name and Last Name */
+  .form-row:first-child {
+    gap: 30px !important;
+  }
+
+  /* Make sure labels are properly aligned above the lines */
+  .form-row:first-child .field label {
+    margin-bottom: 8px !important;
+    font-size: 14px !important;
+    color: #555 !important;
+    display: block !important;
+  }
+
+  /* Match the styling of Email and Phone Number fields */
+  .field input:not([type="radio"]):not([type="submit"]) {
+    border: none !important;
+    border-bottom: 2px solid #ddd !important;
+    border-radius: 0 !important;
+    padding: 8px 0 !important;
+    background: transparent !important;
+  }
+
+  .field input:focus {
+    border-bottom-color: #6e8efb !important;
+    outline: none !important;
+  }
+
+  /* Change line color for all input fields to #555 */
+  .field input:not([type="radio"]):not([type="submit"]) {
+    border-bottom-color: #555 !important;
+  }
+
+  /* Change line color on focus */
+  .field input:not([type="radio"]):not([type="submit"]):focus {
+    border-bottom-color: #6e8efb !important;
+  }
+}
+
+
+
+/* iPad Mini Schedule Call Button Proper Spacing */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* Add proper spacing above the button */
+  .hww-card {
+    padding-bottom: 30px !important;
+  }
+
+  /* Reset any unwanted button styles and add proper margin */
+  .hww-cta {
+    margin-top: 40px !important;
+    padding: 14px 40px !important;
+    border-top: none !important;
+    display: inline-block !important;
+    background: linear-gradient(135deg, #6e8efb, #a777e3) !important;
+    color: white !important;
+    border-radius: 30px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+  }
+
+}
+
+
+
+
+/* iPad Mini Footer - Side by Side Layout */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* Main container with two columns for Insights and Services */
+  .footer-container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-areas:
+      "logo logo"
+      "insights services"
+      "office office"
+      "newsletter newsletter"
+      "social social" !important;
+    gap: 2px !important;
+    padding: 5px !important;
+  }
+
+  /* Logo styling */
+  .footer-left img {
+    display: block !important;
+    grid-area: logo !important;
+    max-width: 90px !important;
+    margin-bottom: 5px !important;
+  }
+
+  /* Insights section */
+  .footer-column:nth-child(1) {
+    grid-area: insights !important;
+    text-align: left !important;
+    margin-right: 5px !important;
+  }
+
+  /* Services section */
+  .footer-column:nth-child(2) {
+    grid-area: services !important;
+    text-align: left !important;
+    margin-left: 0px !important;
+  }
+
+  /* Head Office section */
+  .footer-column:nth-child(3) {
+    grid-area: office !important;
+    text-align: left !important;
+    margin-top: 10px !important;
+    padding-top: 10px !important;
+    border-top: 1px solid #eee !important;
+  }
+
+  /* Newsletter section */
+  .newsletter {
+    grid-area: newsletter !important;
+    text-align: left !important;
+    margin-top: 15px !important;
+  }
+
+  /* Social links section */
+  .social-links {
+    grid-area: social !important;
+    text-align: left !important;
+    margin-top: 10px !important;
+  }
+
+  /* Further reduce gaps between list items */
+  .footer-column ul {
+    margin-top: 3px !important;
+    padding-left: 0 !important;
+  }
+
+  .footer-column li {
+    margin-bottom: 3px !important;
+    line-height: 1.2 !important;
+    font-size: 13px !important;
+    list-style: none !important;
+  }
+
+  /* Reduce heading margins */
+  .footer-column h4 {
+    margin-bottom: 5px !important;
+    font-size: 15px !important;
+    color: #333 !important;
+  }
+
+  /* Head office text */
+  .footer-column:nth-child(3) p {
+    font-size: 13px !important;
+    line-height: 1.3 !important;
+    margin-top: 3px !important;
+    color: #555 !important;
+  }
+
+  /* Email input and button styling */
+  .newsletter-input {
+    display: flex !important;
+    gap: 6px !important;
+    margin-top: 5px !important;
+  }
+
+  .newsletter-input input {
+    flex: 1 !important;
+    border-radius: 16px !important;
+    padding: 6px 10px !important;
+    border: 1px solid #ddd !important;
+    min-height: 32px !important;
+    font-size: 12px !important;
+  }
+
+  .newsletter-input button {
+    border-radius: 16px !important;
+    padding: 6px 12px !important;
+    background: linear-gradient(135deg, #6e8efb, #a777e3) !important;
+    color: white !important;
+    border: none !important;
+    cursor: pointer !important;
+    font-weight: bold !important;
+    min-width: 80px !important;
+    min-height: 32px !important;
+    font-size: 12px !important;
+  }
+
+  /* Email link styling */
+  .email-link {
+    display: block !important;
+    margin-top: 8px !important;
+    font-size: 13px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+  }
+
+  /* Social icons styling */
+  .social-links .icons {
+    display: flex !important;
+    gap: 10px !important;
+    margin-top: 5px !important;
+  }
+
+  .social-links .icons a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 28px !important;
+    height: 28px !important;
+    background: #f5f5f5 !important;
+    border-radius: 50% !important;
+    color: #555 !important;
+    text-decoration: none !important;
+  }
+
+  /* Hide original footer structure */
+  .footer-left,
+  .footer-right {
+    display: contents !important;
+  }
+
+  /* Copyright styling */
+  .footer-bottom {
+    margin-top: 15px !important;
+    padding-top: 10px !important;
+    border-top: 1px solid #eee !important;
+    font-size: 11px !important;
+    text-align: center !important;
+    color: #777 !important;
+  }
+}
+
+
+/* iPad Mini Newsletter Form Adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .newsletter-input {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    max-width: 250px !important;
+  }
+
+  .newsletter-input input,
+  .newsletter-input button {
+    width: 100% !important;
+    padding: 10px 12px !important;
+    border-radius: 20px !important;
+    font-size: 14px !important;
+    min-height: 40px !important;
+    box-sizing: border-box !important;
+  }
+
+  .newsletter-input input {
+    border: 1px solid #ddd !important;
+    text-align: center !important;
+  }
+
+  .newsletter-input button {
+    background: linear-gradient(135deg, #6e8efb, #a777e3) !important;
+    color: white !important;
+    border: none !important;
+    cursor: pointer !important;
+    font-weight: bold !important;
+  }
+
+
+}
+
+
+/* Increase font size in footer for iPad Mini */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer-container {
+    font-size: 16px !important;
+  }
+
+  .footer-column h4 {
+    font-size: 18px !important;
+  }
+
+  .footer-column li,
+  .footer-column p,
+  .newsletter label,
+  .email-link {
+    font-size: 16px !important;
+  }
+
+  .newsletter-input input,
+  .newsletter-input button {
+    font-size: 16px !important;
+    padding: 12px 15px !important;
+  }
+
+  .social-links p {
+    font-size: 16px !important;
+  }
+
+  .footer-bottom {
+    font-size: 14px !important;
+  }
+}
+
+
+/* Decrease space between Insights and Services on iPad Mini */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer-container {
+    gap: 5px !important;
+    /* Reduce overall gap in the grid */
+  }
+
+  .footer-column:nth-child(1),
+  .footer-column:nth-child(2) {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Specifically target the space between the two columns */
+  .footer-column:nth-child(1) {
+    margin-right: 5px !important;
+  }
+
+  .footer-column:nth-child(2) {
+    margin-left: 5px !important;
+  }
+
+  /* Reduce spacing within each section */
+  .footer-column ul {
+    margin-top: 2px !important;
+  }
+
+  .footer-column li {
+    margin-bottom: 2px !important;
+    line-height: 1.1 !important;
+  }
+
+  .footer-column h4 {
+    margin-bottom: 3px !important;
+  }
+
+  /* Remove horizontal lines in footer */
+  .footer-column:nth-child(3) {
+    border-top: none !important;
+    padding-top: 0 !important;
+  }
+
+  .footer-bottom {
+    border-top: none !important;
+    padding-top: 0 !important;
+  }
+
+  /* Remove any other potential horizontal lines */
+  .footer-container>* {
+    border-top: none !important;
+    border-bottom: none !important;
+  }
+
+  hr {
+    display: none !important;
+  }
+
+  /* Change social media icons to black */
+  .social-links .icons a {
+    color: #000000 !important;
+    background: transparent !important;
+  }
+
+  .social-links .icons a:hover {
+    color: #333333 !important;
+  }
+
+  /* Increase Khaas logo size in footer */
+  .footer-left img {
+    transform: scale(1.2) !important;
+    margin-bottom: 0px !important;
+  }
+
+  /* Alternative approach if transform doesn't work */
+  .footer-left img {
+    width: 150px !important;
+    height: auto !important;
+    max-width: none !important;
+  }
+
+  /* Copyright styling */
+.footer-bottom {
+    margin-top: 30px !important;
+    padding-top: 20px !important;
+    color: #000000 !important;
+    font-weight: 500 !important;
+}
+
 }

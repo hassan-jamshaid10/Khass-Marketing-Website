@@ -18,7 +18,7 @@ get_header();
 
 <section class="contact-section" data-aos="fade-up">
 
-<?php echo do_shortcode('[contact-form-7 id="d773739" title="form1"]'); ?>
+<?php echo do_shortcode('[contact-form-7 id="878e574" title="contact"]'); ?>
 
 
 </section>
