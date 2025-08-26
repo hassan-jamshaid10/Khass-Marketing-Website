@@ -261,7 +261,6 @@
 .hero-vector {
   position: absolute;
   bottom: -1900px;
-  /* move it 50px lower */
   left: 0;
   width: 100%;
   z-index: 0;
@@ -275,17 +274,10 @@
   height: auto;
 }
 
-/* ============================= */
-/* HERO VECTOR RESPONSIVE         */
-/* ============================= */
-/* ============================= */
-/* HERO VECTOR RESPONSIVE         */
-/* ============================= */
 
-/* Extra Small Mobile (320px) */
-@media (max-width: 320px) {
+@media (max-width: 768px) {
   .hero-vector {
-    bottom: -650vh; /* adjust as needed */
+    bottom: -5000px;   /* adjust based on your design */
   }
 
   .hero-vector img {
@@ -294,137 +286,12 @@
   }
 }
 
-/* Small Mobile (375px) */
-@media (min-width: 321px) and (max-width: 375px) {
+/* Hide hero-vector on iPads and tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
   .hero-vector {
-    bottom: -800vh;
-  }
-
-  .hero-vector img {
-    width: 100%;
-    height: auto;
+    display: none !important;
   }
 }
-
-/* Mobile Portrait (480px) */
-@media (min-width: 376px) and (max-width: 480px) {
-  .hero-vector {
-    bottom: -650vh;
-  }
-
-  .hero-vector img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-/* Small Mobile / Mid-size (540px) */
-@media (min-width: 481px) and (max-width: 540px) {
-  .hero-vector {
-    bottom: -800vh;
-  }
-
-  .hero-vector img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-/* Mobile Landscape / Small Tablet (600px) */
-@media (min-width: 541px) and (max-width: 600px) {
-  .hero-vector {
-    bottom: -500vh;
-  }
-
-  .hero-vector img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-/* Tablets / iPads (768px) */
-/* ============================= */
-/* HERO VECTOR RESPONSIVE         */
-/* ============================= */
-
-/* Extra Small Mobile (320px) */
-@media (max-width: 320px) {
-  .hero-vector {
-    bottom: -300vh; /* adjust as needed */
-  }
-
-  .hero-vector img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-/* Small Mobile (375px) */
-@media (min-width: 321px) and (max-width: 375px) {
-  .hero-vector {
-    bottom: -780vh;
-  }
-
-  .hero-vector img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-/* Mobile Portrait (480px) */
-@media (min-width: 376px) and (max-width: 480px) {
-  .hero-vector {
-    bottom: -650vh;
-  }
-
-  .hero-vector img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-/* Small Mobile / Mid-size (540px) */
-@media (min-width: 481px) and (max-width: 540px) {
-  .hero-vector,
-  .hero-vector * {
-    display: none !important;   /* hide container and all children */
-    visibility: hidden !important;
-    opacity: 0 !important;
-  }
-}
-
-/* Mobile Landscape / Small Tablet (600px) */
-@media (min-width: 541px) and (max-width: 600px) {
-  .hero-vector,
-  .hero-vector * {
-    display: none !important;   /* hide container and all children */
-    visibility: hidden !important;
-    opacity: 0 !important;
-  }
-}
-
-/* Tablets / iPads (768px) */
-@media (min-width: 601px) and (max-width: 768px) {
-  .hero-vector,
-  .hero-vector * {
-    display: none !important;   /* hide container and all children */
-    visibility: hidden !important;
-    opacity: 0 !important;
-  }
-}
-
-/* Tablets / small iPads (1024px) */
-/* Hide hero vector on tablets/iPads (769px - 1024px) */
-/* Hide hero vector on tablets/iPads (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .hero-vector,
-  .hero-vector * {
-    display: none !important;   /* hide container and all children */
-    visibility: hidden !important;
-    opacity: 0 !important;
-  }
-}
-
 
 
 
@@ -852,6 +719,14 @@ p.featured-meta span.featured-author {
   width: 100%;
   height: auto;
 }
+/* Hide on screens smaller than 1024px (covers most tablets + mobiles) */
+@media (max-width: 1024px) {
+  .vector-background {
+    display: none !important;
+  }
+}
+
+
 
 .section-heading {
   font-size: 2rem;
@@ -1369,6 +1244,11 @@ p.featured-meta span.featured-author {
     height: auto;
   }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-vector {
+    display: none !important;
+  }
+}
 /* HOME page 3rd comp */
 .stats-section {
   margin-top: 80px;
@@ -1379,8 +1259,8 @@ p.featured-meta span.featured-author {
 }
 
 .stats-title {
-  font-size: 2.2rem;
-  font-weight: 500;
+  font-size: 38px;
+  font-weight: 400;
   margin-bottom: 6rem;
   color: #000;
 }
@@ -1408,7 +1288,7 @@ p.featured-meta span.featured-author {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 /* ROW 2: Two Large Boxes */
@@ -1441,14 +1321,15 @@ p.featured-meta span.featured-author {
 }
 
 .stat-box h3 {
-  font-size: 2.8rem;
-  font-weight: 500;
+  font-size: 38px;
+  font-weight: 100;
   margin: 0;
 }
 
 .stat-box p {
   margin-top: 0.8rem;
-  font-size: 1.05rem;
+  font-size: 18px;
+  font-weight: 100;
 }
 
 
@@ -1458,13 +1339,14 @@ p.featured-meta span.featured-author {
 }
 
 .large-box h4 {
-  font-size: 1.3rem;
+  font-size: 34px;
   margin-bottom: 0.8rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .large-box p {
-  font-size: 0.95rem;
+  font-size: 18px;
+  font-weight: 100;
   line-height: 1.6;
 }
 
@@ -1472,7 +1354,7 @@ p.featured-meta span.featured-author {
 .stat-box.large-box {
   align-items: flex-start;
   /* left edge */
-  justify-content: center;
+  justify-content: flex-start;
   /* vertical middle inside the card */
   text-align: left;
   /* left text */
@@ -1482,14 +1364,16 @@ p.featured-meta span.featured-author {
 
 /* Typography & spacing inside the big cards */
 .stat-box.large-box h4 {
-  font-size: 2rem;
+  font-size: 34px;
+  font-weight: 400;
   /* bigger title like Figma */
   line-height: 1.2;
   margin: 0 0 1rem 0;
 }
 
 .stat-box.large-box p {
-  font-size: 1rem;
+  font-size: 18px;
+  font-weight: 100;
   line-height: 1.7;
   max-width: 48ch;
   /* nicer reading width */
@@ -1754,19 +1638,25 @@ p.featured-meta span.featured-author {
     position: absolute;   
     top: auto !important;
     right: auto !important;
-    bottom: -300px !important;  /* move down */
+    bottom:100px !important;  /* match about-vector bottom */
     left: 0 !important;
-    width: 90%;
+    width: 70%;   /* same responsive width as about-vector */
     z-index: 0;
   }
 
   .stats-cta-wrap .diagonal-vector img {
-    width: 100%;
-    height: auto;
+    width: 100%;       /* same as about-vector img */
+    height: auto;      /* same as about-vector img */
     object-fit: contain;
   }
 }
 
+/* Hide hero-vector on iPads and tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .stats-cta-wrap .diagonal-vector {
+    display: none !important;
+  }
+}
 
 
 /* Small Phones */
@@ -1782,6 +1672,12 @@ p.featured-meta span.featured-author {
   position: relative;
   z-index: 1;
 }
+
+
+
+
+
+
 
 
 
@@ -3069,9 +2965,9 @@ p.featured-meta span.featured-author {
     height: 220px;
   }*/
 
-  .hww-cta {
+  /* .hww-cta {
     position: static;
-    margin-top: 14px;
+    margin-top: 14px; */
   }
 }
 
@@ -3095,7 +2991,7 @@ p.featured-meta span.featured-author {
   font-weight: 800;
   margin-bottom: 180px;
   color: #000000;
-  /* White text for dark theme background */
+  text-align: center; /* centers text inside the h2 */
 }
 
 /* Desktop View */

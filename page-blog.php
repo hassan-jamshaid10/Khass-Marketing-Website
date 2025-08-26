@@ -213,8 +213,15 @@ get_header();
 
 <div class="stats-cta-wrap">
 <div class="diagonal-vector" aria-hidden="true">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vector2.png" alt="">
-  </div>
+  <picture>
+    <!-- Mobile first -->
+    <source media="(max-width: 768px)" 
+            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/v2.svg">
+    <!-- Default / Desktop -->
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vector2.png" 
+         alt="Diagonal Vector" />
+  </picture>
+</div>
 
   <!-- =============== STATS SECTION =============== -->
   <section class="stats-section" data-aos="fade-up">
@@ -378,8 +385,9 @@ get_header();
         </li>
       </ul>
     </div>
-
     
+ 
+
 <div class="testimonial-section">
   <h2>Look what people say<br>about our Services</h2>
 
@@ -415,8 +423,9 @@ get_header();
     </div>
   </div>
 </div>
+
   </section>
-</div>
+
 
 
 <?php get_footer(); ?>
