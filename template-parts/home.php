@@ -79,7 +79,7 @@ get_header();
 
       <div class="service-item" data-aos="fade-up" data-aos-delay="500">
         <div class="service-icon">
-          <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/uiux.svg" alt="UI/UX"> -->
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blank.png" alt="UI/UX">
         </div>
         <h3>UX/UI Design</h3>
         <p>Good design isn’t just pretty—it works. We craft sleek interfaces that feel right at home.</p>
@@ -271,7 +271,7 @@ get_header();
 
       <div class="cta-content" data-aos="fade" data-aos-delay="450" data-aos-duration="600">
         <h2>Interested in<br>working together?</h2>
-        <a class="cta-link" href="#">Start a project request <span class="arr">›</span></a>
+        <a class="cta-link" href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>">Start a project request <span class="arr">›</span></a>
       </div>
     </div>
   </section>
@@ -440,12 +440,19 @@ get_header();
 
         <div class="card">
           <p>
-            Absolutely fantastic service! The team was proactive, communicative, and creative in ways that took our
-            business to the next level.
+          Khaas Marketing transformed my website with a modern UX design andseamless integrations. Their
+efforts significantly boosted
+traffic and newsletter sign-ups,
+leading to positive feedback from
+users. With outstanding
+communication and valuable
+insights, they proved to be an
+essential partner throughout the
+redesign process.
           </p>
           <div class="author">
-            <div class="name">John Doe</div>
-            <div class="role">CEO</div>
+            <div class="name">Alyona DelaCoeur</div>
+            <div class="role">Owner</div>
           </div>
         </div>
 
@@ -459,7 +466,10 @@ get_header();
           </div>
         </div>
       </div>
-    </div>
+
+
+
+</div>
 
   </section>
 

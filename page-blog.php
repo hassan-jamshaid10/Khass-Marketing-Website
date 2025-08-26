@@ -96,26 +96,26 @@ get_header();
       if ($allposts->have_posts()) :
         while ($allposts->have_posts()) : $allposts->the_post(); ?>
           
-          <div class="post-card">
-            <?php if (has_post_thumbnail()) : ?>
-              <?php the_post_thumbnail('medium', ['alt' => get_the_title()]); ?>
-            <?php else : ?>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/default-post.jpg" alt="Default Post Image" />
-            <?php endif; ?>
+          <div class="post-card" data-link="<?php the_permalink(); ?>">
+  <?php if (has_post_thumbnail()) : ?>
+    <?php the_post_thumbnail('medium', ['alt' => get_the_title()]); ?>
+  <?php else : ?>
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/default-post.jpg" alt="Default Post Image" />
+  <?php endif; ?>
 
-            <div class="post-info">
-              <span class="post-category">
-                <?php
-                $categories = get_the_category();
-                if (!empty($categories)) {
-                  echo esc_html($categories[0]->name);
-                }
-                ?>
-              </span>
-              <h3><?php the_title(); ?></h3>
-              <p><?php echo get_the_excerpt(); ?></p>
-            </div>
-          </div>
+  <div class="post-info">
+    <span class="post-category">
+      <?php
+      $categories = get_the_category();
+      if (!empty($categories)) {
+        echo esc_html($categories[0]->name);
+      }
+      ?>
+    </span>
+    <h3><?php the_title(); ?></h3>
+    <p><?php echo get_the_excerpt(); ?></p>
+  </div>
+</div>
 
         <?php endwhile; ?>
       <?php endif; wp_reset_postdata(); ?>
@@ -190,7 +190,7 @@ get_header();
 
       <div class="service-item" data-aos="fade-up" data-aos-delay="500">
         <div class="service-icon">
-          <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/uiux.svg" alt="UI/UX"> -->
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blank.png" alt="UI/UX">
         </div>
         <h3>UX/UI Design</h3>
         <p>Good design isn’t just pretty—it works. We craft sleek interfaces that feel right at home.</p>
@@ -305,7 +305,7 @@ get_header();
       <!-- slight stagger for the text/link -->
       <div class="cta-content" data-aos="fade" data-aos-delay="450" data-aos-duration="600">
         <h2>Interested in<br>working together?</h2>
-        <a class="cta-link" href="#">Start a project request <span class="arr">›</span></a>
+        <a class="cta-link" href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>">Start a project request <span class="arr">›</span></a>
       </div>
     </div>
   </section>

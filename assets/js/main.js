@@ -213,8 +213,30 @@ cards.forEach((card, index) => {
 
 
 
+// document.addEventListener('DOMContentLoaded', function() {
+//   const button = document.querySelector('.hww-cta');
+
+//   button.addEventListener('click', function(e) {
+//     e.preventDefault();
+
+//     // Prevent multiple clicks
+//     if (button.classList.contains('loading') || button.classList.contains('scheduled')) return;
+
+//     // Start animation
+//     button.classList.add('loading');
+
+//     // Simulate scheduling process (2s)
+//     setTimeout(() => {
+//       button.classList.remove('loading');
+//       button.classList.add('scheduled');
+//       button.querySelector('.cta-text').textContent = 'Scheduled';
+//     }, 2000);
+//   });
+// });
+
 document.addEventListener('DOMContentLoaded', function() {
   const button = document.querySelector('.hww-cta');
+  const phoneNumber = '+44 7946 081367'; // Replace with your phone number
 
   button.addEventListener('click', function(e) {
     e.preventDefault();
@@ -229,7 +251,67 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
       button.classList.remove('loading');
       button.classList.add('scheduled');
-      button.querySelector('.cta-text').textContent = 'Scheduled';
+      button.querySelector('.cta-text').textContent = 'scheduled';
+
+      // Open phone dialer
+      window.location.href = `tel:${phoneNumber}`;
     }, 2000);
+  });
+});
+
+
+
+const dots = document.querySelectorAll('.testimonial-dots .dot');
+let currentIndex = 0;
+
+// Function to update active card and dots
+function updateActiveTestimonial(index) {
+  cards.forEach(card => card.classList.remove('active'));
+  dots.forEach(dot => dot.classList.remove('active'));
+
+  cards[index].classList.add('active');
+  dots[index].classList.add('active');
+}
+
+// Auto-slide every 4 seconds
+let autoSlide = setInterval(() => {
+  currentIndex = (currentIndex + 1) % cards.length;
+  updateActiveTestimonial(currentIndex);
+}, 4000);
+
+// Dots click functionality
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    clearInterval(autoSlide); // Stop auto-slide when user interacts
+    currentIndex = index;
+    updateActiveTestimonial(currentIndex);
+  });
+});
+
+// ✅ Sync with drag/swipe changes
+cards.forEach((card, index) => {
+  card.addEventListener('transitionend', () => {
+    if (card.classList.contains('active')) {
+      currentIndex = index;
+      updateActiveTestimonial(currentIndex);
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".post-card").forEach(function (card) {
+    card.addEventListener("click", function () {
+      const link = this.querySelector("h3 a")?.href || "<?php the_permalink(); ?>";
+      window.location.href = this.querySelector("a")?.href || this.dataset.link;
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".post-card").forEach(function (card) {
+    card.addEventListener("click", function () {
+      window.location.href = card.dataset.link;
+    });
   });
 });
