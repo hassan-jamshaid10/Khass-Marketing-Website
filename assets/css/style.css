@@ -309,7 +309,7 @@
 @media (min-width: 768px) and (max-width: 1024px) {
   .hero-vector {
     display: none !important;
-  }
+  }/*chnages*/
 }
 
 /* @media (min-width: 540px){
