@@ -144,3 +144,12 @@ add_action( 'wp_enqueue_scripts', 'mytheme_enqueue_contact_styles' );
 
   
 
+function override_newsletter_css() {
+  wp_enqueue_style(
+      'footer-newsletter',
+      get_stylesheet_directory_uri() . '/assets/css/style.css',
+      array(),
+      null
+  );
+}
+add_action('wp_enqueue_scripts', 'override_newsletter_css', 99); // 99 ensures last

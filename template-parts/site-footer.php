@@ -4,14 +4,14 @@
     <div class="footer-left">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Khaas Marketing Logo">
 
-      <div class="newsletter">
-        <label for="email">Newsletter</label>
-        <div class="newsletter-input">
-          <input type="email" id="email" placeholder="E-MAIL" />
-          <button type="submit">SUBSCRIBE</button>
-        </div>
-        <a href="mailto:Info@khaasmarketing.com" class="email-link">Info@khaasmarketing.com</a>
-      </div>
+    <div class="newsletter">
+  <label for="email">Newsletter</label>
+  <div class="newsletter-input">
+    <?php echo do_shortcode('[newsletter_form type="minimal"]'); ?>
+  </div>
+  <a href="mailto:Info@khaasmarketing.com" class="email-link">Info@khaasmarketing.com</a>
+</div>
+
 
       <div class="social-links">
         <p><strong>Follow us</strong></p>
