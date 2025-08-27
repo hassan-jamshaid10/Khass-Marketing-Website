@@ -45,8 +45,8 @@
       </div>
       <div class="footer-column">
         <h4>Head Office</h4>
-        <p>717 k Street, STE 207<br/> Sacramento, CA 95814, United<br/>
-        State.<br/> Phone: +44 7946 081367</p>
+        <p>71-75 Shelton Street, Covent Garden<br/> WC2H 9JQ, London, United<br/>
+        Kingdom.</p>
       </div>
     </div>
   </div>

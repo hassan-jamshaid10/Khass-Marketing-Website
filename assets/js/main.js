@@ -261,42 +261,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-const dots = document.querySelectorAll('.testimonial-dots .dot');
-let currentIndex = 0;
-
-// Function to update active card and dots
-function updateActiveTestimonial(index) {
-  cards.forEach(card => card.classList.remove('active'));
-  dots.forEach(dot => dot.classList.remove('active'));
-
-  cards[index].classList.add('active');
-  dots[index].classList.add('active');
-}
-
-// Auto-slide every 4 seconds
-let autoSlide = setInterval(() => {
-  currentIndex = (currentIndex + 1) % cards.length;
-  updateActiveTestimonial(currentIndex);
-}, 4000);
-
-// Dots click functionality
-dots.forEach((dot, index) => {
-  dot.addEventListener('click', () => {
-    clearInterval(autoSlide); // Stop auto-slide when user interacts
-    currentIndex = index;
-    updateActiveTestimonial(currentIndex);
-  });
-});
-
-// ✅ Sync with drag/swipe changes
-cards.forEach((card, index) => {
-  card.addEventListener('transitionend', () => {
-    if (card.classList.contains('active')) {
-      currentIndex = index;
-      updateActiveTestimonial(currentIndex);
-    }
-  });
-});
 
 
 document.addEventListener("DOMContentLoaded", function () {

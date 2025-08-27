@@ -630,8 +630,9 @@
 .footer-bottom {
   text-align: center;
   margin-top: 40px;
-  font-size: 13px;
-  color: #333;
+  font-size: 14px;
+  font-size:400;
+  color: #000000;
 }
 
 

@@ -36,7 +36,9 @@ get_header();
       // Query latest post from "featured" category
       $featured = new WP_Query(array(
         'category_name'  => 'featured', // slug of your category
-        'posts_per_page' => 1
+        'posts_per_page' => 1,
+        'orderby'        => 'date',     // order by publish date
+        'order'          => 'DESC'      // latest first
       ));
 
       if ($featured->have_posts()) :
@@ -403,12 +405,20 @@ get_header();
     </div>
 
     <div class="card">
-      <p>
-        Absolutely fantastic service! The team was proactive, communicative, and creative in ways that took our business to the next level.
-      </p>
-      <div class="author">
-        <div class="name">John Doe</div>
-        <div class="role">CEO</div>
+    <p>
+          Khaas Marketing transformed my website with a modern UX design andseamless integrations. Their
+efforts significantly boosted
+traffic and newsletter sign-ups,
+leading to positive feedback from
+users. With outstanding
+communication and valuable
+insights, they proved to be an
+essential partner throughout the
+redesign process.
+          </p>
+          <div class="author">
+            <div class="name">Alyona DelaCoeur</div>
+            <div class="role">Owner</div>
       </div>
     </div>
 

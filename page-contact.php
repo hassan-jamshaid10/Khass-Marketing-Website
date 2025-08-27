@@ -18,7 +18,7 @@ get_header();
 
 <section class="contact-section" data-aos="fade-up">
 
-<?php echo do_shortcode('[contact-form-7 id="d773739" title="form1"]'); ?>
+<?php echo do_shortcode('[contact-form-7 id="fb980c4" title="Form 1"]'); ?>
 
 
 </section>
@@ -181,13 +181,20 @@ get_header();
       </div>
 
       <div class="card">
-        <p>
-          Absolutely fantastic service! The team was proactive, communicative, and creative in ways that took our
-          business to the next level.
-        </p>
-        <div class="author">
-          <div class="name">John Doe</div>
-          <div class="role">CEO</div>
+      <p>
+          Khaas Marketing transformed my website with a modern UX design andseamless integrations. Their
+efforts significantly boosted
+traffic and newsletter sign-ups,
+leading to positive feedback from
+users. With outstanding
+communication and valuable
+insights, they proved to be an
+essential partner throughout the
+redesign process.
+          </p>
+          <div class="author">
+            <div class="name">Alyona DelaCoeur</div>
+            <div class="role">Owner</div>
         </div>
       </div>
 
