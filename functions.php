@@ -52,14 +52,38 @@ function khaas_enqueue_assets() {
 }
 add_action('wp_enqueue_scripts', 'khaas_enqueue_assets');
 
-function enqueue_aos_scripts() {
-    wp_enqueue_style('aos-css', 'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css');
-    wp_enqueue_script('aos-js', 'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js', [], null, true);
+// function enqueue_aos_scripts() {
+//     wp_enqueue_style('aos-css', 'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css');
+//     wp_enqueue_script('aos-js', 'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js', [], null, true);
 
-    // Initialize AOS in the footer
-    add_action('wp_footer', function () {
-        echo "<script>AOS.init({ once: true, duration: 800, offset: 100 });</script>";
-    });
+//     // Initialize AOS in the footer
+//     add_action('wp_footer', function () {
+//         echo "<script>AOS.init({ once: true, duration: 800, offset: 100 });</script>";
+//     });
+// }
+// add_action('wp_enqueue_scripts', 'enqueue_aos_scripts');
+
+function enqueue_aos_scripts() {
+  wp_enqueue_style(
+      'aos-css',
+      'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css',
+      [],
+      '2.3.4'
+  );
+
+  wp_enqueue_script(
+      'aos-js',
+      'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js',
+      [],
+      '2.3.4',
+      true
+  );
+
+  // Attach init code after aos.js
+  wp_add_inline_script(
+      'aos-js',
+      'document.addEventListener("DOMContentLoaded",function(){AOS.init({ once: true, duration: 800, offset: 100 });});'
+  );
 }
 add_action('wp_enqueue_scripts', 'enqueue_aos_scripts');
 
@@ -153,3 +177,5 @@ function override_newsletter_css() {
   );
 }
 add_action('wp_enqueue_scripts', 'override_newsletter_css', 99); // 99 ensures last
+
+
