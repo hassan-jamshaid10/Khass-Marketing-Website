@@ -7,6 +7,9 @@ Includes **Contact Form 7**, **Newsletter** integration, and **AOS** scroll anim
 
 ---
 
+## Preview
+![CHATBOX LOGIN PAGE](./k1.png)
+
 ## Table of Contents
 
 - [Features](#features)  
