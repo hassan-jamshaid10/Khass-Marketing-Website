@@ -294,7 +294,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 499px) {
   .hero-vector {
     bottom: -5000px;   /* adjust based on your design */
   }
@@ -304,6 +304,13 @@
     height: auto;
   }
 }
+/* Hide hero-vector only for 500px to 765px */
+@media (min-width: 500px) and (max-width: 765px) {
+  .hero-vector {
+    display: none !important;
+  }
+}
+
 
 /* Hide hero-vector on iPads and tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -1756,7 +1763,7 @@ p.featured-meta span.featured-author {
   height: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 499px) {
   .about-vector {
     bottom: -4800px;
     /* adjust based on your design */
@@ -1767,6 +1774,12 @@ p.featured-meta span.featured-author {
     height: auto;
   }
 }
+@media (min-width: 500px) and (max-width: 765px) {
+  .hero-vector {
+    display: none !important;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .about-vector {
     display: none !important;
