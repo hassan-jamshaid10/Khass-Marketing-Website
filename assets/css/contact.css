@@ -406,3 +406,32 @@ html, body {
     }
   }
   
+  .phone-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.phone-input select.country-select {
+  flex: 0 0 80px; /* smaller dropdown */
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  background: transparent;
+  outline: none;
+  color: #000;
+}
+
+.phone-input input[type="tel"],
+.phone-input .wpcf7-form-control.wpcf7-tel {
+  flex: 0 0 70%;   /* reduce width to 70% of row */
+  min-width: 0;    /* allow shrink */
+  display: inline-block;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  background: transparent;
+  outline: none;
+  color: #000;
+}
